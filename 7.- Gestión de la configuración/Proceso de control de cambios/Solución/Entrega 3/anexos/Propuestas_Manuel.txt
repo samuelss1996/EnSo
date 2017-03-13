@@ -1,0 +1,12 @@
+#######Nuevo requisito funcional:##############
+
+	- Generar un cheque regalo.
+
+#######Nuevo requisito no funcional:###########
+
+	- Disponibilidad en diversos idiomas (español, gallego, inglés)
+
+#######Error en documento de especificación:###
+
+	- FRQ-0010 (Añadir, modificar, eliminar y consultar stock de la BBDD):
+	El stock de la BBDD se verá automáticamente modificado cuando los clientes realicen compras. Además, el personal autorizado deberá poder editar la información contenida en la BBDD de forma manual, si la situación lo requiere.

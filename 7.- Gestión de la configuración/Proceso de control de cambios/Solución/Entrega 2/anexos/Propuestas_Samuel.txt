@@ -1,0 +1,4 @@
+Funcional: Notificar disponibilidad de producto
+No funcional: El sistema debe correr sobre HTTPS
+
+Correción: Productos: almacenar no solo los productos disponibles

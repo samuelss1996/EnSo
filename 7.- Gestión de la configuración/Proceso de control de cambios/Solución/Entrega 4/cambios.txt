@@ -1,0 +1,24 @@
+#######Nuevo requisito funcional:##############
+	
+	- Cancelar pedido en trámite.
+	- Generar un cheque regalo (R)
+	- Devolver el importe pagado por un pedido tras una cencelación (R)
+	- Solicitar ayuda mediante atención al cliente (R)
+	- Notificar disponibilidad de producto
+
+#######Nuevo requisito no funcional:###########
+	
+	- Versión web específica de móvil. (A)
+	- Disponibilidad en diversos idiomas (español, gallego, inglés) (R)
+	- El sistema debe estar adaptado para personas que presenten ciertas discapacidades, especificamente discapacidad visual.(A)
+	- Asegurar mantenimiento y soporte mínimo 5 años(R)
+	- El sistema debe correr sobre HTTPS(R)
+
+#######Error en documento de especificación:###
+
+	- IRQ-0004 define que los centros que cuya autorización haya expirado no se deben guardar en la BD. Se debería definir un requisito para comprobar periódicamente la validez de dichas autorizaciones o bien un método de notificación en la 	fecha de expiración. (A)
+	- FRQ-0010 (Añadir, modificar, eliminar y consultar stock de la BBDD): (A)
+		El stock de la BBDD se verá automáticamente modificado cuando los clientes realicen compras. Además, el personal autorizado deberá poder editar la información contenida en la BBDD de forma manual, si la situación lo requiere.
+	- FRQ-0003 (Devolver pedido): Este requisito funcional abarca de más, ocupándose de dos actividades, devolver un pedido y devolver el importe pagado, que se podrían dividir fácilmente para una planificación y desarrollo más cómodos. (R)
+	- Productos: almacenar no solo los productos disponibles
+	- Requisito de información (proveedores): se debe disponer de algún método o persona encargada de revisar los contratos o acuerdos con empresas proveedoras para que así los datos de la BD sean correctos. (R)
