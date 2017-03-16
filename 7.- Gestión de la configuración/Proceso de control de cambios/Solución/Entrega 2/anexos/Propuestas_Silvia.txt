@@ -1,8 +1,0 @@
-Requisito funcional:
-	- Solicitar ayuda mediante atención al cliente
-
-Requisito no funcional:
-	- Asegurar mantenimiento y soporte mínimo 5 años
-
-Problema en los documentos base:
-	- Requisito de información (proveedores): se debe disponer de algún método o persona encargada de revisar los contratos o acuerdos con empresas proveedoras para que así los datos de la BD sean correctos.
