@@ -25,20 +25,11 @@
     
 * Usuarios
 * Facturas
-* Solicitud
-* Centro
 * Productos
-* Promociones
-* Proveedores
 * Reglas de negocio:
 	* Usuarios
 	* Facturas
-	* Solicitud
-	* Centro 
 	* Productos
-	* Promocion
-	* Proveedores
-
 
 ### Requisitos funcionales
 
@@ -47,10 +38,8 @@
 * Requisito 2: La aplicación deberá permitir gestionar los Ítems del catálogo (CRU, Borrado no => No disponible). Incluir importación y búsquedas según se detalle en los CUs correspondientes. 
 * Requisito 3: Gestión de ventas (CR. Actualización y Borrado NO). Se realizarán estadísticas sobre las ventas según se detalle en los CUs.
 * Solicitar pedido
-* Solicitar uno o varios productos a la facultad
 * Pagar un producto
 * Añadir, modificar y borrar productos del carrito
-* Enviar petición de compra
 * Tramitar factura
 * Añadir, modificar, eliminar y consultar stock de la BBDD
 * Identificar usuarios
@@ -65,11 +54,9 @@
 * Identificar usuarios
 * Pagar producto
 * Modificar carrito
-* Solicitar uno o varios productos a la facultad
 * Añadir uno o varios productos al carrito
 * Borrar uno o varios productos del carrito
 * Buscar productos por características
-* Tramitar solicitud de compra
 * Cerrar sesión
 
 ### Requisitos no funcionales
