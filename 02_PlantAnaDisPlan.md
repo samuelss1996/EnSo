@@ -33,6 +33,7 @@
 # Plan del proyecto. INCREMENTO 1
 
 ## EDT
+<img src="anexos/diagramaEDT.png" />
 
 ## Gantt
 
