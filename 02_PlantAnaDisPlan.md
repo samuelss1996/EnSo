@@ -108,8 +108,11 @@ En definitiva, la aplicacion debe permitir a los usuarios la consulta de todos l
 * Cerrar sesión
 
 ### Requisitos no funcionales
-* Identificación de usuarios por sistema USC
-* Documentación completa y clara
+	Identificador: Requisito RF1
+	Título: Tiempo de envío de notificaciones de compra en menos de 1 minuto.
+	Descripción: El sistema deberá enviar las notificaciones en el menor tiempo posible, para que el usuario no tenga dudas de que se realizó adecuadamente su compra. 
+	Importancia: quedaría bien.
+	Criterio de validación: Cronometrar el tiempo que tarda en llegar el correo de validación a la bandeja de entrada de un cliente después de realizar una compra en la aplicación. Este tiempo debe ser menor que 60 segundos.
 
 ## Matriz de trazabilidad
 
