@@ -1,12 +1,33 @@
 # Introducción
 
 ## Propósito del documento
+En este documento se recoge la información vinculada al análisis de requisitos, diseño y planificación del primer incremento de la aplicación objeto del proyecto.
+    
+En lo que respecta a la fase de análisis, se recogen tanto los requisitos de información, como los funcionales y no funcionales necesarios para abordar este incremento. Por otra parte, la fase de análisis incluye también la pertinente identificación de actores y casos de uso, además de varias matrices de trazabilidad.
+    
+Por otra parte, en la fase de diseño se recogen una serie de diagramas necesarios para la implementación del software asociado a este incremento. Entre ellos estan incluidos un Modelo Entidad-Relación que modelará la base de datos de la aplicación, y uno o varios diagramas de clase y secuencia que modelarán toda la parte ejecutable del software.
+    
+Finalmente, en la parte del documento asociada a la planificación del proyecto, se incluyen una serie de diagramas que muestran las tareas a realizar y cuando se deben realizar para alcanzar la compleción del proyecto.
 
 ## Descripción general del proyecto
+El proyecto que de desarrolla en este documento pretende generar como producto final una aplicación que permita la gestión de una central de compras para la Universidad de Santiago de Compostela (USC). Dicha aplicación deberá estar desarrollada como aplicación de escritorio en Java. 
+
+Entrando más en detalle, la aplicación debe permitir la realización de compras sobre el inventario de la USC, así como servir de pasarela para acceder a productos de proveedores externos. Toda persona que pertenezca a la USC y, por tanto, posea una cuenta de la misma puede acceder a la aplicación, haciendo uso del sistema de identificación de la universidad. No obstante, no todos los usuarios podrán realizar las mismas operaciones sobre la aplicación, por lo que existirán una serie de roles (alumno, director, ...) asociados a los usuarios.
+
+En definitiva, la aplicacion debe permitir a los usuarios la consulta de todos los productos en stock, la realización de compras o propuestas de compra, el seguimiento de pedidos, un sistema de facturación y la posibilidad de colocar una reclamación o queja formal, además de poder devolver productos. 
 
 ## Participantes
+| Nombre | Rol |
+|--|--|
+| Canosa Domínguez, Cristofer | Gestor documental
+| Rodríguez Alcaraz, Silvia | Aseguradora de calidad
+| Seijas Salinas, Orquídea Manuela | Validadora de requisitos
+| Soutullo Sobral, Samuel | Jefe de proyecto
 
 ## Términos utilizados
+// De momento esto queda vacío basandome en este criterio sacado del doc del rabenso:
+	
+    Este apartado no es imprescindible sólo se utilizará si se usa algún concepto ambiguo en la descripción del programa o algún acrónimos. No se usará para meter conceptos de ingeniería como los que ya aparecen en el estándar 829. 
 
 # Análisis. INCREMENTO 1
 
@@ -21,7 +42,7 @@
 ## Requisitos
 
 ### Requisitos de información
-	Este apartado debe incluir sólo las entidades necesarias para abordar este		 incremento y ser consistente con el modelo entidad-relación que se aporte en el diseño.
+	Este apartado debe incluir sólo las entidades necesarias para abordar este incremento y ser consistente con el modelo entidad-relación que se aporte en el diseño.
     
 * Usuarios
 * Facturas
