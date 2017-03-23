@@ -18,6 +18,33 @@
 
 ### Objetivo
 
+OBJ-0001 Mantener un registro del stock actual
+Fuente: REM de requisitos del sistema.
+Descripción: El sistema deberá tener un modelo de datos del stock coherente con el mundo real en todo momento. 
+Prueba de aceptación: El objetivo se considerará cumplido si cualquier transacción que afecte al stock modifica la base de datos de manera adecuada. 
+Importancia: vital
+Urgencia: inmediatamente
+Estado: pendiente de verificación
+Estabilidad: alta
+
+OBJ-0002 Soporte de compras
+Fuente: REM de requisitos del sistema.
+Descripción: El sistema deberá permitir realizar compras desde la aplicación además de proponer la realización de las mismas. El sistema deberá generar una factura en caso de realizar una compra.
+Prueba de aceptación: El objetivo se considerará cumplido si se puede realizar una compra correctamente obteniendo la factura asociada y si se puede realizar una solicitud de compra por parte de un alumno de un centro autorizado.
+Importancia: vital
+Urgencia: inmediatamente
+Estado: pendiente de verificación
+Estabilidad: alta
+
+OBJ-0003 Gestionar usuarios
+Fuente: Requisitos del cliente
+Descripción: El sistema deberá permitir dar de alta, consultar, actualizar y dar de baja.
+Prueba de aceptación: El objetivo se considerará cumplido si se pueden realizar correctamente las acciones relacionadas con los usuarios en la descripción.
+Importancia: vital
+Urgencia: inmediatamente
+Estado: pendiente de verificación
+Estabilidad: alta
+
 ## Requisitos
 
 ### Requisitos de información
