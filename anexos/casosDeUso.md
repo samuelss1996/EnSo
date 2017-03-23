@@ -42,6 +42,42 @@
 |--|--|
 |**Descripción**| Gestiona la modificación de los productos del carrito antes de proceder a su compra. |
 |**Precondición**| - Estar correctamente identificado en la aplicación (sesión iniciada). <br> - El usuario debe tener al menos un producto en su carrito. |
-| **Secuencia normal** | **1.** <br> **2.** |
-| **Postcondición** | |
-| **Excepciones** | |
+| **Secuencia normal** | **1.** El actor *Usuario (ACT-0001)* accede a su carrito personal. <br> **2.** El actor *Usuario (ACT-0001) modifica un campo dentro de cada producto, que representa la cantidad de ese tipo concreto de producto que desea. <br> **3.** Si el usuario está satisfecho con su carrito, el sistema avanza al caso de uso *Pagar un producto*. |
+| **Postcondición** | - El carrito del cliente se ve modificado. |
+
+
+<br>
+
+|UC-0010| Añadir uno o varios productos al carrito |
+|--|--|
+|**Descripción**| Gestiona las acciones a realizar cuando se añade un producto al carrito. |
+|**Precondición**| - Estar correctamente identificado en la aplicación (sesión iniciada). |
+|**Secuencia normal** | **1.** El actor *Usuario (ACT-0001) selecciona un producto (la cantidad puede ser uno o más, siempre limitado por el stock actual). Añade estos productos al carrito. <br> **2.** El sistema añade los productos a una lista temporal e informa al usuario de que los productos se añadieron exitosamente al carrito. |
+|**Postcondición**| - Existencia de elementos en el carrito. |
+|**Excepciones**| **1.** Si no hay stock en el momento de añadir al carrito, el sistema informa de la situación a través de un mensaje de error. A continuación este caso de uso queda sin efecto. |
+
+<br>
+
+|UC-0011| Borrar uno o varios productos del carrito |
+|--|--|
+|**Descripción**| Gestiona las acciones a realizar cuando se elimina un producto del carrito. |
+|**Precondición**| - Estar correctamente identificado en la aplicación (sesión iniciada). <br> - Existencia de elementos en el carrito. |
+|**Secuencia normal**| **1.** El actor *Usuario (ACT-0001)* desde la vista de su carrito, selecciona un producto y lo elimina. <br> **2.** Se confirma el borrado y se le muestra la lista del carrito actualizada al usuario. |
+
+<br>
+
+|UC-0012| Buscar productos por características |
+|--|--|
+|**Descripción**| Gestiona las acciones a realizar cuando el usuario realice una consulta sobre los productos en stock en base a una serie de características seleccionadas. |
+|**Precondición**| |
+|**Secuencia normal**| **1.** El actor *Usuario (ACT-0001)* realiza una consulta de productos en función de unos campos predefinidos. <br> **2.** El sistema procesa la petición y devuelve una lista de productos que se ajusten a los solicitados. |
+|**Postcondición**| - El usuario recibe una lista de productos que existen en stock en función del filtro seleccionado.
+
+<br>
+
+|UC-0016| Cerrar sesión |
+|--|--|
+|**Descripción**| El usuarios decide terminar la sesión que iniciada al introducir sus credenciales. |
+|**Precondición**| - Estar correctamente identificado en la aplicación (sesión iniciada). |
+|**Secuencia normal**| **1.** El actor *Usuario (ACT-0001)* inicia el cierre de sesión. <br> **2.** El sistema destruye todos los objetos temporales (como puede ser el carrito) y guarda los datos persistentes que proceda. <br> **3.** Se confirma al usuario que el cierre de sesión ha sido satisfactorio. |
+|**Postcondición**| - La sesión de usuario deja de existir. |
