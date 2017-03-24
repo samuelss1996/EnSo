@@ -86,13 +86,6 @@ En definitiva, la aplicacion debe permitir a los usuarios la consulta de todos l
 * Requisito 1: La aplicación deberá permitir Gestionar usuarios. (CRU. Borrado NO => Dado de Baja).
 * Requisito 2: La aplicación deberá permitir gestionar los Ítems del catálogo (CRU, Borrado no => No disponible). Incluir importación y búsquedas según se detalle en los CUs correspondientes. 
 * Requisito 3: Gestión de ventas (CR. Actualización y Borrado NO). Se realizarán estadísticas sobre las ventas según se detalle en los CUs.
-* Solicitar pedido
-* Pagar un producto
-* Añadir, modificar y borrar productos del carrito
-* Tramitar factura
-* Añadir, modificar, eliminar y consultar stock de la BBDD
-* Identificar usuarios
-* Buscar productos por características o nombre
 
 #### Actores
 * Usuario
