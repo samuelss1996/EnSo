@@ -107,6 +107,11 @@ En definitiva, la aplicacion debe permitir a los usuarios la consulta de todos l
 * Borrar uno o varios productos del carrito
 * Buscar productos por características
 * Cerrar sesión
+* Obtener valores de ventas en bruto de la última semana, mes  y año
+* Obtener número medio de ventas al día en el último mes y ventas por semana en el último año
+* Cálculo de histogramas de ventas diarias en el último mes y ventas semanales en el último año
+* Cálculo de porcentajes de ventas diarias sobre el total del mes y ventas semanales sobre el total del año
+* Importar todos los usuarios, ítems y ventas dado un archivo CSV, o solo aquellos cuya fecha de de alta, disponibilidad o venta sean posteriores a una fecha determinada
 
 ### Requisitos no funcionales
 	Identificador: Requisito RF1

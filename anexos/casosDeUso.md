@@ -81,3 +81,48 @@
 |**Precondición**| - Estar correctamente identificado en la aplicación (sesión iniciada). |
 |**Secuencia normal**| **1.** El actor *Usuario (ACT-0001)* inicia el cierre de sesión. <br> **2.** El sistema destruye todos los objetos temporales (como puede ser el carrito) y guarda los datos persistentes que proceda. <br> **3.** Se confirma al usuario que el cierre de sesión ha sido satisfactorio. |
 |**Postcondición**| - La sesión de usuario deja de existir. |
+
+#### A partir de aquí son los casos de uso impuestos por Rabenso, por lo que de momento no tienen ID
+
+|?| Obtener valores de ventas en bruto de la última semana, mes y año |
+|--|--|
+|**Descripción**| Usando el módulo estadístico, será posible obtener valores de ventas totales de ciertos períodos, en concreto: última semana, último mes y último año. |
+|**Precondición**| - Estar identificado en la aplicación como usuario con permisos para obtener datos del módulo estadístico. |
+|**Secuencia normal**| **1.** El actor *Usuario (ACT-001)* accede al panel del módulo estadístico. <br> **2.** El actor *Usuario (ACT-001)* selecciona la opción para obtener datos de ventas en bruto. <br> **3.** El actor *Usuario (ACT-001)* selecciona el período sobre la cual desea obtener las estadísticas (última semana, último mes o último año) y realiza la consulta. |
+|**Postcondición**| Se presentan al usuario los datos de ventas solicitados. |
+
+<br>
+
+|?| Obtener número medio de ventas al día en el último mes y ventas por semana en el último año |
+|--|--|
+|**Descripción**| Usando el módulo estadístico, será posible obtener el número medio de ventas para determinados períodos durante cierto tiempo. En concreto, se deben poder obtener el número promedio de ventas diarias durante el último mes, y el número promedio de ventas semanales durante el último año. |
+|**Precondición**| - Estar identificado en la aplicación como usuario con permisos para obtener datos del módulo estadístico. |
+|**Secuencia normal**| **1.** El actor *Usuario (ACT-001)* accede al panel del módulo estadístico. <br> **2.** El actor *Usuario (ACT-001)* selecciona la opción para obtener datos relativos a la media de ventas durante ciertos períodos. <br> **3.** El actor *Usuario (ACT-001)* selecciona el período sobre la cual desea obtener las estadísticas (ventas diarias durante el último mes o ventas semanales durante el último año) y realiza la consulta. |
+|**Postcondición**| Se presentan al usuario los datos de ventas solicitados. |
+
+<br>
+
+|?| Cálculo de histogramas de ventas diarias en el último mes y ventas semanales en el último año |
+|--|--|
+|**Descripción**| Usando el módulo estadístico, será posible obtener datos sobre el número de ventas durante cada uno de los días del último mes, o cada una de las semanas del último año. Estos datos deben ser representados en forma de histograma, para facilitar su visualización. |
+|**Precondición**| - Estar identificado en la aplicación como usuario con permisos para obtener datos del módulo estadístico. |
+|**Secuencia normal**| **1.** El actor *Usuario (ACT-001)* accede al panel del módulo estadístico. <br> **2.** El actor *Usuario (ACT-001)* selecciona la opción para obtener un histograma de ventas sobre un período de tiempo determinado. <br> **3.** El actor *Usuario (ACT-001)* selecciona el período sobre la cual desea obtener las estadísticas (ventas diarias durante el último mes o ventas semanales durante el último año) y realiza la consulta. |
+|**Postcondición**| Se presentan al usuario los datos de ventas solicitados. |
+
+<br>
+
+|?| Cálculo de porcentajes de ventas diarias sobre el total del mes y ventas semanales sobre el total del año |
+|--|--|
+|**Descripción**| Usando el módulo estadístico, será posible obtener obtener datos relativos al porcentaje de ventas de un día determinado con respecto al total del mes, o de una semana con respecto al total del año.  |
+|**Precondición**| - Estar identificado en la aplicación como usuario con permisos para obtener datos del módulo estadístico. |
+|**Secuencia normal**| **1.** El actor *Usuario (ACT-001)* accede al panel del módulo estadístico. <br> **2.** El actor *Usuario (ACT-001)* selecciona la opción para obtener el porcentaje de ventas de un período de tiempo determinado, con respecto a otro período de tiempo superior. <br> **3.** El actor *Usuario (ACT-001)* selecciona el período sobre la cual desea obtener las estadísticas (ventas diarias sobre el total del mes o ventas semanales sobre el total del año) y realiza la consulta. |
+|**Postcondición**| Se presentan al usuario los datos de ventas solicitados. |
+
+<br>
+
+|?| Importar todos los usuarios, ítems y ventas dado un archivo CSV, o solo aquellos cuya fecha de de alta, disponibilidad o venta sean posteriores a una fecha determinada |
+|--|--|
+|**Descripción**| Usando el módulo de importación, será posible importar los datos de usuarios, ítems y productos, de forma que queden guardados de forma persistente en la base de datos. Estos datos estarán contenido en un archivo con extensión *CSV*, cuyo formato está especificado en el *Anexo 1* de este mismo documento. No solo se podrán importar todos los datos contenidos en el fichero, sino que se podrá especificar que se importen solo aquellos cuya fecha de alta, disponibilidad o venta sean posteriores a una fecha determinada.  |
+|**Precondición**| - Estar identificado en la aplicación como usuario con permisos para usar el módulo de importación. |
+|**Secuencia normal**| **1.** El actor *Usuario (ACT-001)* accede al panel del módulo de importación. <br> **2.** El actor *Usuario (ACT-001)* selecciona el fichero del cual desea importar los datos. <br> **3.** Opcionalmente, el actor *Usuario (ACT-001)* selecciona que solo desea importar los datos a partir de una fecha determinada, y especifica dicha fecha. |
+|**Postcondición**| Se guarda de manera persistente en la base de datos el contenido seleccionado del fichero *CSV* |
