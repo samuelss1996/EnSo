@@ -36,6 +36,7 @@ En definitiva, la aplicacion debe permitir a los usuarios la consulta de todos l
 ### Descripción del alcance del INCREMENTO 1
 
 ### Diagrama de contexto
+	Hecho
 
 ### Objetivo
 
