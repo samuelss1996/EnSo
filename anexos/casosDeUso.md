@@ -113,7 +113,7 @@
 
 |?| Cálculo de porcentajes de ventas diarias sobre el total del mes y ventas semanales sobre el total del año |
 |--|--|
-|**Descripción**| Usando el módulo estadístico, será posible obtener obtener datos relativos al porcentaje de ventas de un día determinado con respecto al total del mes, o de una semana con respecto al total del año.  |
+|**Descripción**| Usando el módulo estadístico, será posible obtener obtener datos relativos al porcentaje de ventas de todos los días del mes con respecto al total del mes, o de todas las semanas del año con respecto al total del año.  |
 |**Precondición**| - Estar identificado en la aplicación como usuario con permisos para obtener datos del módulo estadístico. |
 |**Secuencia normal**| **1.** El actor *Usuario (ACT-001)* accede al panel del módulo estadístico. <br> **2.** El actor *Usuario (ACT-001)* selecciona la opción para obtener el porcentaje de ventas de un período de tiempo determinado, con respecto a otro período de tiempo superior. <br> **3.** El actor *Usuario (ACT-001)* selecciona el período sobre la cual desea obtener las estadísticas (ventas diarias sobre el total del mes o ventas semanales sobre el total del año) y realiza la consulta. |
 |**Postcondición**| Se presentan al usuario los datos de ventas solicitados. |
