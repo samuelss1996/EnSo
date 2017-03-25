@@ -32,6 +32,13 @@ En definitiva, la aplicacion debe permitir a los usuarios la consulta de todos l
 # Análisis. INCREMENTO 1
 
 ## Descripción general
+Generar toda la documentación relativa al análisis y diseño del software que se busca construir. Esta documentación tiene por contenidos los requisitos exigidos, el diseño a realizar y la planificación que se llevó a cabo para recopilar la información citada. 
+
+En el análisis se incluyen tanto los requisitos de información como los funcionales y no funcionales, identificándolos y especificándolos según corresponda. También en el análisis se ha incluido la matriz de trazabilidad (RQ-CU).
+
+En cuanto al diseño, se llevó a cabo un modelo Entidad-Relación además de un diagrama de clases y varios diagramas de secuencia para mejorar la comprensión del desarollo de cada funcionalidad o caso de uso. 
+
+Finalmente, para la planificación de realizó un diagrama Gantt y un EDT. Ambos diagramas permiten observar la descomposición del trabajo a realizar junto con la gestión del tiempo y la asignación de labores dentro del equipo.
 
 ### Descripción del alcance del INCREMENTO 1
 
@@ -70,7 +77,6 @@ En definitiva, la aplicacion debe permitir a los usuarios la consulta de todos l
 ## Requisitos
 
 ### Requisitos de información
-	Este apartado debe incluir sólo las entidades necesarias para abordar este incremento y ser consistente con el modelo entidad-relación que se aporte en el diseño.
     
 * Usuarios
 * Facturas
@@ -83,9 +89,21 @@ En definitiva, la aplicacion debe permitir a los usuarios la consulta de todos l
 ### Requisitos funcionales
 
 #### Requisitos del cliente
-* Requisito 1: La aplicación deberá permitir Gestionar usuarios. (CRU. Borrado NO => Dado de Baja).
-* Requisito 2: La aplicación deberá permitir gestionar los Ítems del catálogo (CRU, Borrado no => No disponible). Incluir importación y búsquedas según se detalle en los CUs correspondientes. 
-* Requisito 3: Gestión de ventas (CR. Actualización y Borrado NO). Se realizarán estadísticas sobre las ventas según se detalle en los CUs.
+* Requisito RF1 
+	* Título: Gestión de usuarios 
+	* Descripción: La aplicación deberá permitir Gestionar usuarios. (CRU. Borrado NO => Dado de Baja).
+	* Importancia: vital.
+	* Criterio de validación: se considera que el requisito se cumple si permite crear nuevos usuarios, actualizarlos y leer sus datos además de darlos de baja (no borrarlos).
+* Requisito RF2 
+	* Título: Gestionar Ítems 
+	* Descripción: La aplicación deberá permitir gestionar los Ítems del catálogo (CRU, Borrado no => No disponible). Incluir importación y búsquedas según se detalle en los CUs correspondientes. 
+	* Importancia: vital.
+	* Criterio de validación: se considera que el requisito se cumple si permite crear nuevos Ítems en el catálogo, actualizarlos y leer sus datos.
+* Requisito RF3: 
+	* Título: Gestión de ventas 
+	* Descripción: (CR. Actualización y Borrado NO). Se realizarán estadísticas sobre las ventas según se detalle en los CUs.
+	* Importancia: vital.
+	* Criterio de validación: se considera que el requisito se cumple si las estadísticas sobre ventas poseen correlación con los datos reales de ventas.
 
 #### Actores
 * Usuario
