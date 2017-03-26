@@ -131,7 +131,7 @@ Finalmente, para la planificación de realizó un diagrama Gantt y un EDT. Ambos
 	* Autores:
 	* Fuentes: 
 	* Dependencias:
-		* [RF-002] Gestionar Ítems
+		* [RF-002] Gestionar Ítems, [RF-0003] Gestión de ventas
 	*  Descripción: El sistema deberá almacenar la información correspondiente a los productos disponibles en la tienda. En concreto:
 	*  Datos específicos:
 		* Nombre
