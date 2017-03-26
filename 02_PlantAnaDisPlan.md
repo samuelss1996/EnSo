@@ -155,8 +155,8 @@ Finalmente, para la planificación de realizó un diagrama Gantt y un EDT. Ambos
 	* Criterio de validación: se considera que el requisito se cumple si las estadísticas sobre ventas poseen correlación con los datos reales de ventas.
 
 #### Actores
-* Usuario
-* Administrador
+* ACT-001 Usuario: Este actor representa a cualquier usuario de la aplicación. 
+* ACT-002 Administrador: Este actor representa a todo aquel personal que interactúa con el sistema para realizar labores de mantenimiento, como pueden ser actualización manual de stock y precios, etc. 
 #### Casos de uso
 * Solicitar un pedido
 * Tramitar factura
