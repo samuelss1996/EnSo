@@ -113,16 +113,16 @@
 
 |?| Cálculo de porcentajes de ventas diarias sobre el total del mes y ventas semanales sobre el total del año |
 |--|--|
-|**Descripción**| Usando el módulo estadístico, será posible obtener obtener datos relativos al porcentaje de ventas de un día determinado con respecto al total del mes, o de una semana con respecto al total del año.  |
+|**Descripción**| Usando el módulo estadístico, será posible obtener obtener datos relativos al porcentaje de ventas de todos los días del mes con respecto al total del mes, o de todas las semanas del año con respecto al total del año.  |
 |**Precondición**| - Estar identificado en la aplicación como usuario con permisos para obtener datos del módulo estadístico. |
 |**Secuencia normal**| **1.** El actor *Usuario (ACT-001)* accede al panel del módulo estadístico. <br> **2.** El actor *Usuario (ACT-001)* selecciona la opción para obtener el porcentaje de ventas de un período de tiempo determinado, con respecto a otro período de tiempo superior. <br> **3.** El actor *Usuario (ACT-001)* selecciona el período sobre la cual desea obtener las estadísticas (ventas diarias sobre el total del mes o ventas semanales sobre el total del año) y realiza la consulta. |
 |**Postcondición**| Se presentan al usuario los datos de ventas solicitados. |
 
 <br>
 
-|?| Importar todos los usuarios, ítems y ventas dado un archivo CSV, o solo aquellos cuya fecha de de alta, disponibilidad o venta sean posteriores a una fecha determinada |
+|?| Importar todos los usuarios, ítems o ventas dado un archivo CSV, o solo aquellos cuya fecha de de alta, disponibilidad o venta sean posteriores a una fecha determinada |
 |--|--|
-|**Descripción**| Usando el módulo de importación, será posible importar los datos de usuarios, ítems y productos, de forma que queden guardados de forma persistente en la base de datos. Estos datos estarán contenido en un archivo con extensión *CSV*, cuyo formato está especificado en el *Anexo 1* de este mismo documento. No solo se podrán importar todos los datos contenidos en el fichero, sino que se podrá especificar que se importen solo aquellos cuya fecha de alta, disponibilidad o venta sean posteriores a una fecha determinada.  |
+|**Descripción**| Usando el módulo de importación, será posible importar los datos de usuarios, ítems o productos, de forma que queden guardados de forma persistente en la base de datos. Será posible seleccionar si se desean importar solo los usuarios, solo los ítems, solo los productos, todos los elementos, o cualquier combinación de ellos. Estos datos estarán contenidos en un archivo con extensión *CSV*, cuyo formato está especificado en el *Anexo 1* de este mismo documento. No solo se podrán importar todos los datos contenidos en el fichero, sino que se podrá especificar que se importen solo aquellos cuya fecha de alta, disponibilidad o venta sean posteriores a una fecha determinada.  |
 |**Precondición**| - Estar identificado en la aplicación como usuario con permisos para usar el módulo de importación. |
 |**Secuencia normal**| **1.** El actor *Usuario (ACT-001)* accede al panel del módulo de importación. <br> **2.** El actor *Usuario (ACT-001)* selecciona el fichero del cual desea importar los datos. <br> **3.** Opcionalmente, el actor *Usuario (ACT-001)* selecciona que solo desea importar los datos a partir de una fecha determinada, y especifica dicha fecha. |
 |**Postcondición**| Se guarda de manera persistente en la base de datos el contenido seleccionado del fichero *CSV* |
