@@ -105,10 +105,9 @@ Finalmente, para la planificación de realizó un diagrama Gantt y un EDT. Ambos
 	*  Datos específicos:
 		* Nombre
 		* Id
-		* Descripción
+		* Disponibilidad
 		* Precio
 		* Unidades disponibles
-		* Proveedor (identificador del proveedor, que puede ser externo o la propia USC).
 	*  Criterio de validación: los datos relativos a los productos deben ser consistentes con el mundo real.
 
 * RI004 - Líneas de compra
@@ -118,7 +117,7 @@ Finalmente, para la planificación de realizó un diagrama Gantt y un EDT. Ambos
 	*  Datos específicos:
 		* Número de línea
 		* Precio
-		* Cantiada
+		* Cantidad
 		* Id de la factura
 	*  Criterio de validación: dada una línea de compra será posible saber a qué factura pertenece y qué productos están relacionados con ella.
 	
