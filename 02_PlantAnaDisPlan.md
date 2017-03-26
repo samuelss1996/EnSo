@@ -78,7 +78,7 @@ Finalmente, para la planificación de realizó un diagrama Gantt y un EDT. Ambos
 
 ### Requisitos de información
     
-* Usuarios
+* RI001 - Usuarios
 	* Versión: 1.0 (19/12/2016)
 	* Autores: ?
 	* Fuentes: ?
@@ -101,7 +101,7 @@ Finalmente, para la planificación de realizó un diagrama Gantt y un EDT. Ambos
 	*  Estado: PD
 	*  Estabilidad: PD
 	*  Comentarios: Criterio de validación: tanto el sistema de identificación de usuarios como todos los procesos de gestión de información relacionados con ellos deben funcionar de manera apropiada para el correcto funcionamiento de la aplicación.
-* Facturas
+* RI002 - Facturas
 	* Versión: 1.0 (19/12/2016)
 	* Autores: ?
 	* Fuentes: ?
@@ -126,7 +126,7 @@ Finalmente, para la planificación de realizó un diagrama Gantt y un EDT. Ambos
 	*  Estado: PD
 	*  Estabilidad: PD
 	*  Comentarios: Criterio de validación: la factura debe poseer los datos correctos en relación a la factura con la que esté vinculada. Es decir, deberá mostrar la correcta suma de precios de los productos comprados, la fecha de compra correcta, el nombre de los productos, etc.
-* Productos
+* RI003 - Productos
 	* Versión: 1.0 (19/12/2016)
 	* Autores:
 	* Fuentes: 
