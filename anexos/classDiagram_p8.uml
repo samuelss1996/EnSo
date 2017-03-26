@@ -3077,19 +3077,19 @@ definidas en la interfaz IImport
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="Operations[4]" type="UMLOperation" guid="ikS6Wu6fcE+28ASzCHMNnAAA">
-<XPD:ATTR name="Name" type="string">queryAvailability</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">queryStock</XPD:ATTR>
 <XPD:REF name="Owner">rIMJDa4QlU6wYKFXTcrimgAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">3</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="iOXR55DcMEKFwPRToDYKzQAA">
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="2tCha9K4VECgD3fgJbXu2gAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">boolean</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">ikS6Wu6fcE+28ASzCHMNnAAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="HVjUiw8vQE6G7K1XxUL/YwAA">
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="ChO9AXqVUEO6BXX7U7UAWwAA">
 <XPD:ATTR name="Name" type="string">Product product</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">ikS6Wu6fcE+28ASzCHMNnAAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="kebgNDvoDkCO6kf5czhhwAAA">
+<XPD:OBJ name="Parameters[2]" type="UMLParameter" guid="TfM7RDVt60eTvMQ/ZUBy1QAA">
 <XPD:ATTR name="Name" type="string">int quantity</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">ikS6Wu6fcE+28ASzCHMNnAAA</XPD:REF>
 </XPD:OBJ>
@@ -5103,7 +5103,7 @@ definidas en la interfaz IImport
 <XPD:ATTR name="Height" type="integer">152</XPD:ATTR>
 <XPD:REF name="Model">jI9+U/uFw06Lz0d/qqoOcAAA</XPD:REF>
 <XPD:OBJ name="NameLabel" type="LabelView" guid="klpDY8g4pUeVKRPQwul3qQAA">
-<XPD:ATTR name="Text" type="string">for all elements in SellLines</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">for all elements in sellLines</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="FrameTypeLabel" type="LabelView" guid="Kh8Fj1E/EESvl2uMB89+yQAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
@@ -5433,7 +5433,7 @@ definidas en la interfaz IImport
 <XPD:OBJ name="NameLabel" type="EdgeLabelView" guid="jPJXkhSC+0mJjdW4QF3JgQAA">
 <XPD:ATTR name="Alpha" type="real">1,5707963267949</XPD:ATTR>
 <XPD:ATTR name="Distance" type="real">10</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">5 : queryAvailability()</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">5 : queryStock()</XPD:ATTR>
 <XPD:REF name="Model">KjUjX6JCd06Uazv/Sf2/uwAA</XPD:REF>
 <XPD:REF name="HostEdge">OQciDa/Q3UK1f1m26u4B0QAA</XPD:REF>
 </XPD:OBJ>
@@ -5631,14 +5631,9 @@ definidas en la interfaz IImport
 <XPD:REF name="Views[2]">HusaOjAMkUqE5ZgWek/HHAAA</XPD:REF>
 <XPD:REF name="Views[3]">4phq/3e22E2qZPI+BGvhigAA</XPD:REF>
 </XPD:OBJ>
-<XPD:ATTR name="#OwnedFrames" type="integer">2</XPD:ATTR>
-<XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="cpam2K/sD02v9sCDZ9ABCAAA">
+<XPD:ATTR name="#OwnedFrames" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedFrames[0]" type="UMLFrame" guid="jI9+U/uFw06Lz0d/qqoOcAAA">
 <XPD:ATTR name="Name" type="string">for all elements in sellLines</XPD:ATTR>
-<XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
-<XPD:REF name="InteractionInstanceSet">BXFKxIJsakeVjgamRE3VvAAA</XPD:REF>
-</XPD:OBJ>
-<XPD:OBJ name="OwnedFrames[1]" type="UMLFrame" guid="jI9+U/uFw06Lz0d/qqoOcAAA">
-<XPD:ATTR name="Name" type="string">for all elements in SellLines</XPD:ATTR>
 <XPD:ATTR name="FrameKind" type="string">sd</XPD:ATTR>
 <XPD:REF name="InteractionInstanceSet">BXFKxIJsakeVjgamRE3VvAAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
