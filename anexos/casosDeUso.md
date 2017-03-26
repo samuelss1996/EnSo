@@ -28,7 +28,7 @@
 
 <br>
 
-| UC-0005| Pagar producto |
+| UC-0004 | Pagar producto |
 |--|--|
 |**Descripción**| Gestiona el pago de los productos que un usuario haya añadido previamente a su carrito de compra.|
 |**Precondición**| - Estar correctamente identificado en la aplicación (sesión iniciada). <br> - El usuario debe tener al menos un producto en su carrido.|
@@ -38,7 +38,7 @@
 
 <br>
 
-|UC-0006| Modificar carrito |
+|UC-0005| Modificar carrito |
 |--|--|
 |**Descripción**| Gestiona la modificación de los productos del carrito antes de proceder a su compra. |
 |**Precondición**| - Estar correctamente identificado en la aplicación (sesión iniciada). <br> - El usuario debe tener al menos un producto en su carrito. |
@@ -48,7 +48,7 @@
 
 <br>
 
-|UC-0010| Añadir uno o varios productos al carrito |
+|UC-0006| Añadir uno o varios productos al carrito |
 |--|--|
 |**Descripción**| Gestiona las acciones a realizar cuando se añade un producto al carrito. |
 |**Precondición**| - Estar correctamente identificado en la aplicación (sesión iniciada). |
@@ -58,7 +58,7 @@
 
 <br>
 
-|UC-0011| Borrar uno o varios productos del carrito |
+|UC-0007| Borrar uno o varios productos del carrito |
 |--|--|
 |**Descripción**| Gestiona las acciones a realizar cuando se elimina un producto del carrito. |
 |**Precondición**| - Estar correctamente identificado en la aplicación (sesión iniciada). <br> - Existencia de elementos en el carrito. |
@@ -66,25 +66,16 @@
 
 <br>
 
-|UC-0012| Buscar productos por características |
+|UC-0008| Buscar productos por características |
 |--|--|
 |**Descripción**| Gestiona las acciones a realizar cuando el usuario realice una consulta sobre los productos en stock en base a una serie de características seleccionadas. |
 |**Precondición**| |
 |**Secuencia normal**| **1.** El actor *Usuario (ACT-0001)* realiza una consulta de productos en función de unos campos predefinidos. <br> **2.** El sistema procesa la petición y devuelve una lista de productos que se ajusten a los solicitados. |
 |**Postcondición**| - El usuario recibe una lista de productos que existen en stock en función del filtro seleccionado.
 
-<br>
-
-|UC-0016| Cerrar sesión |
-|--|--|
-|**Descripción**| El usuarios decide terminar la sesión que iniciada al introducir sus credenciales. |
-|**Precondición**| - Estar correctamente identificado en la aplicación (sesión iniciada). |
-|**Secuencia normal**| **1.** El actor *Usuario (ACT-0001)* inicia el cierre de sesión. <br> **2.** El sistema destruye todos los objetos temporales (como puede ser el carrito) y guarda los datos persistentes que proceda. <br> **3.** Se confirma al usuario que el cierre de sesión ha sido satisfactorio. |
-|**Postcondición**| - La sesión de usuario deja de existir. |
-
 #### A partir de aquí son los casos de uso impuestos por Rabenso, por lo que de momento no tienen ID
 
-|?| Obtener valores de ventas en bruto de la última semana, mes y año |
+|UC-0009| Obtener valores de ventas en bruto de la última semana, mes y año |
 |--|--|
 |**Descripción**| Usando el módulo estadístico, será posible obtener valores de ventas totales de ciertos períodos, en concreto: última semana, último mes y último año. |
 |**Precondición**| - Estar identificado en la aplicación como usuario con permisos para obtener datos del módulo estadístico. |
@@ -93,7 +84,7 @@
 
 <br>
 
-|?| Obtener número medio de ventas al día en el último mes y ventas por semana en el último año |
+|UC-0010| Obtener número medio de ventas al día en el último mes y ventas por semana en el último año |
 |--|--|
 |**Descripción**| Usando el módulo estadístico, será posible obtener el número medio de ventas para determinados períodos durante cierto tiempo. En concreto, se deben poder obtener el número promedio de ventas diarias durante el último mes, y el número promedio de ventas semanales durante el último año. |
 |**Precondición**| - Estar identificado en la aplicación como usuario con permisos para obtener datos del módulo estadístico. |
@@ -102,7 +93,7 @@
 
 <br>
 
-|?| Cálculo de histogramas de ventas diarias en el último mes y ventas semanales en el último año |
+|UC-0011| Cálculo de histogramas de ventas diarias en el último mes y ventas semanales en el último año |
 |--|--|
 |**Descripción**| Usando el módulo estadístico, será posible obtener datos sobre el número de ventas durante cada uno de los días del último mes, o cada una de las semanas del último año. Estos datos deben ser representados en forma de histograma, para facilitar su visualización. |
 |**Precondición**| - Estar identificado en la aplicación como usuario con permisos para obtener datos del módulo estadístico. |
@@ -111,7 +102,7 @@
 
 <br>
 
-|?| Cálculo de porcentajes de ventas diarias sobre el total del mes y ventas semanales sobre el total del año |
+|UC-0012| Cálculo de porcentajes de ventas diarias sobre el total del mes y ventas semanales sobre el total del año |
 |--|--|
 |**Descripción**| Usando el módulo estadístico, será posible obtener obtener datos relativos al porcentaje de ventas de todos los días del mes con respecto al total del mes, o de todas las semanas del año con respecto al total del año.  |
 |**Precondición**| - Estar identificado en la aplicación como usuario con permisos para obtener datos del módulo estadístico. |
@@ -120,7 +111,7 @@
 
 <br>
 
-|?| Importar todos los usuarios, ítems o ventas dado un archivo CSV, o solo aquellos cuya fecha de de alta, disponibilidad o venta sean posteriores a una fecha determinada |
+|UC-0013| Importar todos los usuarios, ítems o ventas dado un archivo CSV, o solo aquellos cuya fecha de de alta, disponibilidad o venta sean posteriores a una fecha determinada |
 |--|--|
 |**Descripción**| Usando el módulo de importación, será posible importar los datos de usuarios, ítems o productos, de forma que queden guardados de forma persistente en la base de datos. Será posible seleccionar si se desean importar solo los usuarios, solo los ítems, solo los productos, todos los elementos, o cualquier combinación de ellos. Estos datos estarán contenidos en un archivo con extensión *CSV*, cuyo formato está especificado en el *Anexo 1* de este mismo documento. No solo se podrán importar todos los datos contenidos en el fichero, sino que se podrá especificar que se importen solo aquellos cuya fecha de alta, disponibilidad o venta sean posteriores a una fecha determinada.  |
 |**Precondición**| - Estar identificado en la aplicación como usuario con permisos para usar el módulo de importación. |
