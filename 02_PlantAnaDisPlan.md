@@ -238,14 +238,16 @@ Finalmente, para la planificación de realizó un diagrama Gantt y un EDT. Ambos
 ## Matriz de trazabilidad
 
 # Diseño del INCREMENTO 1
+	Hecho
 
 # Plan del proyecto. INCREMENTO 1
 
 ## EDT
-<img src="anexos/diagramaEDT.png" />
-
+	Hecho
 ## Gantt
+	Hecho
 
 ## Restricciones del proyecto
+	Hecho
 
 # Anexo 1
