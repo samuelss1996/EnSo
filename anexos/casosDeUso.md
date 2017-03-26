@@ -1,8 +1,8 @@
 | UC-0001 | - Solicitar un pedido |
 |--|--|
-|**Descripción**| Tras aprobar una compra se debe asegurar la coherencia de los datos con la base de datos así como generar los documentos pertinentes y notificar adecuadamente a los interesados. |
+|**Descripción**| Tras aprobar una compra se debe asegurar la coherencia de los datos con la base de datos así como generar los documentos pertinentes. |
 |**Precondición**| - Tener una lista de productos en el carrito.|
-|**Secuencia normal**| **1.** El sistema registra en la base de datos la información del/los solicitantes junto a los productos pedidos cuando el usuario aprueba la lista y formaliza la solicitud. Se marca como pendiente de aprobación. <br> **2.** El actor *Director (ACT-0004)* es notificado de una nueva solicitud y accede al registro creado anteriormente para poder aprobarlo. |
+|**Secuencia normal**| **1.** El sistema registra en la base de datos la información del/los solicitantes junto a los productos perdidos cuando el usuario aprueba la lista y formaliza la solicitud. Se marca como pendiente de aprobación. |
 |**Postcondición**|  - La solicitud es registrada en el sistema. |
 |**Excepciones**| **1.** Si el usuario solicitante es el director, el sistema marca el registro de solicitud automáticamente como aprobado, a continuación este caso de uso continúa. |
 
