@@ -79,57 +79,26 @@ Finalmente, para la planificación de realizó un diagrama Gantt y un EDT. Ambos
 ### Requisitos de información
     
 * RI001 - Usuarios
-	* Versión: 1.0 (19/12/2016)
-	* Autores: ?
-	* Fuentes: ?
 	* Dependencias:
 		* [RF-001]: Gestión de usuarios
 	*  Descripción: El sistema deberá almacenar la información correspondiente a los propios usuarios que usarán la aplicación. En concreto:
 	*  Datos específicos:
 		* Nombre
-		* Identificación
-		* Rol
-		* Dirección (se guarda por primera vez cuando se realiza un pedido)  
-	*  Tiempo de vida: 
-		* Medio: PD
-		* Máximo: PD  
-	*  Ocurrencias simultáneas:
-		* Medio: PD
-		* Máximo: PD
-	*  Importancia: vital
-	*  Urgencia:PD
-	*  Estado: PD
-	*  Estabilidad: PD
-	*  Comentarios: Criterio de validación: tanto el sistema de identificación de usuarios como todos los procesos de gestión de información relacionados con ellos deben funcionar de manera apropiada para el correcto funcionamiento de la aplicación.
+		* Id
+		* Tipo de usuario
+		* Correo electrónico
+	* Criterio de validación: tanto el sistema de identificación de usuarios como todos los procesos de gestión de información relacionados con ellos deben funcionar de manera apropiada para el correcto funcionamiento de la aplicación.
 * RI002 - Facturas
-	* Versión: 1.0 (19/12/2016)
-	* Autores: ?
-	* Fuentes: ?
 	* Dependencias:
 		* [RF-0003] Gestión de ventas
 	*  Descripción: El sistema deberá almacenar la información correspondiente a todas las compras que ya han sido tramitadas, gestionadas y finalizadas. En concreto:
 	*  Datos específicos:
-		* Id productos
-		* Cantidad de productos
-		* Responsable de compra
-		* Precio por producto
-		* Cuenta de cargo
-		* Solicitus de compra  
-	*  Tiempo de vida: 
-		* Medio: PD
-		* Máximo: PD  
-	*  Ocurrencias simultáneas:
-		*  Medio: PD
-		*  Máximo: PD
-	*  Importancia: PD
-	*  Urgencia: PD
-	*  Estado: PD
-	*  Estabilidad: PD
-	*  Comentarios: Criterio de validación: la factura debe poseer los datos correctos en relación a la factura con la que esté vinculada. Es decir, deberá mostrar la correcta suma de precios de los productos comprados, la fecha de compra correcta, el nombre de los productos, etc.
+		* Id
+		* precio total
+		* fecha
+		* lineas de compra
+	*  Criterio de validación: la factura debe poseer los datos correctos en relación a la factura con la que esté vinculada. Es decir, deberá mostrar la correcta suma de precios de los productos comprados, la fecha de compra correcta, el nombre de los productos, etc.
 * RI003 - Productos
-	* Versión: 1.0 (19/12/2016)
-	* Autores:
-	* Fuentes: 
 	* Dependencias:
 		* [RF-002] Gestionar Ítems, [RF-0003] Gestión de ventas
 	*  Descripción: El sistema deberá almacenar la información correspondiente a los productos disponibles en la tienda. En concreto:
@@ -140,72 +109,49 @@ Finalmente, para la planificación de realizó un diagrama Gantt y un EDT. Ambos
 		* Precio
 		* Unidades disponibles
 		* Proveedor (identificador del proveedor, que puede ser externo o la propia USC).
-	*  Tiempo de vida:
-		* Medio: PD
-		* Máximo: PD  
-	*  Ocurrencias simultáneas:
-		* Medio: PD
-		* Máximo: PD  
-	*  Importancia: vital
-	*  Urgencia: PD
-	*  Estado: PD
-	*  Estabilidad: PD
-	*  Comentarios: Criterio de validación: los datos relativos a los productos deben ser consistentes con el mundo real.
+	*  Criterio de validación: los datos relativos a los productos deben ser consistentes con el mundo real.
+
+* RI004 - Líneas de compra
+	* Dependencias:
+		* [RF-002] Gestionar Ítems, [RF-0003] Gestión de ventas
+	*  Descripción: El sistema deberá almacenar la información correspondiente a los productos que estén en la factura, junto con la cantidad que ha sido solicitada. En concreto:
+	*  Datos específicos:
+		* Número de línea
+		* Precio
+		* Cantiada
+		* Id de la factura
+	*  Criterio de validación: dada una línea de compra será posible saber a qué factura pertenece y qué productos están relacionados con ella.
 	
 * Reglas de negocio:
 	* Usuarios
-		* Versión: 1.0 (28/12/2016)
-		* Autores: ?
-		* Fuentes: ?
 		* Dependencias: 
 			* [RF-001] Gestión de usuarios
 		*  Descripción: la información almacenada por el sistema deberá satisfacer la siguiente restricción: los usuarios deben ser personas vinculadas a la USC para poder entrar al sistema.
-		*  Importancia: vital
-     	 *  Urgencia: PD
-		*  Estado: PD
-		*  Estabilidad: PD
-		*  Comentarios: Ninguno.
 	 * Facturas
-		* Versión: 1.0 (28/12/2016)
-		* Autores: ?
-		* Fuentes: ?
 		* Dependencias: 
 			* [RF-003] Gestión de ventas
 		*  Descripción: la información almacenada por el sistema deber´´a satisfacer la siguiente restricción: los importes de los productos que aparecen en las facturas deben corresponderse con el precio de dichos productos en el momento de la compra.
-		*  Importancia: PD
-     	 *  Urgencia: PD
-		*  Estado: PD
-		*  Estabilidad: PD
-		*  Comentarios: Ninguno.
 	* Productos
-		* Versión: 1.0 (28/12/2016)
-		* Autores: ?
-		* Fuentes: ?
 		* Dependencias:
 			* [RF-002] Gestionar Ítems
 		*  Descripción: la información almacenada por el sistema deberá satisfacer la siguiente restricción: los productos deben tener un identificador único y el número de unidades disponibles debe coincidir con las unidades en stock.
-		*  Importancia: importante
-     	*  Urgencia: PD
-		*  Estado: PD
-		*  Estabilidad: PD
-		*  Comentarios: Ninguno.
 
 ### Requisitos funcionales
 
 #### Requisitos del cliente
 * RF-001 
 	* Título: Gestión de usuarios 
-	* Descripción: La aplicación deberá permitir Gestionar usuarios. (CRU. Borrado NO => Dado de Baja).
+	* Descripción: La aplicación deberá permitir gestionar usuarios. Esta gestión consistirá en la creación, consulta, actualización y dada de baja de los usuarios.
 	* Importancia: vital.
-	* Criterio de validación: se considera que el requisito se cumple si permite crear nuevos usuarios, actualizarlos y leer sus datos además de darlos de baja (no borrarlos).
+	* Criterio de validación: se considera que el requisito se cumple si permite crear nuevos usuarios, actualizarlos y leer sus datos además de darlos de baja.
 * RF-002
-	* Título: Gestionar Ítems 
-	* Descripción: La aplicación deberá permitir gestionar los Ítems del catálogo (CRU, Borrado no => No disponible). Incluir importación y búsquedas según se detalle en los CUs correspondientes. 
+	* Título: Gestionar ítems 
+	* Descripción: La aplicación deberá permitir gestionar los ítems del catálogo. Esta gestión consiste en la creación, consulta, actualización de productos. Además, será necesario actualizar cuando sea necesario la disponibilidad de un producto. Será imprescindible poder importar información acerca de los ítems de un archivo csv.
 	* Importancia: vital.
 	* Criterio de validación: se considera que el requisito se cumple si permite crear nuevos Ítems en el catálogo, actualizarlos y leer sus datos.
 * RF-003
 	* Título: Gestión de ventas 
-	* Descripción: (CR. Actualización y Borrado NO). Se realizarán estadísticas sobre las ventas según se detalle en los CUs.
+	* Descripción: La aplicación deberá permitir que se creen y se consulten facturas de las ventas realizadas. Se deberá poder realizar estadísticas sobre las ventas.
 	* Importancia: vital.
 	* Criterio de validación: se considera que el requisito se cumple si las estadísticas sobre ventas poseen correlación con los datos reales de ventas.
 
@@ -234,6 +180,7 @@ Finalmente, para la planificación de realizó un diagrama Gantt y un EDT. Ambos
 	* Descripción: El sistema deberá enviar las notificaciones en el menor tiempo posible, para que el usuario no tenga dudas de que se realizó adecuadamente su compra. 
 	* Importancia: quedaría bien.
 	* Criterio de validación: Cronometrar el tiempo que tarda en llegar el correo de validación a la bandeja de entrada de un cliente después de realizar una compra en la aplicación. Este tiempo debe ser menor que 60 segundos.
+
 
 ## Matriz de trazabilidad
 

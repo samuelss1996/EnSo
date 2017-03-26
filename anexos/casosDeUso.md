@@ -31,7 +31,7 @@
 | UC-0004 | Pagar producto |
 |--|--|
 |**Descripción**| Gestiona el pago de los productos que un usuario haya añadido previamente a su carrito de compra.|
-|**Precondición**| - Estar correctamente identificado en la aplicación (sesión iniciada). <br> - El usuario debe tener al menos un producto en su carrido.|
+|**Precondición**| - Estar correctamente identificado en la aplicación (sesión iniciada). <br> - El usuario debe tener al menos un producto en su carrito.|
 |**Secuencia normal**| **1.** El actor *Usuario (ACT-0001)* selecciona la opción *Pagar producto* una vez ha quedado satisfecho con su carrito de compra. <br> **2.** El sistema muestra por pantalla una descripción de los productos que el usuario va a comprar, así como su precio. El precio se mostrará tanto desglosado producto a producto, como la suma total de todos ellos, que supondrá el gasto total por parte del usuario. <br> **3.** El actor *Usuario (ACT-0001)* accede a una pasarela de cobro seguro donde introduce sus datos de pago. <br> **4.** El sistema recibe la confirmación de cobro y el subsistema de BBDD actualiza los datos de stock, así como todos aquellos relacionados con la compra. <br> **5.** Se envía un correo electrónico de confirmación al usuario y se le muestra un resumen de la transacción. |
 | **Postcondición**| - El cliente adquiere el producto. <br> - La base de datos se modifica para actualizar el stock de productos y asignar la compra realizada al usuario. |
 |**Excepciones**| **4.** Si el cobro es imposible de determinar, el sistema muestra un mensaje de error y se devuelve al paso 2. |
