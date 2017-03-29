@@ -18,4 +18,6 @@ Teniendo en cuenta los productos que se van a generar durante la realización de
 
 ## Sistema de gestión de configuración.
 
+* **Git:** * Se ha decidido utilizar Git como sistema de gestión de configuración, puesto que al ser un proyecto estrechamente relacionado con la implementación de código, es altamente probable que sea necesario registrar cada cambio realizado. Esta herramienta permitirá realizar esta actividad de manera rápida y eficiente, además de permitir el acceso a la lista de cambios fácilmente.
+
 ## Proceso
