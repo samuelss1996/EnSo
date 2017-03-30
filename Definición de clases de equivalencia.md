@@ -8,14 +8,32 @@ Estamos aplicando reglas de partición o clases de equivalencia.
 		* R4: para cada método introducir una línea correcta y una incorrecta. Por ejemplo, en el método de importarUsuarios introducir U y I.
 	
 	* Análisis por campos
-		* R3: que una fecha no tenga el formato adecuado. 
-		* R4: introducir una correcta, una incorrecta y otra fuera de rango (ej.: *) en el primer campo (identificador de la tabla).
+		* R1: 
+		 	* Nombre apellidos y categoría: una clase con longitudes entre 1 y 255, otra con longitudes 0 y otra con longitudes > 255
+		 	* Descripción: una clase con longitud entre 1 y 1024, otra con 0 y otra con > 1024
+
+		* R3:
+			* Que una fecha no tenga el formato adecuado. 
+			* Que unidades, cantidad y precio unidad sean enteros
+			* Que unidades, cantidad y precio unidad sean positivos
+			* Identificador de usuario, item o venta existe/no existe
+			* Identificador de usuario, item o venta previamente leído/no previamente leído
+			* Venta referencia a ítem o usuario que no existe (booleano porque existe/no existe)
 	
 	* Análisis por método
 		* R3: que se introduzca el path o una línea diferente.
 
 	* Análisis por valores límite
-		* Archivo vacío
+		* A nivel de archivo:
+			* Archivo vacío
+			* Archivo con un número de registros tan elevado que cargarlo entero en memoria pete
+
+		* A nivel de campos:
+			* Nombre, apellidos, categoría: 0, 1, 255 y 256 caracteres
+			* Descripción: 0, 1, 1024 y 1025 caracteres
+
+	* Conjetura de errores
+		* Si hay varias lineas con un mismo vref, deben añadirse a la misma venta
 
 
 * InterfazDAO
