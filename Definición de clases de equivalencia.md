@@ -68,7 +68,6 @@ Estamos aplicando reglas de partición o clases de equivalencia.
 			* R3: ID válido de usuario e ID inválido.
 			* R3: ID de usuario existente e inexistente.
 	
-
 	* Análisis por valores límite
 		* Usuario sin historial de compras.
 
@@ -80,6 +79,8 @@ Estamos aplicando reglas de partición o clases de equivalencia.
 			* R1: Introducir un valor válido (>0) y dos inválidos (negativos y 0) ya que toma un número de días como entrada.			
 		* **getHistos** / **getPorcentajes**
 			* R4: Introducir cada uno de los modos correctos y uno incorrecto.
+	* Análisis por valores límite
+		*  Cálculos sobre fechas inexistentes (previas a la creación de la aplicación o que aun no han sucedido).
 
 * InterfazControlador
 
