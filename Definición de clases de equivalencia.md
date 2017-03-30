@@ -83,5 +83,60 @@ Estamos aplicando reglas de partición o clases de equivalencia.
 
 * InterfazControlador
 
-	Aplicando R5 se subdividen las siguientes clases:
-	* Análisis campos 
+	* Análisis por métodos
+		* **buscarProductos**
+			* R3: Introducir una cadena con el identificador de un producto existente y una de uno que no esté registrado pero que cumpla el formato especificado.
+			* R5: Los identificadores de productos son de la forma N-XXXXXX-000.
+				* R1: Cadena de letras con 5 y 7 caracteres (incorrecto) y una correcta. Clase equivalente para la cadena numérica.
+				* R3: Eliminar uno de los campos del identificador.
+				* R4: Que N sea {U,I,D} u otro caracter.
+			
+		* **insertarCompra**
+			*R3: la clase Compra cuenta únicamente con un atributo de fecha, se introducirá una compra con una fecha válida y una con una fecha inválida para el sistema de compras.
+
+		* **realizarPedido**
+			*R3: la clase Pedido cuenta únicamente con un atributo de estado, se introducirá una pedido con un estado válido y uno con una cadena vacía.
+			*R4: Marcar pedido como aceptado, rechazado o una cadena inválida.
+
+		* **aceptarPedido**
+			Este método es similar a realizarPedido, por lo que no se realizarán pruebas exhaustivas a menos que se encuentren fallos en las pruebas realizadas.
+		
+		* **isRegistred**
+				
+			* R3: Se introdudirá el identificador de un usuario registrado y un identificador de un usuario que no esté registrado en la base de datos.
+			*R5: A partir del identificar del usuario se podrán realizazr estas pruebas:
+				* R4: Se introducirá el id del usuario, un identificador válido pero de otro tipo de elemento como un producto o una venta y un identificador inválido.
+
+		* **logUsuario**
+			* R3: Se introdudirá el identificador de un usuario registrado y un identificador de un usuario que no esté registrado en la base de datos.
+			*R5: A partir del identificar del usuario se podrán realizazr estas pruebas:
+				* R4: Se introducirá el id del usuario, un identificador válido pero de otro tipo de elemento como un producto o una venta y un identificador inválido.
+
+		* **mostrarVentasBruto**
+			* R1: Introducir un valor válido (>0) y dos inválidos (negativos y 0). (A la espera de que Martín me confirme)
+
+		Los siguientes métodos cuentan con métodos análogos en otras interfaces y, por lo tanto, no se realizarán pruebas exhaustivas sobre ellos ya que se considera que estas han sido correctamente realizadas.
+
+		* **consultarHistorial**
+			Este método es similar a getHistorialUsuario.
+
+		* **añadirUsuario**
+			Este método es similar a insertUser.
+
+		* **modificarUsuario**
+			Este método es similar a modUser.
+
+		* **mostrarMedias**
+			Este método es similar a getMedias.
+
+		* **mostrarHistos**
+			Este método es similar a getHistos.
+
+		* **mostrarPorcentajes**
+			Este método es similar a getPorcentajes.
+		
+
+	* Análisis por valores limite
+		*Tienda sin items.
+		
+		
