@@ -42,7 +42,9 @@ Estamos aplicando reglas de partición o clases de equivalencia.
 			* R3: Id válido para la inserción y uno inválido.
 			* R3: Id existente y no existente para la modificación.
 
-		* **Validar pedido** Ni puta idea de lo que hace esto.
+		* **Validar pedido** *No se gestiona el usuario que hace la validación ni se marca qué pedido validar, pero ok.*
+			* R3: Cadena válida y cadena vacía.
+			* R4: Marcar pedido como aceptado, rechazado o una cadena inválida.
 
 		* **Historial usuario**
 			* R3: ID válido de usuario e ID inválido.
@@ -52,21 +54,14 @@ Estamos aplicando reglas de partición o clases de equivalencia.
 	* Análisis por valores límite
 		* Usuario sin historial de compras.
 
-			
-
-
 
 * InterfazEstadistica
 
-	Aplicando R5 se subdividen las siguientes clases:
 	* Análisis por métodos 
-		* R1: 
-			* Introducir un valor válido (>0) y dos inválidos (negativos y 0) ya que todas las entradas son int.			
-		* R2: no hay listas de tam variable, asique nada (creo)
-		* R3: introducir otro tipo de datos que no sean int.
-		* R4: la única varianza posible se completa con R3 introduciendo datos no esperados y viendo qué provocan (no introducir un int).
-
-		En este módulo tienen una errata en el segundo método: flaot en vez de float(?).
+		* **getValoresBrutos** / **getMedias**
+			* R1: Introducir un valor válido (>0) y dos inválidos (negativos y 0) ya que toma un número de días como entrada.			
+		* **getHistos** / **getPorcentajes**
+			* R4: Introducir cada uno de los modos correctos y uno incorrecto.
 
 * InterfazControlador
 
