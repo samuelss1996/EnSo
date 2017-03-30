@@ -23,7 +23,14 @@ Estamos aplicando reglas de partición o clases de equivalencia.
 * InterfazEstadistica
 
 	Aplicando R5 se subdividen las siguientes clases:
-	* Análisis campos 
+	* Análisis por métodos 
+		* R1: 
+			* Introducir un valor válido (>0) y dos inválidos (negativos y 0) ya que todas las entradas son int.			
+		* R2: no hay listas de tam variable, asique nada (creo)
+		* R3: introducir otro tipo de datos que no sean int.
+		* R4: la única varianza posible se completa con R3 introduciendo datos no esperados y viendo qué provocan (no introducir un int).
+
+		En este módulo tienen una errata en el segundo método: flaot en vez de float(?).
 
 * InterfazControlador
 
