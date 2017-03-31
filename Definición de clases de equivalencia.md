@@ -75,12 +75,17 @@ Estamos aplicando reglas de partición o clases de equivalencia.
 * InterfazEstadistica
 
 	* Análisis por métodos 
-		* **getValoresBrutos** / **getMedias**
-			* R1: Introducir un valor válido (>0) y dos inválidos (negativos y 0) ya que toma un número de días como entrada.			
-		* **getHistos** / **getPorcentajes**
-			* R4: Introducir cada uno de los modos correctos y uno incorrecto.
+	
+    	Nota: todos los métodos reciben un modo, no como está especificado en el pdf.
+		* **getValoresBrutos** / **getMedias / getHistos** / **getPorcentajes**
+			* R1: Introducir un valor x válido (3>=x>0) y dos inválidos (negativo y  0)		
+			* R3: introducir un nº válido del conjunto (ej.: 2) y uno inválido (ej.:5).	
+			* R4: Introducir cada uno de los modos correctos y uno (x) incorrecto (x>3).
+		
 	* Análisis por valores límite
-		*  Cálculos sobre fechas inexistentes (previas a la creación de la aplicación o que aun no han sucedido).
+		*  Como la condición de entrada especifica un rango de valores [1,3] se probarán los valores en los extremos (1 y 3) y justo fuera del intervalo (0 y 4).
+	* Conjetura de errores
+		* Prestar atención al valor 0 tanto para la entrada como para la salida.
 
 * InterfazControlador
 
