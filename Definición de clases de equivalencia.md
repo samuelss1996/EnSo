@@ -111,8 +111,7 @@ Estamos aplicando reglas de partición o clases de equivalencia.
 			*R5: A partir del identificar del usuario se podrán realizazr estas pruebas:
 				* R4: Se introducirá el id del usuario, un identificador válido pero de otro tipo de elemento como un producto o una venta y un identificador inválido.
 
-		* **mostrarVentasBruto**
-			* R1: Introducir un valor válido (>0) y dos inválidos (negativos y 0). (A la espera de que Martín me confirme)
+			
 
 		Los siguientes métodos cuentan con métodos análogos en otras interfaces y, por lo tanto, no se realizarán pruebas exhaustivas sobre ellos ya que se considera que estas han sido correctamente realizadas.
 
@@ -133,6 +132,9 @@ Estamos aplicando reglas de partición o clases de equivalencia.
 
 		* **mostrarPorcentajes**
 			Este método es similar a getPorcentajes.
+		
+		* **mostrarVentasBruto**
+			Este método es similar a getValoresBrutos.
 		
 
 	* Análisis por valores limite
