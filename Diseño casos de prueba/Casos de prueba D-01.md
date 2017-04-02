@@ -66,7 +66,7 @@ Se supone que la base de datos solo cuenta con el usuario "U-aaaaaa-000", nombre
 ## Definición
 |ID Usuario | nombre | apellidos | fecha_alta | tipo |Clases que valida|
 |--|--|--|--|--|--|
-|U-dddddd-111 | Manuel | Soutoullo | 10-10-2010 | alumno |12|
+|U-dddddd-111 | Manuel | Soutoullo | 10-10-2010 | alumno |13|
 ## Resultado esperado
 Se debe indicar que el usuario no existe y, por tanto, no se puede modificar.
 Como alternativa puede decidir insertar el nuevo usuario en la base.
