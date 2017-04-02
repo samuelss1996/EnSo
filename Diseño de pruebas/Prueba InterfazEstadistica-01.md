@@ -12,4 +12,6 @@ Dada una entrada no esperada en un método, ésta no puede provocar un comportam
 ## Resultado de aplicar las técnicas
 |Información|Tipo de dato|Regla|Clase válida|Clase no válida|
 |--|--|--|--|--|
-|getValoresBrutos / getMedias / getHistos / getPorcentajes|int|R4| {1} Nº en el rango [1,3] | {2} Nº fuera del rango [1,3] |
+|getValoresBrutos / getMedias / getHistos / getPorcentajes|int|R4| {1} Modo 1 | {2} Nº fuera del rango [1,3] |
+||||{3} Modo 2 ||
+||||{4} Modo 3 ||
