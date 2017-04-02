@@ -5,9 +5,9 @@ Dado que realizando todos los casos de prueba teniendo en cuenta las distintas e
 ## Dependencias
 Valida la consulta de ventas totales diarias.
 ## Definición
-|Modo|
-|--|
-|-3|
+|Modo|Clases que valida | 
+|--|--|
+|-3| 2 |
 ## Resultado esperado
 El resultado será un mensaje de error indicando que se ha realizado la consulta de manera incorrecta (se ha introducido un modo erróneo). 
 
@@ -15,9 +15,9 @@ El resultado será un mensaje de error indicando que se ha realizado la consulta
 ## Dependencias
 Valida la consulta de la media de ventas semanales.
 ## Definición
-|Modo|
-|--|
-|2|
+|Modo|Clases que valida |
+|--|--|
+|2|3|
 ## Resultado esperado
 El resultado será la media de ventas semanales.
 
@@ -26,9 +26,9 @@ El resultado será la media de ventas semanales.
 ## Dependencias
 Valida la consulta del histograma de ventas mensuales
 ## Definición
-|Modo|
-|--|
-|3|
+|Modo|Clases que valida|
+|--|--|
+|3|4|
 ## Resultado esperado
 El resultado será el histograma de ventas mensuales.
 
@@ -36,8 +36,8 @@ El resultado será el histograma de ventas mensuales.
 ## Dependencias
 Valida la consulta de los porcentajes de las ventas diarias.
 ## Definición
-|Modo|
-|--|
-|1|
+|Modo|Clases que valida|
+|--|--|
+|1|1|
 ## Resultado esperado
 El resultado será el porcentaje correspondiente a las ventas diarias.
