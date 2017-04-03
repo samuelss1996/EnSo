@@ -5,6 +5,11 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -19,43 +24,151 @@
 
 \begin{document}
 	\maketitle
+	
+	\newpage
+	\begin{table}[htpb]
+		\centering
+		\begin{tabular}{|l|l|l|}
+			\hline
+			\rowcolor[HTML]{9B9B9B} 
+			\multicolumn{3}{|c|}{\cellcolor[HTML]{9B9B9B}{\color[HTML]{000000} \textbf{CONTROL DE VERSIONES}}} \\ \hline
+			\rowcolor[HTML]{C0C0C0} 
+			\textbf{Edición} & \textbf{Fecha} & \textbf{Descripción del cambio} \\ \hline
+			1.0 & 02/04/2017 & Diseño y casos de prueba de caja negra \\ \hline
+		\end{tabular}
+	\end{table}
+	
 	\newpage
 	\tableofcontents
 	\newpage
 	
 \section{Plan de pruebas}
 	\subsection{Identificador único del documento}
+		\texttt{PDP\_v1}
 
 	\subsection{Introducción}
+		Este documento se corresponde con el plan de pruebas correspondiente al proyecto de ventas de la USC. El software se basa en un portal web mediante el cual los usuarios pueden solicitar pedidos, siendo tramitados posteriormente por la universidad.
+
+		El objetivo de este plan es marcar las pautas y definir la estrategia que se seguirá para certificar el software. En este caso, los casos de prueba y procedimientos tan sólo están generados mediante métodos de caja negra contra la especificación de las interfaces del software.
+
+		Por tanto, los elementos sobre los que se aplicarán las pruebas son las interfaces correspondientes a los módulos de importación, control, estadística y acceso a base de datos (DAO). Dado que las pruebas son de caja negra, se centrarán en el estudio de las especificaciones: testear las entradas para comprobar si se obtienen las salidas esperadas. Para la selección de casos de prueba se utilizó un enfoque sistemático basado en el método de partición o clases de equivalencia.
+	
 			\subsubsection{Documentos relacionados}
+				\begin{table}[htpb]
+					\centering
+					\begin{tabular}{|l|l|}
+					\hline
+					\textbf{Nombre} & \textbf{Descripción} \\ \hline
+					02\_PlantAnaDisPlan\_v1.pdf & Documento de análisis y diseño del software. \\ \hline
+					Std\_IEEE\_829.pdf & Estándar 829 \\ \hline
+					\end{tabular}
+				\end{table}
 
 	\subsection{Elementos software a probar}
+		Como ya se ha mencionado en la introducción, los elementos a probar son los módulos de importación, estadístico, control y DAO a través de pruebas de caja negra sobre sus interfaces.
 
 	\subsection{Características a probar}
+		Dado que son pruebas funcionales, las características de las interfaces a probar son las entradas pertinentes a sus métodos. Se pretende comprobar, mediante una serie de casos de prueba planteados mediante partición, que para una entrada dada se obtiene la salida esperada.
 
 	\subsection{Características que no se prueban}
+		Partiendo de que se utilizan pruebas de caja negra, todas las características a nivel estructural del software (caja blanca) no se probarán en esta versión del software. Además, puesto que se ha planteado centrar la búsqueda de errores en las interfaces, no se realizarán pruebas centradas en las funciones incorrectas o ausentes, estructuras de datos o acceso a BBDD, rendimiento o errores de inicialización y terminación.
 
 	\subsection{Enfoque general de la prueba}
+		Dada la importancia de los formatos para los distintos atributos expuestos en los requisitos, las pruebas se centraron en asegurar su correcta interpretación. Para ello se utilizó principalmente el método de partición para crear casos de prueba.
+
+		Como segunda técnica se usó el análisis por valores límite y, con menor frecuencia, la conjetura de errores.
+
+		Teniendo en cuenta que las pruebas se centran en generación de clases del modelo, muchos de los métodos se consideraron similares entre sí, asumiendo que si uno de ellos es correcto sería apropiado pensar que el resto también lo serán. Sin embargo, atendiendo al teorema de Pareto, en el caso de que uno de estos métodos falle, será conveniente ampliar los casos de prueba a todos sus métodos similares.
 
 	\subsection{Criterios de paso/fallo para cada elemento}
+		La aprobación o rechazo de un elemento sobre el que se han aplicado pruebas se basará en un criterio basado en gravedad de errores. El elemento podrá ser aprobado si se han realizado el 100\% de pruebas sobre él y ha obtenido un 90\% de éxito. El 10\% se correspondería a errores medios y leves, pero nunca graves. Un elemento que contenga errores graves, aunque sólo sea uno, no podrá ser aprobado. A continuación, se especifica qué se entiende por error leve, medio y grave:
+		
+		\begin{itemize}
+			\item \textbf{Error leve:} el elemento muestra un comportamiento correcto, pero ligeramente variable en situaciones similares. También se entienden como errores leves pequeñas desviaciones con respecto a los estándares a seguir.
+			
+			\item \textbf{Error medio:} es un error medio el hecho de que los métodos del elemento a probar, pese a funcionar, realicen sus operaciones de manera incorrecta o no de la forma previamente planteada. En otras palabras, que el elemento no cumpla los requisitos que se le habían impuesto pese a su aparente buen funcionamiento.
+			
+			\item \textbf{Error grave:} el elemento no cumple el objetivo para el que fue diseñado. También se considera error grave cuando la salida de un método del elemento provoca una situación inesperada y no controlada.
+		\end{itemize}
 
 	\subsection{Criterios de suspensión y requisitos de reanudación}
+		En ocasiones cuando el número o tipo de errores llega a un punto en el que el seguimiento de la prueba no tiene valor, es mejor barajar el hecho de frenar el proceso de pruebas. A continuación, se indican las situaciones en las que se frenaría dicho proceso con el fin de no desperdiciar recursos:
+		
+		\begin{itemize}
+			\item \textbf{Existencia de un error grave:} una vez se encuentra un error grave en un elemento a probar dentro de un caso de prueba, lo mejor es frenar dicha prueba dado que, como ya se ha mencionado, no es posible que vaya a aprobar. En este caso, el elemento deberá ser estudiado y depurado con el fin de remediar dicho error y continuar con las pruebas más adelante.
+			
+			No dejando pasar errores críticos se evita el confundir errores fantasma provocados por este error con meros defectos.
+			
+			\item \textbf{Ningún elemento está preparado para ser probado:} en este caso, realizar pruebas sobre elementos que todavía se encuentran en un estado prematuro sólo conseguirá desperdiciar recursos y no obtener ningún tipo de información esclarecedora. Lo mejor en este caso, es dejar pasar un período de tiempo donde se complementen los elementos y, en este punto, realizar sobre ellos las pruebas.
+			
+			\item \textbf{Se supera un 20\% de errores al probar un elemento:} aunque sean errores leves o medios, un elemento con un 20\% de errores acabará provocando más fallos en el conjunto de la aplicación en algún momento. De alcanzar y superar este límite, este elemento debe ser revisado para poder volver a realizar pruebas sobre él en un futuro. 
+			
+			\item \textbf{No disponibilidad del software apropiado para realizar las pruebas:} si las pruebas han sido planteadas para realizar de una forma concreta es mejor esperar a tener todas las herramientas disponibles. Sustituir estas herramientas por otras puede provocar una pérdida de tiempo posterior o el rediseño de alguna prueba.
+		\end{itemize}
 
 	\subsection{Documentos a entregar}
+		Puesto que en este punto tan sólo se ha planteado la aplicación de pruebas de caja negra, los documentos a entregar tras la realización de las pruebas serían:
+		
+		\begin{itemize}
+			\item Informe de pruebas de caja negra.
+			\item Código de los elementos a probar
+			\item Código de las pruebas que se realizaron
+		\end{itemize}
 
 	\subsection{Actividades de preparación y ejecución de pruebas}
+		Para el correcto desarrollo de las pruebas se necesita contar con equipos que contengan el software que se utilizará para su realización. En este caso, \emph{Mockito} y \emph{JUnit}, además del correspondiente \emph{IDE} de trabajo que compartirán todos los programadores de pruebas a la hora de codificar: \emph{Eclipse}. Es obvio que, además, todo el personal implicado en la ejecución de las pruebas tendrá acceso al código de las implementado, el código de los elementos a probar y el plan de pruebas a seguir.
 
 	\subsection{Necesidades de entorno}
+		Para la realización de las pruebas será necesario tener una base de datos funcional con los datos necesarios para cada uno de los casos de prueba. Dado que los casos serán idempotentes siempre que no se indique lo contrario, serán ellos los encargados de inicializar la base de datos a sus valores necesarios para la correcta ejecución.
 
 	\subsection{Responsabilidades en la organización y realización de las pruebas}
+		Para la realización de las pruebas se precisará un equipo de pruebas que podría estar formado por personas que cumplan los siguientes roles (entiéndase que sólo existiría un jefe de proyecto):
+		
+		\begin{table}[]
+\centering
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Rol}           & \textbf{Responsabilidad}                                                                                                                                                                                               \\ \hline
+Jefe de proyecto       & Responsable de estudiar las condiciones de finalización del proceso de pruebas. Será tarea suya concluir si el producto probado está listo o no. También es su deber coordinar al resto del equipo y delegar sobre él. \\ \hline
+Analista               & Persona encargada de resolver las incidencias, analizar los resultados y generar los informes correspondientes para comunicar los resultados técnicos al jefe de proyecto.                                             \\ \hline
+Programador de pruebas & Responsable de la generación del plan de pruebas.                                                                                                                                                                      \\ \hline
+\end{tabularx}
+\end{table}
 
 	\subsection{Necesidades de personal y de formación}
+		Por una parte, el personal debe poseer los conocimientos técnicos informáticos suficientes como para poder implementar las pruebas que se van a realizar y comprender el código a probar, además de saber manejar las herramientas planteadas para el desarrollo de las pruebas.
+
+		Por otra parte, es necesaria una figura que lidere el equipo de pruebas y coordine a todos sus integrantes, con capacidad de liderazgo. Sus conocimientos estarían más orientados a la empresa pese a que sería apropiado que tuviese implicación dentro de las TICs.
+
+		Finalmente, sería necesaria una persona centrada en el análisis e interpretación de los resultados obtenidos en las pruebas, que comunicase el equipo de testing con el jefe de proyecto. Sería conveniente que esta persona tuviese conocimientos en el área de la ingeniería y, como requisito recomendable, experiencia previa.
+
 
 	\subsection{Esquema de tiempos}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\textwidth]{../anexos/PlanDePruebas.PNG}
+			\caption{Diagrama de Gantt}
+			\label{fig:gantt}
+		\end{figure} 
 
 	\subsection{Riesgos asumidos por el plan y planes de contingencias para cada riesgo}
+		\begin{table}[htpb]
+			\centering
+			\label{my-label}
+			\begin{tabularx}{\textwidth}{|X|X|X|}
+				\hline
+				\textbf{Riesgo}                                                  & \textbf{Descripción}                                                       & \textbf{Contigencia}                                                                                  \\ \hline
+				Fuerte limitación temporal para el planteamiento de las pruebas. & Intervalo de tiempo escaso para diseñar el plan de pruebas.                & Generación de pruebas de caja negra sin excesivo nivel de detalle para cumplir las fechas de entrega. \\ \hline
+				Cambios en los requisitos o diseños originales.                  & Incoherencias y falta de información en el documento de análisis y diseño. & Diálogo intergrupal para solucionar posibles malas interpretaciones.                                  \\ \hline
+				Recursos con escaso tiempo para asignar a las pruebas.           & Recursos con poca disponibilidad.                                          & Redistribución de la carga entre recursos más disponibles.                                            \\ \hline
+			\end{tabularx}
+		\end{table}
 
 	\subsection{Aprobaciones y firmas con nombre y puesto desempeñado}
+		La aprobación para definir el proceso como completo y permitir que avance al siguiente nivel es una tarea cooperativa entre dos departamentos. Mediante una reunión formal en la que se encuentren el jefe de desarrollo y el analista a cargo del proyecto se decidirá si el software está preparado. Se precisa de la aprobación de ambos ya que es necesario contar con un aprobado a nivel técnico y otro más enfocado a un nivel empresarial. De esta forma, mediante el debate y el estudio de los informes de pruebas se considera que el software pasa a la siguiente fase si se aprueba por unanimidad.
+
+		La firma del analista y el jefe de desarrollo supondrían la aprobación del software y, por tanto, el pase a la siguiente fase del proyecto.
+
 
 \section{Diseño de pruebas}
 	\subsection{InterfazImportación}
