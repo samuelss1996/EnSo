@@ -29,3 +29,14 @@ Teniendo en cuenta los productos que se van a generar durante la realización de
 * **Software de entorno de desarrollo**: Conjunto de todo el software necesario durante la fase de desarrollo. Esto incluye editores de texto, entornos de desarrollo integrados (IDE), compiladores, intérpretes, librerías, frameworks, etc.
 * **Computador de desarrollo**: Máquina o máquinas usadas por el estudiante durante la realización del trabajo durante todas las posibles fases del mismo (análisis, diseño, implementación, ...).
 * **Computador de despliegue**: Máquina o máquinas sobre las que se ejecutará finalmente el software en el momento en el que será evaluado por parte del tribunal.
+
+# Fuentes de riesgo
+## Retraso en el proceso de documentación (*ISO 12207 - Soporte*)
+La documentación del proyecto se debe realizar al mismo tiempo que el trabajo en sí. De esta forma todo el proceso quedará especificado de forma permanente, evitando que en un punto posterior o en la memoria final se produzcan incoherencias entre lo que se especifica en la documentación y el producto final.
+
+## Nulo o deficiente proceso de validación (*ISO 12207 - Soporte*)
+Si la lista de requisitos es muy amplia es conveniente automatizar de alguna forma su validación, por ejemplo, haciendo tests. 
+No llevar un registro concreto de validación puede desembocar en una entrega incompleta.
+
+## No reevaluar los riesgos con cierta periodicidad (*ISO 15504-2 - Gestión del Riesgo*)
+Para asegurar que se cumple la planificación establecida es conveniente reevaluar los riesgos con cierta periodicidad para evitar que surjan nuevos, así como para reducir el tiempo necesario para su gestión (en el caso de que algún riesgo ya no sea relevante).
