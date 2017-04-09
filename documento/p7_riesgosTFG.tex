@@ -12,29 +12,87 @@
 \begin{document}
 	\maketitle %TODO poner portada bonita
 	\newpage
-	
-	Aquí van las tablas de versiones %TODO
-	
+		
+	\begin{table}[htb]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \multicolumn{3}{|c|}{CONTROL DE VERSIONES} \\ \hline
+    VERSIÓN & FECHA & DESCRIPCIÓN DEL CAMBIO\\
+    \hline \hline
+    1.0 & 07/04/2017 & Creación del documento \\ \hline
+    \end{tabular}   
+    \end{table}
+    	
 	\newpage
 	\tableofcontents
 	\newpage
 	
-	\section{Desripción de la práctica}
-		TODO %TODO
+	\section{Descripción de la práctica}
+	La práctica que recoge este documento consiste en la realización del proceso completo de gestión de riesgos sobre el desarrollo de un Trabajo de Fin de Grado. Cabe destacar que tan sólo se contemplan los riesgos que están relacionados con la gestión de la configuración.\\
+	
+	El procedimiento a seguir ha sido, en primer lugar, la identificación de activos dentro del proyecto planteado. Con activos nos referimos tanto a los elementos de configuración, como a las líneas base, el sistema de gestión de la configuración y el proceso. Por otra parte, también fueron identificadas las fuentes de riesgo para poder proceder al análisis de riesgos.\\
+	
+	El análisis de riesgos, por su parte, se basó en la identificación de los mismos para, finalmente, poder llevar a cabo una planificación donde se plantean acciones de prevención, minimización y seguimiento.
 		
 	\section{Descripción del grupo de trabajo}
-		TODO %TODO
+		\begin{table}[htb]
+        \centering
+        \begin{tabular}{|l|l|l|}
+        \hline
+        \multicolumn{2}{|c|}{Grupo de trabajo} \\ \hline
+        Nombre & Rol\\
+        \hline \hline
+        Crístofer Canosa Domínguez &  \\ \hline
+        Silvia Rodríguez Alcaraz & \\ \hline
+        Orquídea Seijas Salinas & \\ \hline
+        Samuel Soutullo Sobral & \\ \hline
+        \end{tabular}   
+        \end{table}
 		
 	\section{Planificación de la práctica}
 		TODO %TODO meter gantt
 		
 	\section{Desarrollo de la práctica}
 		\subsection{Identificación de activos}
-			TODO %TODO
-			
+			\subsubsection{Elementos de configuración} 
+			\begin{itemize}
+                \item Solicitud de anteproyecto: Supone una entrega formal donde, además, se exponen datos concretos sobre la implementación del trabajo (propuesta de solución, planificación, etc).
+                \item Documento de análisis: Estudio de requisitos del trabajo, junto a una planificación temporal y análisis de costes.
+                \item Documento de diseño: Conjunto de diagramas y documentos anexos donde se define el diseño a implementar en la entrega.
+                \item Repositorio de código: Conjunto de archivos fuente y de configuración necesarios para construir la aplicación.
+                 \item Repositorio de documentación: Páginas, libros y otros documentos consultados para la realización del trabajo. Es conveniente guardarlos localmente para mantener la versión visitada en caso de que la versión online se actualice o desaparezca.
+                 \item Presentación del trabajo: Incluye la memoria y el documento de la presentación oral, que serán un aglomerado del resto de documentos que componen el trabajo.
+                 \item Manuales técnicos y de usuario:** El manual técnico contiene información sobre la implementación de la                         aplicación para su posterior ampliación o modificación por parte de terceros. El manual de usuario funciona como guía para usuarios comunes del programa.
+            \end{itemize}
+			\subsubsection{Líneas base}
+			\begin{itemize}
+			    \item Solicitud: El producto de esta etapa sería la propia solicitud de TFG. Una vez aprobada la solicitud del alumno, éste puede pasar a la siguiente etapa del proceso sin modificaciones sobre esta propuesta. Es decir, en principio, debe continuar con el trabajo presentado.
+			    \item Análisis y diseño: en esta etapa el alumno realizará los pertinentes estudios para establecer tanto los requisitos y costes del trabajo como los diagramas pertinentes que describan el sistema a implementar. Los productos de esta etapa serán el documento de análisis y el de diseño, los cuales deberán ser aprobados para proceder a la implementación. Una vez aprobados, los productos no podrán ser modificados sin emplear un proceso de control de cambios estricto.
+			    \item Implementación: el producto de esta etapa será el código de la aplicación a desarrollar. Este código debe ser plenamente funcional y cumplir tanto con la estructura descrita en el diseño como con los requisitos determinados en el análisis para ser aprobado.
+			    \item Documentación: los productos son la memoria del proyecto, el documento de presentación oral y los manuales técnicos y de usuario. Todos los documentos deben ser claros, precisos y completos para asegurar su aprobación. Esta sería la última etapa del proceso, una vez finalizada éste debería haberse completado. La comparación de las distintas líneas base permitirá comprobar si los tiempos estimados para cada etapa se han cumplido o no y, en este caso, cómo se han desviado de la planificación inicial.	    			    
+			\end{itemize}
+			\subsubsection{Sistema de gestión de configuración}
+			\begin{itemize}
+			    \item Git: Se ha decidido utilizar Git como sistema de gestión de configuración, puesto que al ser un proyecto estrechamente relacionado con la implementación de código, es altamente probable que sea necesario registrar cada cambio realizado. Esta herramienta permitirá realizar esta actividad de manera rápida y eficiente, además de permitir el acceso a la lista de cambios fácilmente.
+			\end{itemize}
+			\subsubsection{Proceso}
+			\begin{itemize}
+			    \item Documentación de cambios: Conjunto de documentos creados con la finalidad de realizar un correcto seguimiento del control de cambios. Cobran especial importancia cuando se tratan de cambios cuya introducción se ve forzada por causas externas al estudiante y afectan a trabajo ya realizado.
+			    \item Documento de despliegue: Documento en el que se especifica de manera formal y clara los pasos a seguir para poder ejecutar la posible aplicación en cualquier equipo o conjunto de equipos que cumplan los requisitos necesarios para la ejecución de dicha aplicación.
+			    \item Documento de validación: Documento generado como consecuencia de realización de procesos de validación. Los procesos de validación determinan si el software final cumple o no los requisitos exigidos.
+			    \item Software de entorno de desarrollo: Conjunto de todo el software necesario durante la fase de desarrollo. Esto incluye editores de texto, entornos de desarrollo integrados (IDE), compiladores, intérpretes, librerías, frameworks, etc.
+                \item Computador de desarrollo: Máquina o máquinas usadas por el estudiante durante la realización del trabajo durante todas las posibles fases del mismo (análisis, diseño, implementación, ...).	    
+			    \item Computador de despliegue: Máquina o máquinas sobre las que se ejecutará finalmente el software en el momento en el que será evaluado por parte del tribunal.
+			\end{itemize}
 		\subsection{Identificación de fuentes de riesgo}
-			TODO %TODO
-			
+			\subsubsection{Retraso en el proceso de documentación (*ISO 12207 - Soporte*)}
+			La documentación del proyecto se debe realizar al mismo tiempo que el trabajo en sí. De esta forma todo el proceso quedará especificado de forma permanente, evitando que en un punto posterior o en la memoria final se produzcan incoherencias entre lo que se especifica en la documentación y el producto final.
+			\subsubsection{Nulo o deficiente proceso de validación (*ISO 12207 - Soporte*)}
+			Si la lista de requisitos es muy amplia es conveniente automatizar de alguna forma su validación, por ejemplo, haciendo tests. 
+No llevar un registro concreto de validación puede desembocar en una entrega incompleta.
+			\subsubsection{No reevaluar los riesgos con cierta periodicidad (*ISO 15504-2 - Gestión del Riesgo*)}
+			Para asegurar que se cumple la planificación establecida es conveniente reevaluar los riesgos con cierta periodicidad para evitar que surjan nuevos, así como para reducir el tiempo necesario para su gestión (en el caso de que algún riesgo ya no sea relevante).
 		\subsection{Análisis de riesgos}
 			\subsubsection{Riesgo R001. Nombre del riesgo}
 				\paragraph{Probabilidad} Valor
