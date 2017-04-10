@@ -21,7 +21,7 @@
 * Errores en el despliegue de la aplicación.
     * Se debe tener en cuenta en el diseño, así como tener las herramientas y versiones definidas en la gestión de configuración.
 
-# Respositorio de código
+# Repositorio de código
 
 # Repositorio de documentación
 * Desactualización del repositorio
