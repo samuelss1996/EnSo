@@ -86,15 +86,15 @@
 			    \item Computador de despliegue: Máquina o máquinas sobre las que se ejecutará finalmente el software en el momento en el que será evaluado por parte del tribunal.
 			\end{itemize}
 		\subsection{Identificación de fuentes de riesgo}
-			\subsubsection{Retraso en el proceso de documentación (*ISO 12207 - Soporte*)}
+			\subsubsection{Retraso en el proceso de documentación (ISO 12207 - Soporte)}
 			La documentación del proyecto se debe realizar al mismo tiempo que el trabajo en sí. De esta forma todo el proceso quedará especificado de forma permanente, evitando que en un punto posterior o en la memoria final se produzcan incoherencias entre lo que se especifica en la documentación y el producto final.
-			\subsubsection{Nulo o deficiente proceso de validación (*ISO 12207 - Soporte*)}
+			\subsubsection{Nulo o deficiente proceso de validación (ISO 12207 - Soporte)}
 			Si la lista de requisitos es muy amplia es conveniente automatizar de alguna forma su validación, por ejemplo, haciendo tests. 
 No llevar un registro concreto de validación puede desembocar en una entrega incompleta.
-			\subsubsection{No reevaluar los riesgos con cierta periodicidad (*ISO 15504-2 - Gestión del Riesgo*)}
+			\subsubsection{No reevaluar los riesgos con cierta periodicidad (ISO 15504-2 - Gestión del Riesgo)}
 			Para asegurar que se cumple la planificación establecida es conveniente reevaluar los riesgos con cierta periodicidad para evitar que surjan nuevos, así como para reducir el tiempo necesario para su gestión (en el caso de que algún riesgo ya no sea relevante).
 		\subsection{Análisis de riesgos}
-			\subsubsection{Riesgo R001. Nombre del riesgo}
+			\subsubsection{Riesgo R001. Solicitud de anteproyecto}
 				\paragraph{Probabilidad} Valor
 				\paragraph{Impacto}	Valor
 				\paragraph{Descripción} Texto
@@ -104,6 +104,175 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
 				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
 	
+            \subsubsection{Riesgo R002. Documento de análisis}
+				\paragraph{Probabilidad} Valor
+				\paragraph{Impacto}	Valor
+				\paragraph{Descripción} Texto
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.	
+				
+				\subsubsection{Riesgo R003. Documento de diseño}
+				\paragraph{Probabilidad} Valor
+				\paragraph{Impacto}	Valor
+				\paragraph{Descripción} Texto
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R004. Repositorio de código}
+				\paragraph{Probabilidad} Valor
+				\paragraph{Impacto}	Valor
+				\paragraph{Descripción} Texto
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R005. Repositorio de documentación}
+				\paragraph{Probabilidad} Alta
+				\paragraph{Impacto}	Serio
+				\paragraph{Descripción} La desactualización del repositorio supondría altas probabilidades de perder la documentación realizada hasta el momento, creando inconsistencias en el proyecto debido a la falta de información crucial. 
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R006. Presentación del trabajo}
+				\paragraph{Probabilidad} Baja
+				\paragraph{Impacto}	Tolerable
+				\paragraph{Descripción} Su mal planteamiento puede provocar que no se entienda lo que ha sido desarrollado en el trabajo. Además, si se realiza forma incompleta puede provocar que la presentación del trabajo pierda sentido y, por tanto, el trabajo parezca inconsistente. 
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R007. Manuales técnicos y de usuario}
+				\paragraph{Probabilidad} Alta
+				\paragraph{Impacto}	Serio
+				\paragraph{Descripción} La incorrecta especificación del manual de usuario llevaría al individuo que lo consulta a cometer errores en base a las especificaciones incorrectas. Además, los fallos a la hora de especificar el manual técnico podrían provocar errores fatales de cara al futuro ya que no reflejaría la realidad de la aplicación. Así, ésta podría ser tratada de un modo no apropiado.
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R008. Solicitud}
+				\paragraph{Probabilidad} Baja
+				\paragraph{Impacto}	Serio
+				\paragraph{Descripción} Una solicitud prematura supondría tratar de presentar un trabajo no lo suficientemente desarrollado y refinado, por tanto, las probabilidades de que contuviera errores o inconsistencias serían elevadas.
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R009. Análisis y diseño}
+				\paragraph{Probabilidad} Valor
+				\paragraph{Impacto}	Valor
+				\paragraph{Descripción} Texto
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R010. Implementación}
+				\paragraph{Probabilidad} Valor
+				\paragraph{Impacto}	Valor
+				\paragraph{Descripción} Texto
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R011. Documentación}
+				\paragraph{Probabilidad} Valor
+				\paragraph{Impacto}	Valor
+				\paragraph{Descripción} Texto
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R012. Git}
+				\paragraph{Probabilidad} Valor
+				\paragraph{Impacto}	Valor
+				\paragraph{Descripción} Texto
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R013. Documento de cambios}
+				\paragraph{Probabilidad} Valor
+				\paragraph{Impacto}	Valor
+				\paragraph{Descripción} Texto
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R014. Documento de despliegue}
+				\paragraph{Probabilidad} Valor
+				\paragraph{Impacto}	Valor
+				\paragraph{Descripción} Texto
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R015. Documento de validación}
+				\paragraph{Probabilidad} Valor
+				\paragraph{Impacto}	Valor
+				\paragraph{Descripción} Texto
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R016. Software de entorno de desarrollo}
+				\paragraph{Probabilidad} Valor
+				\paragraph{Impacto}	Valor
+				\paragraph{Descripción} Texto
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R017. Computador de desarrollo}
+				\paragraph{Probabilidad} Valor
+				\paragraph{Impacto}	Valor
+				\paragraph{Descripción} Texto
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
+				
+				\subsubsection{Riesgo R018. Computador de despliegue}
+				\paragraph{Probabilidad} Valor
+				\paragraph{Impacto}	Valor
+				\paragraph{Descripción} Texto
+				\paragraph{Fecha} Valor %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Tratamiento} Valor %Minimización o prevención
+				\paragraph{Acción} Texto %Descripción del tratamiento
+				\paragraph{Indicadores} Texto %Que nos puede indicar que se está produciendo el riesgo
+				\paragraph{Seguimiento}	Texto %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
 	\appendix
 		\section{Bibliografía y material utilizado}
 			TODO %TODO

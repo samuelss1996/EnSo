@@ -24,12 +24,24 @@
 # Respositorio de código
 
 # Repositorio de documentación
+* Desactualización del repositorio
+	* Supondría altas probabilidades de perder la documentación realizada hasta el momento, creando inconsistencias en el proyecto debido a la falta de información crucial.  	
 
 # Presentación del trabajo
+* Mal planteamiento
+	* Puede provocar que no se entienda lo que ha sido desarrollado en el trabajo. 
+* Presentación incompleta
+	* El hecho de no incluir información importante u omitir datos valiosos puede provocar que la presentación del trabajo pierda sentido y, por tanto, el trabajo parezca inconsistente. 
 
 # Manuales técnicos y de usuario
+* Incorrectas especificaciones
+	* La incorrecta especificación del manual de usuario llevaría al individuo que lo consulta a cometer errores en base a las especificaciones incorrectas.
+	* Los errores a la hora de especificar el manual técnico podrían provocar errores fatales de cara al futuro ya que no reflejaría la realidad de la aplicación. Así, ésta podría ser tratada de un modo no apropiado. 
 
 # Solicitud
+* Solicitud prematura
+	* Supondría tratar de presentar un trabajo no lo suficientemente desarrollado y refinado, por tanto, las probabilidades de que contuviera errores o inconsistencias serían elevadas. 
+
 
 # Análisis y diseño
 
