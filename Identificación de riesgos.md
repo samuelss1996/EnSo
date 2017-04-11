@@ -42,8 +42,8 @@
 # Líneas base
 
 ## Solicitud
-* Solicitud prematura
-	* Supondría tratar de presentar un trabajo no lo suficientemente desarrollado y refinado, por tanto, las probabilidades de que contuviera errores o inconsistencias serían elevadas. 
+* Inicio prematuro del TFG
+	* Supondría comenzar a desarrollar el TFG antes de que el anteproyecto sea aprobado, pudiendo ser rechazado y perdiendo todo el progreso realizado.
 
 
 ## Análisis y diseño
