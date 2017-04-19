@@ -36,7 +36,7 @@ CREATE TABLE if not exists pertenecer(
 
 CREATE TABLE if not exists facturas(
 	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
-	precioTotal DECIMAL(4,2) NOT NULL,
+	precioTotal FLOAT NOT NULL,
 	fecha DATE NOT NULL,
 	idUsuarios INTEGER NOT NULL,
 	FOREIGN KEY(idUsuarios) REFERENCES usuarios(id)
@@ -52,7 +52,7 @@ CREATE TABLE if not exists productos(
 
 CREATE TABLE if not exists lineacompra(
 	cantidad INTEGER NOT NULL,
-	precioTotal DECIMAL(4,2) NOT NULL,
+	precioTotal FLOAT NOT NULL,
 	numLinea INTEGER NOT NULL,
 	idFacturas INTEGER NOT NULL,
 	idProductos INTEGER NOT NULL,
