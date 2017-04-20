@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <XPD:PROJECT xmlns:XPD="http://www.staruml.com" version="1">
 <XPD:HEADER>
 <XPD:SUBUNITS>
@@ -11,7 +11,7 @@
 <XPD:ATTR name="Title" type="string">p8</XPD:ATTR>
 <XPD:ATTR name="#OwnedElements" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="VaLFhavAL06gN8yWY/th2QAA">
-<XPD:ATTR name="Name" type="string">Dise&#241;o estructural</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Diseño estructural</XPD:ATTR>
 <XPD:REF name="Namespace">4n1jGh9KWEaxl3FFitwRXQAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">5</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLClassDiagram" guid="s3l4edAGIU6r53YV97q8LQAA">
@@ -851,7 +851,7 @@
 <XPD:ATTR name="Left" type="integer">944</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">852</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">123</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">108</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">121</XPD:ATTR>
 <XPD:REF name="Model">6ouUZqj3kEWQa+EV1zeArAAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="UHJg9VBjfkep8/lZ9BXn/AAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="WiEcrEGrKkybVV7iEBbPxwAA">
@@ -1450,7 +1450,7 @@
 <XPD:ATTR name="Width" type="integer">455</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">188</XPD:ATTR>
 <XPD:ATTR name="Text" type="string">import(Date dateFrom, int... elements) {
-  // preparar el archivo para leer las l&#237;neas y crear un importData vac&#237;o
+  // preparar el archivo para leer las líneas y crear un importData vacío
   
   para cada linea {
     LineProcessor processor = LineProcessor.getLineProcessorFor(linea)
@@ -2512,13 +2512,11 @@ definidas en la interfaz IImport
 <XPD:REF name="SupplierDependencies[0]">35O0ju0psUGQ08tYTbdxiQAA</XPD:REF>
 <XPD:ATTR name="#TypedFeatures" type="integer">1</XPD:ATTR>
 <XPD:REF name="TypedFeatures[0]">sIsRiu5nEk+E2u+o+42q7AAA</XPD:REF>
-<XPD:ATTR name="#TypedParameters" type="integer">6</XPD:ATTR>
+<XPD:ATTR name="#TypedParameters" type="integer">4</XPD:ATTR>
 <XPD:REF name="TypedParameters[0]">U+zZ1Ggk2UWZ5NTi+RUSmwAA</XPD:REF>
 <XPD:REF name="TypedParameters[1]">pRirLXVqBk6qvjvJr48prwAA</XPD:REF>
-<XPD:REF name="TypedParameters[2]">SXjQRBGIJku7YOhjaOEimAAA</XPD:REF>
-<XPD:REF name="TypedParameters[3]">cD6ZCv2XtUC/WfjzBgO+wAAA</XPD:REF>
-<XPD:REF name="TypedParameters[4]">kWwV3+1wiUC9IyGIlzAVMgAA</XPD:REF>
-<XPD:REF name="TypedParameters[5]">KgvWOIGHREipBma+AMoGrwAA</XPD:REF>
+<XPD:REF name="TypedParameters[2]">cD6ZCv2XtUC/WfjzBgO+wAAA</XPD:REF>
+<XPD:REF name="TypedParameters[3]">kWwV3+1wiUC9IyGIlzAVMgAA</XPD:REF>
 <XPD:ATTR name="#Associations" type="integer">1</XPD:ATTR>
 <XPD:REF name="Associations[0]">3QLvvClauUad+PQaTuXq9AAA</XPD:REF>
 <XPD:ATTR name="#Attributes" type="integer">7</XPD:ATTR>
@@ -2646,7 +2644,7 @@ definidas en la interfaz IImport
 <XPD:REF name="Owner">n5N6jP/MI06YrRTt6BfSrAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[4]" type="UMLAttribute" guid="ov77f7Oq2E6Tbcb0KxcLxAAA">
-<XPD:ATTR name="Name" type="string">totalPrize</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">totalPrice</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:REF name="Owner">n5N6jP/MI06YrRTt6BfSrAAA</XPD:REF>
 </XPD:OBJ>
@@ -2666,15 +2664,13 @@ definidas en la interfaz IImport
 <XPD:REF name="SupplierDependencies[0]">6mYBbEHawE6xG4ez0Q6brgAA</XPD:REF>
 <XPD:ATTR name="#TypedFeatures" type="integer">1</XPD:ATTR>
 <XPD:REF name="TypedFeatures[0]">OdRYE0XllkimtmOjABCIPwAA</XPD:REF>
-<XPD:ATTR name="#TypedParameters" type="integer">8</XPD:ATTR>
+<XPD:ATTR name="#TypedParameters" type="integer">6</XPD:ATTR>
 <XPD:REF name="TypedParameters[0]">wuoIB4Wyb0qJlKXl0jOQKAAA</XPD:REF>
 <XPD:REF name="TypedParameters[1]">2Ka1YhEBoEqJ0j+QAB+drwAA</XPD:REF>
 <XPD:REF name="TypedParameters[2]">bi1PROLBNU+VM67fIVdOFwAA</XPD:REF>
 <XPD:REF name="TypedParameters[3]">A+z+u9IbM0aVSJ0S2DLceAAA</XPD:REF>
-<XPD:REF name="TypedParameters[4]">eXDT1UuhNk6zrDLo9TZPXAAA</XPD:REF>
-<XPD:REF name="TypedParameters[5]" pathname="product">47jhyUTczk6gMCtW8icJEgAA</XPD:REF>
-<XPD:REF name="TypedParameters[6]">7/clvj1JLky0urH1hGm54wAA</XPD:REF>
-<XPD:REF name="TypedParameters[7]">CPq4CutZlEmMmyLVd4+2pwAA</XPD:REF>
+<XPD:REF name="TypedParameters[4]">7/clvj1JLky0urH1hGm54wAA</XPD:REF>
+<XPD:REF name="TypedParameters[5]">CPq4CutZlEmMmyLVd4+2pwAA</XPD:REF>
 <XPD:ATTR name="#Associations" type="integer">1</XPD:ATTR>
 <XPD:REF name="Associations[0]">e9MV9KB57kichqOzt41eZQAA</XPD:REF>
 <XPD:ATTR name="#Attributes" type="integer">8</XPD:ATTR>
@@ -4051,7 +4047,7 @@ definidas en la interfaz IImport
 <XPD:REF name="TypedParameters[1]">hSefucvVukqS4W64jCX/DQAA</XPD:REF>
 <XPD:ATTR name="#Associations" type="integer">1</XPD:ATTR>
 <XPD:REF name="Associations[0]">g3gBGpYybUeOHoUmPVTvpAAA</XPD:REF>
-<XPD:ATTR name="#Attributes" type="integer">3</XPD:ATTR>
+<XPD:ATTR name="#Attributes" type="integer">4</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="OdRYE0XllkimtmOjABCIPwAA">
 <XPD:ATTR name="Name" type="string">product</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
@@ -4065,8 +4061,12 @@ definidas en la interfaz IImport
 <XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
 <XPD:REF name="Owner">6ouUZqj3kEWQa+EV1zeArAAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Attributes[2]" type="UMLAttribute" guid="996xuik6rEqXLcizSnOx1AAA">
-<XPD:ATTR name="Name" type="string">totalPrize</XPD:ATTR>
+<XPD:OBJ name="Attributes[2]" type="UMLAttribute" guid="lOz8KBQKvESASR3smB2VWwAA">
+<XPD:ATTR name="Name" type="string">unitPrice</XPD:ATTR>
+<XPD:REF name="Owner">6ouUZqj3kEWQa+EV1zeArAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[3]" type="UMLAttribute" guid="996xuik6rEqXLcizSnOx1AAA">
+<XPD:ATTR name="Name" type="string">totalPrice</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">float</XPD:ATTR>
 <XPD:REF name="Owner">6ouUZqj3kEWQa+EV1zeArAAA</XPD:REF>
@@ -4165,19 +4165,19 @@ definidas en la interfaz IImport
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[1]" type="UMLModel" guid="g/jd4xVfcUyqXD+EpHv19wAA">
-<XPD:ATTR name="Name" type="string">Dise&#241;o de comportamiento</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Diseño de comportamiento</XPD:ATTR>
 <XPD:REF name="Namespace">4n1jGh9KWEaxl3FFitwRXQAA</XPD:REF>
 <XPD:ATTR name="#OwnedCollaborationInstanceSets" type="integer">4</XPD:ATTR>
 <XPD:OBJ name="OwnedCollaborationInstanceSets[0]" type="UMLCollaborationInstanceSet" guid="Sg/5s/qQxkuPuRVTCGYTDwAA">
-<XPD:ATTR name="Name" type="string">A&#241;adir uno o varios productos al carrito</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Añadir uno o varios productos al carrito</XPD:ATTR>
 <XPD:REF name="RepresentedClassifier">g/jd4xVfcUyqXD+EpHv19wAA</XPD:REF>
 <XPD:ATTR name="#InteractionInstanceSets" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="InteractionInstanceSets[0]" type="UMLInteractionInstanceSet" guid="53RSpIUWtEO+oHH7kaoi6QAA">
-<XPD:ATTR name="Name" type="string">A&#241;adir uno o varios productos al carrito</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Añadir uno o varios productos al carrito</XPD:ATTR>
 <XPD:REF name="Context">Sg/5s/qQxkuPuRVTCGYTDwAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLSequenceDiagram" guid="tbsB8Z5ul0WJdEDLYoAwTgAA">
-<XPD:ATTR name="Name" type="string">A&#241;adir uno o varios productos al carrito</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Añadir uno o varios productos al carrito</XPD:ATTR>
 <XPD:ATTR name="MessageSignature" type="UMLMessageSignatureKind">mskNameAndType</XPD:ATTR>
 <XPD:REF name="DiagramOwner">53RSpIUWtEO+oHH7kaoi6QAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLSequenceDiagramView" guid="Hph/iIp4a0y9z1V/bTVK7AAA">
@@ -5376,7 +5376,7 @@ definidas en la interfaz IImport
 <XPD:OBJ name="NameLabel" type="EdgeLabelView" guid="xoCnaBOFW0yALXXukCKm1QAA">
 <XPD:ATTR name="Alpha" type="real">1,5707963267949</XPD:ATTR>
 <XPD:ATTR name="Distance" type="real">10</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">1 : queryUser()</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">1 : fetchUser()</XPD:ATTR>
 <XPD:REF name="Model">veJAArZSB0uP2ePXIoeOUwAA</XPD:REF>
 <XPD:REF name="HostEdge">RyKvVbp5x0KehaW4GlrPZQAA</XPD:REF>
 </XPD:OBJ>
@@ -5618,6 +5618,8 @@ definidas en la interfaz IImport
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
+<XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
+<XPD:REF name="Views[0]">VX/bQvSRHEapTu6e4nXnwAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:ATTR name="#ParticipatingStimuli" type="integer">7</XPD:ATTR>
 <XPD:OBJ name="ParticipatingStimuli[0]" type="UMLStimulus" guid="veJAArZSB0uP2ePXIoeOUwAA">
@@ -6327,6 +6329,8 @@ definidas en la interfaz IImport
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
+<XPD:ATTR name="#Views" type="integer">1</XPD:ATTR>
+<XPD:REF name="Views[0]">RtrE/fy+Ik+1m51GaT3mqQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:ATTR name="#ParticipatingStimuli" type="integer">12</XPD:ATTR>
 <XPD:OBJ name="ParticipatingStimuli[0]" type="UMLStimulus" guid="NWNaIuWn7EmKHrGOMxXyXAAA">
