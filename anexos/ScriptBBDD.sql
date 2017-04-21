@@ -50,7 +50,7 @@ CREATE TABLE if not exists products(
 
 
 CREATE TABLE if not exists Sell(
-	id CHAR(11) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	id CHAR(11) NOT NULL PRIMARY KEY,
 	totalPrice FLOAT(4,2) NOT NULL,
 	sellDate DATE NOT NULL,
 	idUser CHAR(11) NOT NULL,
@@ -66,7 +66,7 @@ CREATE TABLE if not exists lineacompra(
 	lineSell INTEGER NOT NULL,
 	idSell CHAR(11) NOT NULL,
 	idProducts CHAR(11) NOT NULL,
-	PRIMARY KEY(idSell, numLinea),
+	PRIMARY KEY(idSell, lineSell),
 	FOREIGN KEY(idSell) REFERENCES Sell(id)
 		on delete restrict on update cascade,
 	FOREIGN KEY(idProducts) REFERENCES products(id)
