@@ -1,6 +1,6 @@
 package model;
 
-import model.IDAOSell;
+import model.data.Sell;
 
 import java.util.Date;
 

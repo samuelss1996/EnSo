@@ -1,7 +1,6 @@
 package model;
 
-import model.IDAOProduct;
-import model.Product;
+import model.data.Product;
 
 import java.util.List;
 

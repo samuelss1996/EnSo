@@ -1,7 +1,7 @@
 package importModule;
 
 
-import model.ImportData;
+import model.data.ImportData;
 
 import java.util.Date;
 

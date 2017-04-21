@@ -1,6 +1,8 @@
 package model;
 
 
+import model.data.Product;
+
 import java.util.List;
 
 public interface IDAOProduct {

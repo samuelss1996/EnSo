@@ -1,6 +1,10 @@
 package model;
 
 
+import model.data.Application;
+import model.data.Center;
+import model.data.User;
+
 import java.util.List;
 
 public class JDBCUserDAO implements IDAOUser {

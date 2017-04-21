@@ -6,6 +6,10 @@ import statistics.IStatistics;
 
 public class Controller implements IController {
 
+	public static void main(String[] args) {
+
+	}
+
 	@Override
 	public IImport getImportModule() {
 		return null;

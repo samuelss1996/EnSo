@@ -1,6 +1,8 @@
 package model;
 
 
+import model.data.ImportData;
+
 public interface IDAOImport {
-	void importModule(ImportData data);
+	void doImport(ImportData data);
 }

@@ -1,6 +1,8 @@
 package model;
 
 
+import model.data.Sell;
+
 import java.util.Date;
 
 public interface IDAOSell {

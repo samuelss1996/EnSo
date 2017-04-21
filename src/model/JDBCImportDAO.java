@@ -1,10 +1,9 @@
 package model;
 
-import model.IDAOImport;
-import model.ImportData;
+import model.data.ImportData;
 
 public class JDBCImportDAO implements IDAOImport {
-	public void importModule(ImportData data) {
+	public void doImport(ImportData data) {
 
 	}
 }
