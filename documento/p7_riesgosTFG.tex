@@ -1,57 +1,71 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{lastpage}
+\usepackage[left=2.5cm,right=2.5cm,top=2.75cm,bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+
+
+\setlength{\headheight}{25pt}
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[LO,RE]{
+    		\centering
+    		\begin{tabular}{|c|l|l|}
+    			\hline
+   		 		\textbf{EN} & \textit{Análisis de riegos de la gestión de la configuración en un TFG} & 23/04/2017 \\\cline{2-3} 
+    			\textbf{SO} & \multicolumn{2}{|c|}{\textbf{DOC: p7\_riesgosTFG.pdf}}   \\ \hline
+    		\end{tabular}
+              }
+\cfoot{Página \thepage\ de \pageref{LastPage}}
 \author{Canosa Domínguez, Cristofer \\ Rodríguez Alcaraz, Silvia \\ Seijas Salinas, Orquídea Manuela \\ Soutullo Sobral, Samuel}
 \title{Análisis de riegos de la gestión de la configuración en un TFG}
 
-%TODO encabezados y pies de página
 \begin{document}
 	\maketitle %TODO poner portada bonita
 	\newpage
-		
 	\begin{table}[htb]
-    \centering
-    \begin{tabular}{|l|l|l|}
-    \hline
-    \multicolumn{3}{|c|}{CONTROL DE VERSIONES} \\ \hline
-    VERSIÓN & FECHA & DESCRIPCIÓN DEL CAMBIO\\
-    \hline \hline
-    1.0 & 07/04/2017 & Creación del documento \\ \hline
-    \end{tabular}   
+    	\centering
+    	\begin{tabular}{|l|l|l|}
+   			\hline
+    		\multicolumn{3}{|c|}{CONTROL DE VERSIONES} \\ \hline
+    		VERSIÓN & FECHA & DESCRIPCIÓN DEL CAMBIO\\
+    		\hline \hline
+    		1.0 & 07/04/2017 & Creación del documento \\ \hline
+    	\end{tabular}   
     \end{table}
-    	
 	\newpage
 	\tableofcontents
 	\newpage
-	
+	\pagestyle{fancy}
 	\section{Descripción de la práctica}
 	La práctica que recoge este documento consiste en la realización del proceso completo de gestión de riesgos sobre el desarrollo de un Trabajo de Fin de Grado. Cabe destacar que tan sólo se contemplan los riesgos que están relacionados con la gestión de la configuración.\\
 	
 	El procedimiento a seguir ha sido, en primer lugar, la identificación de activos dentro del proyecto planteado. Con activos nos referimos tanto a los elementos de configuración, como a las líneas base, el sistema de gestión de la configuración y el proceso. Por otra parte, también fueron identificadas las fuentes de riesgo para poder proceder al análisis de riesgos.\\
 	
-	El análisis de riesgos, por su parte, se basó en la identificación de los mismos para, finalmente, poder llevar a cabo una planificación donde se plantean acciones de prevención, minimización y seguimiento.
+	El análisis de riesgos, por su parte, se basó en la identificación de los mismos en función de los activos previamente definidos para, finalmente, poder llevar a cabo una planificación donde se plantean acciones de prevención y  minimización. Para los riesgos más importantes, se ha planteado realizar un seguimiento a lo largo del trabajo de fin de grado. La fecha utilizada para observar cada uno de los riesgos ha sido seleccionada de la planificación propuesta sobre un TFG que viene en las transparencias del enunciado.
 		
 	\section{Descripción del grupo de trabajo}
 		\begin{table}[htb]
         \centering
         \begin{tabular}{|l|l|l|}
         \hline
-        \multicolumn{2}{|c|}{Grupo de trabajo} \\ \hline
-        Nombre & Rol\\
+        \multicolumn{2}{|c|}{\textbf{Grupo de trabajo}} \\ \hline
+       \textbf{Nombre} & \textbf{Rol}\\
         \hline \hline
-        Crístofer Canosa Domínguez &  \\ \hline
-        Silvia Rodríguez Alcaraz & \\ \hline
-        Orquídea Seijas Salinas & \\ \hline
-        Samuel Soutullo Sobral & \\ \hline
+        Crístofer Canosa Domínguez & Validador de requisitos \\ \hline
+        Silvia Rodríguez Alcaraz & Aseguradora de calidad \\ \hline
+        Orquídea Seijas Salinas & Gestora documental \\ \hline
+        Samuel Soutullo Sobral & Jefe de proyecto \\ \hline
         \end{tabular}   
         \end{table}
 		
 	\section{Planificación de la práctica}
-		TODO %TODO meter gantt
+		\includegraphics[scale=0.25]{imagenes/planificacion.jpg}
 		
 	\section{Desarrollo de la práctica}
 		\subsection{Identificación de activos}
@@ -66,12 +80,12 @@
                  \item Manuales técnicos y de usuario:** El manual técnico contiene información sobre la implementación de la                         aplicación para su posterior ampliación o modificación por parte de terceros. El manual de usuario funciona como guía para usuarios comunes del programa.
             \end{itemize}
 			\subsubsection{Líneas base}
-			\begin{itemize}
-			    \item Solicitud: El producto de esta etapa sería la propia solicitud de TFG. Una vez aprobada la solicitud del alumno, éste puede pasar a la siguiente etapa del proceso sin modificaciones sobre esta propuesta. Es decir, en principio, debe continuar con el trabajo presentado.
-			    \item Análisis y diseño: en esta etapa el alumno realizará los pertinentes estudios para establecer tanto los requisitos y costes del trabajo como los diagramas pertinentes que describan el sistema a implementar. Los productos de esta etapa serán el documento de análisis y el de diseño, los cuales deberán ser aprobados para proceder a la implementación. Una vez aprobados, los productos no podrán ser modificados sin emplear un proceso de control de cambios estricto.
-			    \item Implementación: el producto de esta etapa será el código de la aplicación a desarrollar. Este código debe ser plenamente funcional y cumplir tanto con la estructura descrita en el diseño como con los requisitos determinados en el análisis para ser aprobado.
-			    \item Documentación: los productos son la memoria del proyecto, el documento de presentación oral y los manuales técnicos y de usuario. Todos los documentos deben ser claros, precisos y completos para asegurar su aprobación. Esta sería la última etapa del proceso, una vez finalizada éste debería haberse completado. La comparación de las distintas líneas base permitirá comprobar si los tiempos estimados para cada etapa se han cumplido o no y, en este caso, cómo se han desviado de la planificación inicial.	    			    
-			\end{itemize}
+				\begin{itemize}
+			    	\item Solicitud: El producto de esta etapa sería la propia solicitud de TFG. Una vez aprobada la solicitud del alumno, éste puede pasar a la siguiente etapa del proceso sin modificaciones sobre esta propuesta. Es decir, en principio, debe continuar con el trabajo presentado.
+			    	\item Análisis y diseño: en esta etapa el alumno realizará los pertinentes estudios para establecer tanto los requisitos y costes del trabajo como los diagramas pertinentes que describan el sistema a implementar. Los productos de esta etapa serán el documento de análisis y el de diseño, los cuales deberán ser aprobados para proceder a la implementación. Una vez aprobados, los productos no podrán ser modificados sin emplear un proceso de control de cambios estricto.
+			   	 	\item Implementación: el producto de esta etapa será el código de la aplicación a desarrollar. Este código debe ser plenamente funcional y cumplir tanto con la estructura descrita en el diseño como con los requisitos determinados en el análisis para ser aprobado.
+			   		\item Documentación: los productos son la memoria del proyecto, el documento de presentación oral y los manuales técnicos y de usuario. Todos los documentos deben ser claros, precisos y completos para asegurar su aprobación. Esta sería la última etapa del proceso, una vez finalizada éste debería haberse completado. La comparación de las distintas líneas base permitirá comprobar si los tiempos estimados para cada etapa se han cumplido o no y, en este caso, cómo se han desviado de la planificación inicial.	    			    
+				\end{itemize}
 			\subsubsection{Sistema de gestión de configuración}
 			\begin{itemize}
 			    \item Git: Se ha decidido utilizar Git como sistema de gestión de configuración, puesto que al ser un proyecto estrechamente relacionado con la implementación de código, es altamente probable que sea necesario registrar cada cambio realizado. Esta herramienta permitirá realizar esta actividad de manera rápida y eficiente, además de permitir el acceso a la lista de cambios fácilmente.
@@ -98,7 +112,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Probabilidad} Moderada
 				\paragraph{Impacto}	Catastrófico
 				\paragraph{Descripción} El hecho de que falte algún apartado o existan errores en la realización del documento puede hacer que se rechace por parte de la comisión de TFG. Por lo tanto, se debe organizar el tiempo para realizar todos y cada uno de los elementos obligatorios.
-				\paragraph{Fecha} Marzo %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Fecha} A lo largo del mes de marzo %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
 				\paragraph{Tratamiento} Prevención %Minimización o prevención
 				\paragraph{Acción} Se debe mantener un ECS con la planificación en la que estén definidos todos los elementos obligatorios y el tiempo disponible para su realización. La estimación del tiempo se puede revisar a lo largo de la realización del anteproyecto, pero siempre ajustándose a la fecha límite de entrega. %Descripción del tratamiento
 				\paragraph{Indicadores} Alguno de los elementos está tardando más de lo debido conforme a la planificación. %Que nos puede indicar que se está produciendo el riesgo
@@ -128,7 +142,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Probabilidad} Alta
 				\paragraph{Impacto}	Tolerable
 				\paragraph{Descripción} El trabajo debe ocupar unas horas establecidas para ser válido. En caso de no cumplirlas se debe exponer una razón adecuada.
-				\paragraph{Fecha} 20/03/2017-30/03/2017 %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Fecha} 20/03/2017-30/03/2017
 				\paragraph{Tratamiento} Prevención %Minimización o prevención
 				\paragraph{Acción} Una vez realizada la planificación, si no cumple con las restricciones temporales establecidas, habrá que replantearse los requisitos para ampliarlos o disminuirlos.  %Descripción del tratamiento
 				\paragraph{Indicadores} La planificación no cumple con las restricciones temporales establecidas. %Que nos puede indicar que se está produciendo el riesgo
@@ -156,7 +170,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Probabilidad} Moderada
 				\paragraph{Impacto}	Serio
 				\paragraph{Descripción} Si no se especifican comportamientos concretos es probable que se diseñen módulos que no funcionan o se olviden requisitos. Se debe documentar el diseño en la medida posible.
-				\paragraph{Fecha} Cuando se realice el diseño detallado de cada incremento. %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Fecha} Cuando se realice el diseño detallado de cada incremento: 08/04/17-13/04/17, 28/04/17-04/05/17, 19/05/17.%Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
 				\paragraph{Tratamiento} Minimización  %Minimización o prevención
 				\paragraph{Acción} Es necesario corregir el diseño, con el consiguiente retraso que conlleve respecto a la planificación del TFG. Es posible que no sea posible cubrir los requisitos más superficiales de la aplicación.%Descripción del tratamiento
 				\paragraph{Indicadores} En el momento en el que se realiza el módulo de implementación, no se sigue el diseño inicial, ya que no cumple con todos los requisitos necesarios. %Que nos puede indicar que se está produciendo el riesgo
@@ -166,7 +180,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Probabilidad} Bajo
 				\paragraph{Impacto}	Serio
 				\paragraph{Descripción} Se producen errores graves en la implementación de la aplicación por no tener un diseño claro y un conocimiento amplio de las herramientas a utilizar.
-				\paragraph{Fecha} Cuando se realice la codificación de cada incremento. %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Fecha} Cuando se realice la codificación de cada incremento:14/04/17-26/04/17, 05/05/17-18/05/17, 20/05/17-27/05/17. %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
 				\paragraph{Tratamiento} Prevención %Minimización o prevención
 				\paragraph{Acción} Completar cada módulo y realizar las pruebas necesarias sobre el mismo antes de implementar el siguiente. Así, cada módulo completo será plenamente funcional y los errores serán más fáciles de detectar y corregir porque estarán en un módulo completo%Descripción del tratamiento
 				\paragraph{Indicadores} Que una prueba relacionada con el módulo falle.  %Que nos puede indicar que se está produciendo el riesgo
@@ -177,7 +191,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Impacto}	Serio
 				\paragraph{Descripción} La desactualización del repositorio supondría altas probabilidades de perder la documentación realizada hasta el momento, creando inconsistencias en el proyecto debido a la falta de información crucial. 
 				\paragraph{Fecha} Construcción del repositorio (30/03/2017), actualizaciones después de cada uno de los 3 incrementos y actualización final el 09/06/2017 al finalizar el proyecto.
-				\paragraph{Tratamiento} P
+				\paragraph{Tratamiento} Prevención
 				\paragraph{Acción} Después de cada punto crítico (ver fechas citadas) se revisará arduamente el repositorio de documentación comprobando que contiene todos los documentos generados en ese punto del proyecto.	Llevando a cabo estas acciones, al final del desarrollo el repositorio debería estar completo.			
 				\paragraph{Indicadores} Consultas no exitosas de la documentación, es decir, no encontrar la información que se iba a buscar al repositorio.
 				\paragraph{Seguimiento}	Desde el inicio del proyecto (30/03/2017) hasta el fin del mismo (09/06/2017)
@@ -187,7 +201,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Impacto}	Tolerable
 				\paragraph{Descripción} Su mal planteamiento puede provocar que no se entienda lo que ha sido desarrollado en el trabajo. 
 				\paragraph{Fecha} Cierre del proyecto (04/06/2017-09/06/2017)
-				\paragraph{Tratamiento} P
+				\paragraph{Tratamiento} Prevención
 				\paragraph{Acción} Plantear cuidadosamente la presentación del trabajo para no dejar ningún cabo suelto que pueda jugar en contra del autor a la hora de exponerlo. Además, realizar varias presentaciones de ser necesario realizando ensayos previos a la exposición.
 				\paragraph{Indicadores} Incoherencias a la hora de tratar de exponer el trabajo.					
 
@@ -196,7 +210,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Impacto}	Catastrófico
 				\paragraph{Descripción} La falta de contenidos en la presentación puede deberse a una mala gestión de cambios previa y, en este punto, generará inconsistencias al exponer el trabajo.
 				\paragraph{Fecha} Cierre del proyecto (04/06/2017-09/06/2017)
-				\paragraph{Tratamiento} M
+				\paragraph{Tratamiento} Minimización
 				\paragraph{Acción} En este punto del desarrollo tan sólo se puede revisar si los contenidos que faltan se han traspapelado o tratar de completarlos de la mejor forma posible antes de la exposición.
 				\paragraph{Indicadores} Inconsistencia a la hora de exponer el trabajo debido a la falta de documentos o información.
 				\paragraph{Seguimiento}	Este riesgo está muy ligado al R009, con tal de asegurar que el repositorio de documentación y el de código están actualizados en todo momento, no debería llegarse a este punto. Por esto, de no ser así el impacto es muy elevado pero la probabilidad de que ocurra baja ya que depende de dos riesgos ya estudiados.			
@@ -206,7 +220,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Impacto}	Serio
 				\paragraph{Descripción} La incorrecta especificación del manual de usuario llevaría al individuo que lo consulta a cometer errores en base a las especificaciones incorrectas. Además, los fallos a la hora de especificar el manual técnico podrían provocar errores fatales de cara al futuro ya que no reflejaría la realidad de la aplicación. Así, ésta podría ser tratada de un modo no apropiado.
 				\paragraph{Fecha} Cierre del proyecto (04/06/2017-09/06/2017)
-				\paragraph{Tratamiento} P
+				\paragraph{Tratamiento} Prevención
 				\paragraph{Acción} Realización de los manuales en base a toda la documentación actualizada y recopilada a lo largo del proyecto. Además, llevar a cabo varias reviosiones intensivas de los manuales en busca de falta de información, incongruencias o datos erróneos. Como método a mayores, dejar probar la aplicación a un usuario dejándole únicamente el manual de usuario como ayuda y recoger sus impresiones mediante un cuestionario a medida.
 				\paragraph{Indicadores} 
 				\begin{itemize}
@@ -220,7 +234,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Impacto}	Serio
 				\paragraph{Descripción} Supondría comenzar a desarrollar el TFG antes de que el anteproyecto sea aprobado, pudiendo ser rechazado y perdiendo todo el progreso realizado.
 				\paragraph{Fecha} A partir del 30/03/2017, cuando es entregado el anteproyecto.
-				\paragraph{Tratamiento} P
+				\paragraph{Tratamiento} Prevención
 				\paragraph{Acción} Aguardar a la aprobación del anteproyecto para comenzar a trabajar en el proyecto.
 				\paragraph{Indicadores} Falta de aprobación del anteproyecto.
 				\paragraph{Seguimiento}	Período de tiempo posterior a la entrega del anteproyecto, donde se aguardará por su evaluación.
@@ -230,7 +244,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Impacto}	Catastrófico (peor de los casos)
 				\paragraph{Descripción} El análisis incorrecto de requisitos y diseño del proyecto han sido considerados como lo suficientemente correctos como para pasar a la siguiente fase, por lo que el resto del proyecto se verá afectado. Por supuesto, esto dependerá de la gravedad del error cometido pero en el peor de los casos se tratará de un problema serio que podría retrasar la entrega del TFG.
 				\paragraph{Fecha} 30/03/2017-14/04/2017. Desde que se inicia el trabajo hasta que comienza el primer incremento.
-				\paragraph{Tratamiento} P
+				\paragraph{Tratamiento} Prevención
 				\paragraph{Acción} Revisión intensiva de los requisitos recogidos y el diseño realizado en busca de inconsistencias o a nivel de diseño y falta de requisitos. El diseño será refinado en los siguientes incrementos, por lo que el nivel de detalle no es crucial, pero sí que cumpla los requisitos expuestos.
 				\paragraph{Indicadores} 
 				    \begin{itemize}
@@ -244,7 +258,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Probabilidad} Baja
 				\paragraph{Impacto}	Serio
 				\paragraph{Descripción} Una validación de requisitos funcionales superficial puede permitir que se entregue un software con una calidad mucho menor de la necesaria debido a falta de funcionalidades necesarias implementadas, por lo que se pondría en peligro el proyecto. 
-				\paragraph{Fecha} Se puede producir cuando se realice la captura detallada de requisitos. %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Fecha} Se puede producir cuando se realice la captura detallada de requisitos 30/03/17-05/04/17. %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
 				\paragraph{Tratamiento} Prevención %Minimización o prevención
 				\paragraph{Acción} Realizar la captura detallada de requisitos y consultarla con el tutor del TFG detalladamente para validarlos. %Descripción del tratamiento
 				\paragraph{Indicadores} Requisitos funcionales definidos vagamente: un mismo requisito puede dar pie a que se interprete su funcionalidad de varias formas. %Que nos puede indicar que se está produciendo el riesgo
@@ -263,7 +277,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Probabilidad} Baja
 				\paragraph{Impacto}	Serio
 				\paragraph{Descripción} Supondrá como poco incoherencias en la documentación del trabajo y puede llegar a suponer la pérdida de datos importantes.
-				\paragraph{Fecha} Durante la captura detallada de requisitos. %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Fecha} Durante la captura detallada de requisitos:30/03/17-05/04/17. %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
 				\paragraph{Tratamiento} Prevención %Minimización o prevención
 				\paragraph{Acción} Consultar con el tutor los elementos de configuración del software que se desean definir antes de seguir avanzando con la captura detallada de requisitos.%Descripción del tratamiento
 				\paragraph{Indicadores} Los ECS no contemplan en ningún punto alguno de los documentos que se va a generar, por ejemplo: el código. %Que nos puede indicar que se está produciendo el riesgo
@@ -282,7 +296,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Probabilidad} Alta
 				\paragraph{Impacto}	Tolerable
 				\paragraph{Descripción} Supondrá que, en la documentación de cambios, se pierdan explicaciones de los cambios realizados entre actualización y actualización.
-				\paragraph{Fecha} Este riesgos se podrá producir a lo largo de la codificación y pruebas en cada uno de los incrementos.  %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Fecha} Este riesgos se podrá producir a lo largo de la codificación y pruebas en cada uno de los incrementos: 14/04/17-26/04/17, 05/05/17-18/05/17, 20/05/17-27/05/17.  %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
 				\paragraph{Tratamiento} Prevención %Minimización o prevención
 				\paragraph{Acción} Será necesario actualizar el documento de cambios cada vez que se guarde en el repositorio un cambio en el código. %Descripción del tratamiento
 				\paragraph{Indicadores} No encontrar la explicación de un cambio implementado en la documentación. %Que nos puede indicar que se está produciendo el riesgo
@@ -291,7 +305,7 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Probabilidad} Baja
 				\paragraph{Impacto}	Serio
 				\paragraph{Descripción} Supondrá que, cuando se realice el despliegue, la aplicación no pueda ejecutarse en un equipo, a pesar de que según el documento de despliegue se podría.
-				\paragraph{Fecha} Este riesgo se puede producir en la puesta en explotación de cada uno de los incrementos. %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
+				\paragraph{Fecha} Este riesgo se puede producir en la puesta en explotación de cada uno de los incrementos:27/04/17-28/04/17, 19/05/17-20/05/17, 28/05/17-03/06/17. %Cuando puede producirse el riesgo. Ver el Gantt de Rabenso
 				\paragraph{Tratamiento} Prevención %Minimización o prevención
 				\paragraph{Acción} Realizar un documento de despliegue lo más completo posible y consultarlo con el tutor del TFG. %Descripción del tratamiento
 				\paragraph{Indicadores} El tipo de  especificaciones técnicas del computador de desarrollo tenidas en cuenta para la realización del proyecto no son las mismas que para el computador de despliegue.  %Que nos puede indicar que se está produciendo el riesgo
@@ -307,11 +321,25 @@ No llevar un registro concreto de validación puede desembocar en una entrega in
 				\paragraph{Indicadores} El computador de desarrollo no funciona.%Que nos puede indicar que se está produciendo el riesgo
 				\paragraph{Seguimiento}	Será necesario seguir este riesgo en el momento en el que se detecte el indicador. %Desde cuando empezar a seguir el riesgo. Este apartado solo aparece en riesgos con impactos altos.
 
-				
+	\newpage
 	\appendix
 		\section{Bibliografía y material utilizado}
-			TODO %TODO
+			\begin{itemize}
+			\item \textbf{Campus Virtual de Enxeñería do Software:} PresCompleta.pdf
+			\item \textbf{Regulamento do traballo de fin de grao en Enxeñería Informática Universidade de Santiago de Compostela:} http://www.usc.es/etse/files/u1/RegulamentoTFG\_GrEI\_CG\_30xan2014.pdf
+			\item \textbf{Traballo de fin de grao EI:} http://www.usc.es/etse/taxonomy/term/10437
+			\end{itemize}
 			
 		\section{Relatorio de documentos asociados a éste}
-			TODO %TODO
+		\begin{table}[htb]
+        \centering
+        \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Documento} & \textbf{Software de visualización} & \textbf{Descripción} \\
+        \hline
+        planificacion.mpp & Microsoft Project (2016) & Planificación de la práctica \\ 
+        \hline
+        \end{tabular}   
+        \end{table}
+        
 \end{document}
