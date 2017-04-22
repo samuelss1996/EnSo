@@ -49,13 +49,13 @@ CREATE TABLE if not exists products(
 	availableSince DATE NOT NULL,
 	category VARCHAR(255),
 	description TEXT(1024),
-	currentPrice FLOAT(4,2) NOT NULL
+	currentPrice FLOAT NOT NULL
 );
 
 
 CREATE TABLE if not exists Sell(
 	id CHAR(11) NOT NULL PRIMARY KEY,
-	totalPrice FLOAT(4,2) NOT NULL,
+	totalPrice FLOAT NOT NULL,
 	sellDate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	idUser CHAR(11) NOT NULL,
 	FOREIGN KEY(idUser) REFERENCES user(id)
@@ -65,8 +65,8 @@ CREATE TABLE if not exists Sell(
 
 CREATE TABLE if not exists lineacompra(
 	quantity INTEGER NOT NULL,
-	totalPrice FLOAT(4,2) NOT NULL,
-	unitPrice FLOAT(4,2) NOT NULL,
+	totalPrice FLOAT NOT NULL,
+	unitPrice FLOAT NOT NULL,
 	lineSell INTEGER NOT NULL,
 	idSell CHAR(11) NOT NULL,
 	idProducts CHAR(11) NOT NULL,
@@ -90,7 +90,7 @@ INSERT into products(id, name, stock, available, availableSince, category, descr
        values ('I-AAAA-000', 'Producto1', '100', true, '2017-03-01', 'categoria', 'Descripcion del producto', 99.99);
 INSERT into products(id, name, stock, available, availableSince, category, description, currentPrice)
        values ('I-AAAA-001', 'Producto2', '100', true, '2017-02-15', 'categoria', 'Descripcion del producto', 49.99);
-
+	   
 INSERT into sell(id, totalPrice, sellDate, idUser) 
 	VALUES (1, 10.00, '2017-04-22 11:00:00', 'U-AAAA-000');
 INSERT into sell(id, totalPrice, sellDate, idUser)
