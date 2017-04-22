@@ -21,7 +21,7 @@ public class JDBCProductDAO implements IDAOProduct {
     }
 
     @Override
-    public Product fetchProduct(int productId) {
+    public Product fetchProduct(String productId) {
         return null;
     }
 
@@ -31,7 +31,7 @@ public class JDBCProductDAO implements IDAOProduct {
     }
 
     @Override
-    public int queryStock(int productId) {
+    public int queryStock(String productId) {
         return 0;
     }
 }

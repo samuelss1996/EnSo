@@ -12,9 +12,9 @@ public interface IDAOProduct {
 
 	void updateProduct(Product product);
 
-	Product fetchProduct(int productId);
+	Product fetchProduct(String productId);
 
 	List<Product> queryProduct(String name);
 
-	int queryStock(int productId);
+	int queryStock(String productId);
 }

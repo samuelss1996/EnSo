@@ -1,7 +1,5 @@
 package statistics;
 
-import statistics.IStatistics;
-
 public class Statistics implements IStatistics {
 	public int calculateLastWeekSellCount() {
 		return 0;

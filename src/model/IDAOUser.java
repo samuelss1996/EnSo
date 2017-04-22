@@ -12,13 +12,13 @@ public interface IDAOUser {
 
 	void updateUser(User user);
 
-	void deregisterUser(int userId, String password);
+	void deregisterUser(String userId, String password);
 
-	User fetchUser(int userId);
+	User fetchUser(String userId);
 
 	List<User> queryUser(String username);
 
-	Application getApplication();
+	List<Application> getApplications(String userID);
 
-	Center getCenter();
+	Center getCenter(int id);
 }

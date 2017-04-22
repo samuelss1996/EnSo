@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class User {
 	private String id;
+	private int center;
 	private String firstName;
 	private String lastName;
 	private Date registerDate;
@@ -12,7 +13,21 @@ public class User {
 	private String email;
 	public String typeUser;
 
-	public String getId() {
+    public User() {
+    }
+
+    public User(String id, int center, String firstName, String lastName, Date registerDate, String NIF, String email, String typeUser) {
+        this.id = id;
+        this.center = center;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.registerDate = registerDate;
+        this.NIF = NIF;
+        this.email = email;
+        this.typeUser = typeUser;
+    }
+
+    public String getId() {
 		return id;
 	}
 
@@ -20,7 +35,15 @@ public class User {
 		this.id = id;
 	}
 
-	public String getFirstName() {
+    public int getCenter() {
+        return center;
+    }
+
+    public void setCenter(int center) {
+        this.center = center;
+    }
+
+    public String getFirstName() {
 		return firstName;
 	}
 
