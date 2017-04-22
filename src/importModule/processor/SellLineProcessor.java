@@ -21,7 +21,7 @@ public class SellLineProcessor extends LineProcessor {
     public void processLine(ImportData data) throws DataFormatException {
         try {
             Product sellProduct = new Product();
-            Date sellDate = DateFormat.getDateInstance(DateFormat.DEFAULT, Locale.forLanguageTag("es")).parse(this.getField(2));
+            Date sellDate = DateFormat.getDateInstance(DateFormat.SHORT, Locale.forLanguageTag("es")).parse(this.getField(2));
 
             if (this.shouldBeImportedBasedOnDate(sellDate) && this.checkFieldsFormat()) {
                 Sell sell = data.containsSell(this.getField(1))? data.getSellById(this.getField(1)) : new Sell();
@@ -64,11 +64,11 @@ public class SellLineProcessor extends LineProcessor {
      * @throws DataFormatException If any of the fields has an invalid format
      */
     private boolean checkFieldsFormat() throws DataFormatException {
-        if(!this.getField(1).matches("^V-[a-zA-Z]{6}-[0-9]{3}$")) {
+        if(!this.getField(1).matches("^V-[a-zA-Z]{5}-[0-9]{3}$")) {
             throw new DataFormatException(String.format("Invalid sell identifier. Expected V-XXXXX-000. Found %s", this.getField(1)));
-        } else if(!this.getField(3).matches("^U-[a-zA-Z]{6}-[0-9]{3}$")) {
+        } else if(!this.getField(3).matches("^U-[a-zA-Z]{5}-[0-9]{3}$")) {
             throw new DataFormatException(String.format("Invalid user identifier. Expected U-XXXXX-000. Found %s", this.getField(3)));
-        } else if(!this.getField(4).matches("^I-[a-zA-Z]{6}-[0-9]{3}$")) {
+        } else if(!this.getField(4).matches("^I-[a-zA-Z]{5}-[0-9]{3}$")) {
             throw new DataFormatException(String.format("Invalid product identifier. Expected I-XXXXX-000. Found %s", this.getField(4)));
         }
 

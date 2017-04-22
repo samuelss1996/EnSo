@@ -20,7 +20,7 @@ public class UserLineProcessor extends LineProcessor {
 	public void processLine(ImportData data) throws DataFormatException {
         try {
             User user = new User();
-            Date registerDate = DateFormat.getDateInstance(DateFormat.DEFAULT, Locale.forLanguageTag("es")).parse(this.getField(2));
+            Date registerDate = DateFormat.getDateInstance(DateFormat.SHORT, Locale.forLanguageTag("es")).parse(this.getField(2));
 
             if (this.shouldBeImportedBasedOnDate(registerDate) && this.checkFieldsFormat()) {
                 user.setId(this.getField(1));
@@ -43,7 +43,7 @@ public class UserLineProcessor extends LineProcessor {
      * @throws DataFormatException If any of the fields has an invalid format
      */
     private boolean checkFieldsFormat() throws DataFormatException {
-        if(!this.getField(1).matches("^U-[a-zA-Z]{6}-[0-9]{3}$")) {
+        if(!this.getField(1).matches("^U-[a-zA-Z]{5}-[0-9]{3}$")) {
             throw new DataFormatException(String.format("Invalid user identifier. Expected U-XXXXX-000. Found %s", this.getField(1)));
         } else if(!this.getField(5).matches("^[0-9]{8}[a-zA-Z]$")) {
             throw new DataFormatException(String.format("Invalid user NIF: %s", this.getField(5)));

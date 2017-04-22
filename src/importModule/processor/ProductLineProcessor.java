@@ -20,7 +20,7 @@ public class ProductLineProcessor extends LineProcessor {
 	@Override
 	public void processLine(ImportData data) throws DataFormatException {
         try {
-            Date availableSince = DateFormat.getDateInstance(DateFormat.DEFAULT, Locale.forLanguageTag("es")).parse(this.getField(2));
+            Date availableSince = DateFormat.getDateInstance(DateFormat.SHORT, Locale.forLanguageTag("es")).parse(this.getField(2));
             Product product = new Product();
 
             if (this.shouldBeImportedBasedOnDate(availableSince) && this.checkFieldsFormat()) {
@@ -46,7 +46,7 @@ public class ProductLineProcessor extends LineProcessor {
      * @throws DataFormatException If any of the fields has an invalid format
      */
     private boolean checkFieldsFormat() throws DataFormatException {
-        if(!this.getField(1).matches("^I-[a-zA-Z]{6}-[0-9]{3}$")) {
+        if(!this.getField(1).matches("^I-[a-zA-Z]{5}-[0-9]{3}$")) {
             throw new DataFormatException(String.format("Invalid product identifier. Expected I-XXXXX-000. Found %s", this.getField(1)));
         }
 

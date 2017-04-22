@@ -1,6 +1,7 @@
 package model.data;
 
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -11,6 +12,9 @@ public class Sell {
 	private List<SellLine> sellLines;
 	private float totalPrice;
 
+	public Sell() {
+	    this.sellLines = new ArrayList<>();
+    }
 
 	public void addLine(SellLine line) {
 		this.sellLines.add(line);

@@ -4,12 +4,19 @@ import model.data.Product;
 import model.data.Sell;
 import model.data.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ImportData {
     private List<User> users;
     private List<Product> products;
     private List<Sell> sells;
+
+    public ImportData() {
+        this.users = new ArrayList<>();
+        this.products = new ArrayList<>();
+        this.sells = new ArrayList<>();
+    }
 
     public void addUser(User user) {
         this.users.add(user);
