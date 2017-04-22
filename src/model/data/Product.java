@@ -13,6 +13,9 @@ public class Product {
 	private String description;
 	private float currentPrice;
 
+	public Product() {
+	}
+
 	public Product(String id, String name, int stock, boolean available, Date availableSince, String category, String description, float currentPrice) {
 		this.id = id;
 		this.name = name;

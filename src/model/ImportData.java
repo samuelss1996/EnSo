@@ -30,4 +30,16 @@ public class ImportData {
     public Sell getSellById(String sellId) {
         return this.sells.stream().filter(sell -> sell.getId().equals(sellId)).findFirst().get();
     }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public List<Sell> getSells() {
+        return sells;
+    }
 }

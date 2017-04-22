@@ -22,4 +22,12 @@ public class SellLine {
 	public int getQuantity() {
 		return 0;
 	}
+
+	public float getUnitPrice() {
+		return unitPrice;
+	}
+
+	public float getTotalPrice() {
+		return totalPrice;
+	}
 }
