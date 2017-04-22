@@ -90,3 +90,10 @@ INSERT into products(id, name, stock, available, availableSince, category, descr
        values ('I-AAAA-000', 'Producto1', '100', true, '2017-03-01', 'categoria', 'Descripcion del producto', 99.99);
 INSERT into products(id, name, stock, available, availableSince, category, description, currentPrice)
        values ('I-AAAA-001', 'Producto2', '100', true, '2017-02-15', 'categoria', 'Descripcion del producto', 49.99);
+
+INSERT into sell(id, totalPrice, sellDate, idUser) 
+	VALUES (1, 10.00, '2017-04-22 11:00:00', 'U-AAAA-000');
+INSERT into sell(id, totalPrice, sellDate, idUser)
+	VALUES (2, 24.50, '2017-03-22 11:00:00', 'U-AAAA-000');
+INSERT into sell(id, totalPrice, sellDate, idUser)
+	VALUES (3, 24.50, '2017-03-23 11:00:00', 'U-AAAA-000');
