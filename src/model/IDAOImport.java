@@ -1,7 +1,7 @@
 package model;
 
 
-import model.data.ImportData;
+import model.data.*;
 
 public interface IDAOImport {
 	void doImport(ImportData data);

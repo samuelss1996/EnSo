@@ -3,7 +3,7 @@ package importModule.processor;
 
 import importModule.IImport;
 import model.ImportData;
-import model.Product;
+import model.data.Product;
 
 import java.text.DateFormat;
 import java.text.ParseException;

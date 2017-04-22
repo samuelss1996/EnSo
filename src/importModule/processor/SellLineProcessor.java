@@ -2,7 +2,11 @@ package importModule.processor;
 
 
 import importModule.IImport;
-import model.*;
+import model.ImportData;
+import model.data.Product;
+import model.data.Sell;
+import model.data.SellLine;
+import model.data.User;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -32,7 +36,7 @@ public class SellLineProcessor extends LineProcessor {
                     sell.setSellDate(sellDate);
 
                     sellUser.setId(this.getField(3));
-                    sell.setUser(sellUser);
+                    sell.setUser(sellUser.getId());
                 }
 
                 sellProduct.setId(this.getField(4));

@@ -2,7 +2,8 @@ package importModule.processor;
 
 import importModule.IImport;
 import model.ImportData;
-import model.User;
+import model.data.User;
+
 
 import java.text.DateFormat;
 import java.text.ParseException;

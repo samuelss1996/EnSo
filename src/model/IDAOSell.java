@@ -8,7 +8,7 @@ import java.util.Date;
 public interface IDAOSell {
 	void addSell(Sell sell);
 
-	Sell querySell(int sellId);
+	Sell querySell(String sellId);
 
 	int calculateSellCount(Date from, Date to);
 

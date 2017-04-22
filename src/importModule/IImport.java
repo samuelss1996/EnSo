@@ -1,6 +1,6 @@
 package importModule;
 
-import model.data.ImportData;
+import model.ImportData;
 
 import java.io.IOException;
 import java.util.Date;

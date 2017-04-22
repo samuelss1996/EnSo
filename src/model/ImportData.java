@@ -1,6 +1,7 @@
 package model;
 
 import java.util.List;
+import model.data.*;
 
 public class ImportData {
 	private List<User> users;

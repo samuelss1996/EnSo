@@ -7,9 +7,9 @@ import java.util.List;
 public class Sell {
 	private String id;
 	private Date sellDate;
-	private User user;
+	private String idUser;
 	private List<SellLine> sellLines;
-	private Object totalPrice;
+	private float totalPrice;
 
 
 	public void addLine(SellLine line) {
@@ -38,23 +38,23 @@ public class Sell {
 		this.sellDate = sellDate;
 	}
 
-	public User getUser() {
-		return user;
+	public String getIduser() {
+		return idUser;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setUser(String idUser) {
+		this.idUser = idUser;
 	}
 
 	public void setSellLines(List<SellLine> sellLines) {
 		this.sellLines = sellLines;
 	}
 
-	public Object getTotalPrice() {
+	public float getTotalPrice() {
 		return totalPrice;
 	}
 
-	public void setTotalPrice(Object totalPrice) {
+	public void setTotalPrice(float totalPrice) {
 		this.totalPrice = totalPrice;
 	}
 }
