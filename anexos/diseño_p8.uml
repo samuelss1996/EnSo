@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <XPD:PROJECT xmlns:XPD="http://www.staruml.com" version="1">
 <XPD:HEADER>
 <XPD:SUBUNITS>
@@ -11,7 +11,7 @@
 <XPD:ATTR name="Title" type="string">p8</XPD:ATTR>
 <XPD:ATTR name="#OwnedElements" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="OwnedElements[0]" type="UMLModel" guid="VaLFhavAL06gN8yWY/th2QAA">
-<XPD:ATTR name="Name" type="string">Diseño estructural</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Dise&#241;o estructural</XPD:ATTR>
 <XPD:REF name="Namespace">4n1jGh9KWEaxl3FFitwRXQAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">5</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLClassDiagram" guid="s3l4edAGIU6r53YV97q8LQAA">
@@ -56,7 +56,7 @@
 <XPD:ATTR name="Left" type="integer">168</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">824</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">108</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">134</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">147</XPD:ATTR>
 <XPD:REF name="Model">ZrspKRJHfUa3JpTjrVU/oQAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="DP2SGnk25E6av20div819gAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="Djx5RmmfOUeHUYcut5goPgAA">
@@ -261,7 +261,7 @@
 <XPD:ATTR name="FillColor" type="string">$004040FF</XPD:ATTR>
 <XPD:ATTR name="Left" type="integer">128</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">576</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">235</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">256</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">147</XPD:ATTR>
 <XPD:REF name="Model">cObb79zwiUC28a49Zz6BTQAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="OQZtUJmSxk+9YY3jFxP49gAA">
@@ -1450,7 +1450,7 @@
 <XPD:ATTR name="Width" type="integer">455</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">188</XPD:ATTR>
 <XPD:ATTR name="Text" type="string">import(Date dateFrom, int... elements) {
-  // preparar el archivo para leer las líneas y crear un importData vacío
+  // preparar el archivo para leer las l&#237;neas y crear un importData vac&#237;o
   
   para cada linea {
     LineProcessor processor = LineProcessor.getLineProcessorFor(linea)
@@ -2510,53 +2510,57 @@ definidas en la interfaz IImport
 <XPD:REF name="Views[3]">G0NGwdT8UEK7aQWNukC/SAAA</XPD:REF>
 <XPD:ATTR name="#SupplierDependencies" type="integer">1</XPD:ATTR>
 <XPD:REF name="SupplierDependencies[0]">35O0ju0psUGQ08tYTbdxiQAA</XPD:REF>
-<XPD:ATTR name="#TypedFeatures" type="integer">1</XPD:ATTR>
-<XPD:REF name="TypedFeatures[0]">sIsRiu5nEk+E2u+o+42q7AAA</XPD:REF>
-<XPD:ATTR name="#TypedParameters" type="integer">4</XPD:ATTR>
+<XPD:ATTR name="#TypedParameters" type="integer">5</XPD:ATTR>
 <XPD:REF name="TypedParameters[0]">U+zZ1Ggk2UWZ5NTi+RUSmwAA</XPD:REF>
 <XPD:REF name="TypedParameters[1]">pRirLXVqBk6qvjvJr48prwAA</XPD:REF>
 <XPD:REF name="TypedParameters[2]">cD6ZCv2XtUC/WfjzBgO+wAAA</XPD:REF>
 <XPD:REF name="TypedParameters[3]">kWwV3+1wiUC9IyGIlzAVMgAA</XPD:REF>
+<XPD:REF name="TypedParameters[4]">AJfnDYlc3kmjWMI+eJqKvgAA</XPD:REF>
 <XPD:ATTR name="#Associations" type="integer">1</XPD:ATTR>
 <XPD:REF name="Associations[0]">3QLvvClauUad+PQaTuXq9AAA</XPD:REF>
-<XPD:ATTR name="#Attributes" type="integer">7</XPD:ATTR>
+<XPD:ATTR name="#Attributes" type="integer">8</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="qRza8op9ukuV0RoFl9uHVwAA">
 <XPD:ATTR name="Name" type="string">id</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="Owner">ZrspKRJHfUa3JpTjrVU/oQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="pPTUSWe9qUWb9d5ShLS4/QAA">
+<XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="z5Tkf3/S20yIShPYPxQVuQAA">
+<XPD:ATTR name="Name" type="string">center</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:REF name="Owner">ZrspKRJHfUa3JpTjrVU/oQAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[2]" type="UMLAttribute" guid="pPTUSWe9qUWb9d5ShLS4/QAA">
 <XPD:ATTR name="Name" type="string">firstName</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="Owner">ZrspKRJHfUa3JpTjrVU/oQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Attributes[2]" type="UMLAttribute" guid="bkljRWD2cE+F1ol2Z8U66AAA">
+<XPD:OBJ name="Attributes[3]" type="UMLAttribute" guid="bkljRWD2cE+F1ol2Z8U66AAA">
 <XPD:ATTR name="Name" type="string">lastName</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="Owner">ZrspKRJHfUa3JpTjrVU/oQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Attributes[3]" type="UMLAttribute" guid="h+muG7aYgUWKmX3H5JJI/QAA">
+<XPD:OBJ name="Attributes[4]" type="UMLAttribute" guid="h+muG7aYgUWKmX3H5JJI/QAA">
 <XPD:ATTR name="Name" type="string">registerDate</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">Date</XPD:ATTR>
 <XPD:REF name="Owner">ZrspKRJHfUa3JpTjrVU/oQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Attributes[4]" type="UMLAttribute" guid="FwPn4mKBvUCz5ZLu6UsY9AAA">
+<XPD:OBJ name="Attributes[5]" type="UMLAttribute" guid="FwPn4mKBvUCz5ZLu6UsY9AAA">
 <XPD:ATTR name="Name" type="string">NIF</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="Owner">ZrspKRJHfUa3JpTjrVU/oQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Attributes[5]" type="UMLAttribute" guid="sY5ohQOCaEKAkyKmFF63QAAA">
+<XPD:OBJ name="Attributes[6]" type="UMLAttribute" guid="sY5ohQOCaEKAkyKmFF63QAAA">
 <XPD:ATTR name="Name" type="string">email</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="Owner">ZrspKRJHfUa3JpTjrVU/oQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Attributes[6]" type="UMLAttribute" guid="FXJJX9UYl0KmiLg+YIjzhAAA">
+<XPD:OBJ name="Attributes[7]" type="UMLAttribute" guid="FXJJX9UYl0KmiLg+YIjzhAAA">
 <XPD:ATTR name="Name" type="string">typeUser</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="Owner">ZrspKRJHfUa3JpTjrVU/oQAA</XPD:REF>
@@ -2610,10 +2614,11 @@ definidas en la interfaz IImport
 <XPD:ATTR name="#CallActions" type="integer">1</XPD:ATTR>
 <XPD:REF name="CallActions[0]">2yYfgQ3NM0KrWP7jjlaEuAAA</XPD:REF>
 </XPD:OBJ>
-<XPD:ATTR name="#TypedParameters" type="integer">3</XPD:ATTR>
+<XPD:ATTR name="#TypedParameters" type="integer">4</XPD:ATTR>
 <XPD:REF name="TypedParameters[0]">FtentFYXHEa1pkkgBdCXagAA</XPD:REF>
 <XPD:REF name="TypedParameters[1]">aqK2a4/UVEKdMu6U5jx6kgAA</XPD:REF>
 <XPD:REF name="TypedParameters[2]">raqR+hyAhkipTtwUgIUtDAAA</XPD:REF>
+<XPD:REF name="TypedParameters[3]">duLL9nf0SE2VfPx82FuGEQAA</XPD:REF>
 <XPD:ATTR name="#Associations" type="integer">2</XPD:ATTR>
 <XPD:REF name="Associations[0]">Z8QEvYd0BkOZo9WIr8HBRgAA</XPD:REF>
 <XPD:REF name="Associations[1]">2ndNwXCzHk2iPmgWDWaDawAA</XPD:REF>
@@ -2631,10 +2636,9 @@ definidas en la interfaz IImport
 <XPD:REF name="Owner">n5N6jP/MI06YrRTt6BfSrAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[2]" type="UMLAttribute" guid="sIsRiu5nEk+E2u+o+42q7AAA">
-<XPD:ATTR name="Name" type="string">user</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">idUser</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">User</XPD:ATTR>
-<XPD:REF name="Type_">ZrspKRJHfUa3JpTjrVU/oQAA</XPD:REF>
+<XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="Owner">n5N6jP/MI06YrRTt6BfSrAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[3]" type="UMLAttribute" guid="wANSyzXh1ky9Rpb8CVjPLgAA">
@@ -2664,13 +2668,14 @@ definidas en la interfaz IImport
 <XPD:REF name="SupplierDependencies[0]">6mYBbEHawE6xG4ez0Q6brgAA</XPD:REF>
 <XPD:ATTR name="#TypedFeatures" type="integer">1</XPD:ATTR>
 <XPD:REF name="TypedFeatures[0]">OdRYE0XllkimtmOjABCIPwAA</XPD:REF>
-<XPD:ATTR name="#TypedParameters" type="integer">6</XPD:ATTR>
+<XPD:ATTR name="#TypedParameters" type="integer">7</XPD:ATTR>
 <XPD:REF name="TypedParameters[0]">wuoIB4Wyb0qJlKXl0jOQKAAA</XPD:REF>
 <XPD:REF name="TypedParameters[1]">2Ka1YhEBoEqJ0j+QAB+drwAA</XPD:REF>
 <XPD:REF name="TypedParameters[2]">bi1PROLBNU+VM67fIVdOFwAA</XPD:REF>
 <XPD:REF name="TypedParameters[3]">A+z+u9IbM0aVSJ0S2DLceAAA</XPD:REF>
 <XPD:REF name="TypedParameters[4]">7/clvj1JLky0urH1hGm54wAA</XPD:REF>
 <XPD:REF name="TypedParameters[5]">CPq4CutZlEmMmyLVd4+2pwAA</XPD:REF>
+<XPD:REF name="TypedParameters[6]">RLD1k1FZMkSuKCzvPfLHbgAA</XPD:REF>
 <XPD:ATTR name="#Associations" type="integer">1</XPD:ATTR>
 <XPD:REF name="Associations[0]">e9MV9KB57kichqOzt41eZQAA</XPD:REF>
 <XPD:ATTR name="#Attributes" type="integer">8</XPD:ATTR>
@@ -2732,8 +2737,9 @@ definidas en la interfaz IImport
 <XPD:REF name="Views[3]">4kLnOEHGe0KfXHsOFamL1AAA</XPD:REF>
 <XPD:ATTR name="#SupplierDependencies" type="integer">1</XPD:ATTR>
 <XPD:REF name="SupplierDependencies[0]">DCNIo98NU0ufatnsYK877wAA</XPD:REF>
-<XPD:ATTR name="#TypedParameters" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="#TypedParameters" type="integer">2</XPD:ATTR>
 <XPD:REF name="TypedParameters[0]">Lazbq//6fEefzcjiH6XMfQAA</XPD:REF>
+<XPD:REF name="TypedParameters[1]">J5Gz4a5kQUC3NLeZQ6VH+wAA</XPD:REF>
 <XPD:ATTR name="#Associations" type="integer">1</XPD:ATTR>
 <XPD:REF name="Associations[0]">fbP/974hUU2mCE3V/e0llgAA</XPD:REF>
 <XPD:ATTR name="#Attributes" type="integer">2</XPD:ATTR>
@@ -2855,12 +2861,12 @@ definidas en la interfaz IImport
 <XPD:ATTR name="Name" type="string">deregisterUser</XPD:ATTR>
 <XPD:REF name="Owner">cObb79zwiUC28a49Zz6BTQAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="99hpMpsfCkKOFDqR4mnvFQAA">
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="2b6IENjwu0O4LMDHORG8tAAA">
 <XPD:ATTR name="Name" type="string">userId</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">hpj5o9V0EkadedKPBrqdHgAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="5TN0NqsGD0KVSB1SF1wDKQAA">
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="DluyJyHZEUmTigGDe6OhmgAA">
 <XPD:ATTR name="Name" type="string">password</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">hpj5o9V0EkadedKPBrqdHgAA</XPD:REF>
@@ -2870,14 +2876,14 @@ definidas en la interfaz IImport
 <XPD:ATTR name="Name" type="string">fetchUser</XPD:ATTR>
 <XPD:REF name="Owner">cObb79zwiUC28a49Zz6BTQAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="kWwV3+1wiUC9IyGIlzAVMgAA">
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="AJfnDYlc3kmjWMI+eJqKvgAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">UY7XSeAaO0SZpND2Bt+4XQAA</XPD:REF>
 <XPD:REF name="Type_">ZrspKRJHfUa3JpTjrVU/oQAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="RzTGai0mjk+xFHrDqKHoJgAA">
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="9O5R9ywLzUOK2+Ufjt0lEQAA">
 <XPD:ATTR name="Name" type="string">userId</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">UY7XSeAaO0SZpND2Bt+4XQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:ATTR name="#CallActions" type="integer">1</XPD:ATTR>
@@ -2899,23 +2905,33 @@ definidas en la interfaz IImport
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="Operations[5]" type="UMLOperation" guid="VQLiLUKAyEqm1aYt77jEtQAA">
-<XPD:ATTR name="Name" type="string">getApplication</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">getApplications</XPD:ATTR>
 <XPD:REF name="Owner">cObb79zwiUC28a49Zz6BTQAA</XPD:REF>
-<XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="h9GGt6Vam0GfbrRg5pxMEgAA">
+<XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="QXNsmPypb0+QdrJL7K0rOwAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">List&lt;Application&gt;</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">VQLiLUKAyEqm1aYt77jEtQAA</XPD:REF>
-<XPD:REF name="Type_">s5vD8LMZbEe/HNd6MJ32lAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="bOTEzoWWK0KAKiCxH/6l8wAA">
+<XPD:ATTR name="Name" type="string">userId</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">VQLiLUKAyEqm1aYt77jEtQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="Operations[6]" type="UMLOperation" guid="taJpDsHoW0q4QTnjgZ3pVgAA">
-<XPD:ATTR name="Name" type="string">getCenter</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">fetchCenter</XPD:ATTR>
 <XPD:REF name="Owner">cObb79zwiUC28a49Zz6BTQAA</XPD:REF>
-<XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="Lazbq//6fEefzcjiH6XMfQAA">
+<XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="J5Gz4a5kQUC3NLeZQ6VH+wAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">taJpDsHoW0q4QTnjgZ3pVgAA</XPD:REF>
 <XPD:REF name="Type_">iHzasJIjfE6meQRmVcawdgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="foshuVazbkyXfJBn/IpwTgAA">
+<XPD:ATTR name="Name" type="string">id</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">taJpDsHoW0q4QTnjgZ3pVgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -2949,14 +2965,14 @@ definidas en la interfaz IImport
 <XPD:ATTR name="Name" type="string">querySell</XPD:ATTR>
 <XPD:REF name="Owner">5/E9doMVC029xuyyI2inGwAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="aqK2a4/UVEKdMu6U5jx6kgAA">
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="duLL9nf0SE2VfPx82FuGEQAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">nlMCeYvqzUWKMwBcqQiIlgAA</XPD:REF>
 <XPD:REF name="Type_">n5N6jP/MI06YrRTt6BfSrAAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="quR3yFA/iUqPf8BsmA+UVgAA">
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="9xAXrzI+IEWhEWjpyv7jUgAA">
 <XPD:ATTR name="Name" type="string">sellId</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">nlMCeYvqzUWKMwBcqQiIlgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -3155,14 +3171,14 @@ definidas en la interfaz IImport
 <XPD:ATTR name="Name" type="string">fetchProduct</XPD:ATTR>
 <XPD:REF name="Owner">rIMJDa4QlU6wYKFXTcrimgAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="CPq4CutZlEmMmyLVd4+2pwAA">
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="RLD1k1FZMkSuKCzvPfLHbgAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">rJ+Eet5o9EW9ZVqiwxNo1gAA</XPD:REF>
 <XPD:REF name="Type_">iuAympxxRUqSgxh59h30ugAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="3p6K0LQGhUq8/ko+Ubml1gAA">
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="XLJpN/9E9UKvxqcz1x7sUAAA">
 <XPD:ATTR name="Name" type="string">productId</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">rJ+Eet5o9EW9ZVqiwxNo1gAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -3185,14 +3201,14 @@ definidas en la interfaz IImport
 <XPD:ATTR name="Name" type="string">queryStock</XPD:ATTR>
 <XPD:REF name="Owner">rIMJDa4QlU6wYKFXTcrimgAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">2</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="en0nXSQ8+EmKN1+Lj/yFxgAA">
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="zFvBRSltM0Sr5MiYqbbetgAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">ikS6Wu6fcE+28ASzCHMNnAAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="ONdBsFd5jkK31pGcrm1Z6gAA">
+<XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="FE4L/jxAD0evSSix8lk4iwAA">
 <XPD:ATTR name="Name" type="string">productId</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">ikS6Wu6fcE+28ASzCHMNnAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:ATTR name="#CallActions" type="integer">1</XPD:ATTR>
@@ -4232,19 +4248,19 @@ definidas en la interfaz IImport
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[1]" type="UMLModel" guid="g/jd4xVfcUyqXD+EpHv19wAA">
-<XPD:ATTR name="Name" type="string">Diseño de comportamiento</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Dise&#241;o de comportamiento</XPD:ATTR>
 <XPD:REF name="Namespace">4n1jGh9KWEaxl3FFitwRXQAA</XPD:REF>
 <XPD:ATTR name="#OwnedCollaborationInstanceSets" type="integer">4</XPD:ATTR>
 <XPD:OBJ name="OwnedCollaborationInstanceSets[0]" type="UMLCollaborationInstanceSet" guid="Sg/5s/qQxkuPuRVTCGYTDwAA">
-<XPD:ATTR name="Name" type="string">Añadir uno o varios productos al carrito</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">A&#241;adir uno o varios productos al carrito</XPD:ATTR>
 <XPD:REF name="RepresentedClassifier">g/jd4xVfcUyqXD+EpHv19wAA</XPD:REF>
 <XPD:ATTR name="#InteractionInstanceSets" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="InteractionInstanceSets[0]" type="UMLInteractionInstanceSet" guid="53RSpIUWtEO+oHH7kaoi6QAA">
-<XPD:ATTR name="Name" type="string">Añadir uno o varios productos al carrito</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">A&#241;adir uno o varios productos al carrito</XPD:ATTR>
 <XPD:REF name="Context">Sg/5s/qQxkuPuRVTCGYTDwAA</XPD:REF>
 <XPD:ATTR name="#OwnedDiagrams" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedDiagrams[0]" type="UMLSequenceDiagram" guid="tbsB8Z5ul0WJdEDLYoAwTgAA">
-<XPD:ATTR name="Name" type="string">Añadir uno o varios productos al carrito</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">A&#241;adir uno o varios productos al carrito</XPD:ATTR>
 <XPD:ATTR name="MessageSignature" type="UMLMessageSignatureKind">mskNameAndType</XPD:ATTR>
 <XPD:REF name="DiagramOwner">53RSpIUWtEO+oHH7kaoi6QAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLSequenceDiagramView" guid="Hph/iIp4a0y9z1V/bTVK7AAA">
@@ -4771,7 +4787,7 @@ definidas en la interfaz IImport
 <XPD:OBJ name="NameLabel" type="EdgeLabelView" guid="taaZCI5WQkiqstKUFssjvwAA">
 <XPD:ATTR name="Alpha" type="real">1,5707963267949</XPD:ATTR>
 <XPD:ATTR name="Distance" type="real">10</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">2 : ImportData import()</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">2 : ImportData doImport()</XPD:ATTR>
 <XPD:REF name="Model">4W262JV+ekSyyaGBBQc34gAA</XPD:REF>
 <XPD:REF name="HostEdge">jUCljxkZGkyRKOkepk7dRgAA</XPD:REF>
 </XPD:OBJ>
