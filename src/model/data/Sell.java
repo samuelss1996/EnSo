@@ -13,13 +13,15 @@ public class Sell {
 
 
 	public void addLine(SellLine line) {
+		this.sellLines.add(line);
 	}
 	
 	public void removeLine(SellLine line) {
+		this.sellLines.remove(line);
 	}
 	
 	public List<SellLine> getSellLines() {
-		return null;
+		return sellLines;
 	}
 
 	public String getId() {

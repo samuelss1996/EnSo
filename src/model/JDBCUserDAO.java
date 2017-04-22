@@ -121,7 +121,7 @@ public class JDBCUserDAO implements IDAOUser {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return new ArrayList();
+        return new ArrayList<>();
     }
 
     @Override

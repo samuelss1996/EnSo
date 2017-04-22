@@ -150,8 +150,9 @@ public class JDBCSellDAO implements IDAOSell {
         int[] dailySells = calculateDailySellCount(from, to);
         int total = 0;
 
-        for (int i = 0; i < dailySells.length; i++)
-            total += dailySells[i];
+        for (int dailySell : dailySells) {
+            total += dailySell;
+        }
 
         float[] relativeSells = new float[dailySells.length];
 
@@ -167,8 +168,9 @@ public class JDBCSellDAO implements IDAOSell {
         int[] weeklySells = calculateWeeklySellCount(from, to);
         int total = 0;
 
-        for (int i = 0; i < weeklySells.length; i++)
-            total += weeklySells[i];
+        for (int weeklySell : weeklySells) {
+            total += weeklySell;
+        }
 
         float[] relativeSells = new float[weeklySells.length];
 

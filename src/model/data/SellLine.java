@@ -16,11 +16,11 @@ public class SellLine {
     }
 
     public Product getProduct() {
-		return null;
+		return product;
 	}
 	
 	public int getQuantity() {
-		return 0;
+		return quantity;
 	}
 
 	public float getUnitPrice() {

@@ -1,120 +1,90 @@
 package statistics;
 
-import model.DAOFactoryJDBC;
-import model.JDBCSellDAO;
+import model.IDAOSell;
+import model.IDataAccess;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Statistics implements IStatistics {
 	public int calculateLastWeekSellCount() {
-		DAOFactoryJDBC factoryJDBC = new DAOFactoryJDBC();
-		JDBCSellDAO sellDAO = (JDBCSellDAO) factoryJDBC.getSellDAO();
+		IDAOSell sellDAO = IDataAccess.getDAOFactory(IDataAccess.JDBC_FACTORY).getSellDAO();
 
-		Date from = new Date();
-		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, -7);
-		Date to = cal.getTime();
+        LocalDate now = LocalDate.now();
+        LocalDate lastWeek = now.minusWeeks(1);
 
-		return sellDAO.calculateSellCount(to, from);
+        return sellDAO.calculateSellCount(new Date(lastWeek.toEpochDay()), new Date(now.toEpochDay()));
 	}
 
 	public int calculateLastMonthSellCount() {
-		DAOFactoryJDBC factoryJDBC = new DAOFactoryJDBC();
-		JDBCSellDAO sellDAO = (JDBCSellDAO) factoryJDBC.getSellDAO();
+		IDAOSell sellDAO = IDataAccess.getDAOFactory(IDataAccess.JDBC_FACTORY).getSellDAO();
 
-		Date from = new Date();
-		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, -31);
-		Date to = cal.getTime();
+        LocalDate now = LocalDate.now();
+        LocalDate lastMonth = now.minusMonths(1);
 
-		return sellDAO.calculateSellCount(to, from);
+		return sellDAO.calculateSellCount(new Date(lastMonth.toEpochDay()), new Date(now.toEpochDay()));
 	}
 
 	public int calculateLastYearSellCount() {
-		DAOFactoryJDBC factoryJDBC = new DAOFactoryJDBC();
-		JDBCSellDAO sellDAO = (JDBCSellDAO) factoryJDBC.getSellDAO();
+		IDAOSell sellDAO = IDataAccess.getDAOFactory(IDataAccess.JDBC_FACTORY).getSellDAO();
 
-		Date from = new Date();
-		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, -365);
-		Date to = cal.getTime();
+        LocalDate now = LocalDate.now();
+        LocalDate lastYear = now.minusYears(1);
 
-		return sellDAO.calculateSellCount(to, from);
+        return sellDAO.calculateSellCount(new Date(lastYear.toEpochDay()), new Date(now.toEpochDay()));
 	}
 
 	public float calculateLastMonthDailyAverageSells() {
-		DAOFactoryJDBC factoryJDBC = new DAOFactoryJDBC();
-		JDBCSellDAO sellDAO = (JDBCSellDAO) factoryJDBC.getSellDAO();
+		IDAOSell sellDAO = IDataAccess.getDAOFactory(IDataAccess.JDBC_FACTORY).getSellDAO();
 
-		Date from = new Date();
-		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, -31);
-		Date to = cal.getTime();
+        LocalDate now = LocalDate.now();
+        LocalDate lastMonth = now.minusMonths(1);
 
-		return sellDAO.calculateDailyAverageSells(to, from);
+		return sellDAO.calculateDailyAverageSells(new Date(lastMonth.toEpochDay()), new Date(now.toEpochDay()));
 	}
 
 	public float calculateLastYearWeeklyAverageSells() {
-		DAOFactoryJDBC factoryJDBC = new DAOFactoryJDBC();
-		JDBCSellDAO sellDAO = (JDBCSellDAO) factoryJDBC.getSellDAO();
+		IDAOSell sellDAO = IDataAccess.getDAOFactory(IDataAccess.JDBC_FACTORY).getSellDAO();
 
-		Date from = new Date();
-		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, -365);
-		Date to = cal.getTime();
+        LocalDate now = LocalDate.now();
+        LocalDate lastYear = now.minusYears(1);
 
-		return sellDAO.calculateWeeklyAverageSells(to, from);
+		return sellDAO.calculateWeeklyAverageSells(new Date(lastYear.toEpochDay()), new Date(now.toEpochDay()));
 	}
 
 	public int[] calculateLastMonthDailySellCount() {
-		DAOFactoryJDBC factoryJDBC = new DAOFactoryJDBC();
-		JDBCSellDAO sellDAO = (JDBCSellDAO) factoryJDBC.getSellDAO();
+		IDAOSell sellDAO = IDataAccess.getDAOFactory(IDataAccess.JDBC_FACTORY).getSellDAO();
 
-		Date from = new Date();
-		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, -31);
-		Date to = cal.getTime();
+        LocalDate now = LocalDate.now();
+        LocalDate lastMonth = now.minusMonths(1);
 
-		return sellDAO.calculateDailySellCount(to, from);
+		return sellDAO.calculateDailySellCount(new Date(lastMonth.toEpochDay()), new Date(now.toEpochDay()));
 	}
 
 	public int[] calculateLastYearWeeklySellCount() {
-		DAOFactoryJDBC factoryJDBC = new DAOFactoryJDBC();
-		JDBCSellDAO sellDAO = (JDBCSellDAO) factoryJDBC.getSellDAO();
+		IDAOSell sellDAO = IDataAccess.getDAOFactory(IDataAccess.JDBC_FACTORY).getSellDAO();
 
-		Date from = new Date();
-		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, -365);
-		Date to = cal.getTime();
+        LocalDate now = LocalDate.now();
+        LocalDate lastYear = now.minusYears(1);
 
-		return sellDAO.calculateWeeklySellCount(to, from);
+		return sellDAO.calculateWeeklySellCount(new Date(lastYear.toEpochDay()), new Date(now.toEpochDay()));
 	}
 
 	public float[] calculateLastWeekDailyRelativeSells() {
-		DAOFactoryJDBC factoryJDBC = new DAOFactoryJDBC();
-		JDBCSellDAO sellDAO = (JDBCSellDAO) factoryJDBC.getSellDAO();
+		IDAOSell sellDAO = IDataAccess.getDAOFactory(IDataAccess.JDBC_FACTORY).getSellDAO();
 
-		Date from = new Date();
-		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, -7);
-		Date to = cal.getTime();
+        LocalDate now = LocalDate.now();
+        LocalDate lastWeek = now.minusWeeks(1);
 
-		return sellDAO.calculateDailyRelativeSells(to, from);
+		return sellDAO.calculateDailyRelativeSells(new Date(lastWeek.toEpochDay()), new Date(now.toEpochDay()));
 	}
 
 	public float[] calculateLastYearWeeklyRelativeSells() {
-		DAOFactoryJDBC factoryJDBC = new DAOFactoryJDBC();
-		JDBCSellDAO sellDAO = (JDBCSellDAO) factoryJDBC.getSellDAO();
+		IDAOSell sellDAO = IDataAccess.getDAOFactory(IDataAccess.JDBC_FACTORY).getSellDAO();
 
-		Date from = new Date();
-		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.DATE, -365);
-		Date to = cal.getTime();
+        LocalDate now = LocalDate.now();
+        LocalDate lastYear = now.minusYears(1);
 
-		return sellDAO.calculateWeeklyRelativeSells(to, from);
+		return sellDAO.calculateWeeklyRelativeSells(new Date(lastYear.toEpochDay()), new Date(now.toEpochDay()));
 	}
 }

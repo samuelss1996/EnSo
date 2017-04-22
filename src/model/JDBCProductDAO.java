@@ -1,6 +1,5 @@
 package model;
 
-import com.sun.scenario.effect.impl.prism.ps.PPSBlend_REDPeer;
 import model.data.Product;
 
 import java.sql.Connection;
@@ -14,7 +13,7 @@ public class JDBCProductDAO implements IDAOProduct {
     @Override
     public void addProduct(Product product) {
         try (Connection connection = DAOFactoryJDBC.createConnection()) {
-            try (PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO products (id, name, stock, available, availableSince, category, description, currentPrice) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
+            try (PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO products (id, name, stock, available, availableSince, category, description, currentPrice) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")) {
                 preparedStatement.setString(1, product.getId());
                 preparedStatement.setString(2, product.getName());
                 preparedStatement.setInt(3, product.getStock());

@@ -11,4 +11,16 @@ public class Application {
         this.status = status;
         this.content = content;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public String getContent() {
+        return content;
+    }
 }
