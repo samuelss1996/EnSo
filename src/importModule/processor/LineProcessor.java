@@ -63,7 +63,7 @@ public abstract class LineProcessor {
      * @throws DataFormatException If the line has not the correct field number is any of the fields is empty
      */
     private void checkLine(String line) throws DataFormatException {
-        if(this.getExpectedFieldCount() == this.fields.length) {
+        if(this.getExpectedFieldCount() != this.fields.length) {
             throw new DataFormatException(String.format("Invalid field count. Expected %d. Found %d. Line: %s",
                     this.getExpectedFieldCount(), this.fields.length, line));
         }

@@ -1,0 +1,5 @@
+U; U-AAAA-002;04/04/2017; samuel; soutollo; 12345677Y
+U; U-AAAA-003;04/04/2017; manuel; limon; 12245677Y
+I; I-AAAA-002;04/04/2017; Producto guay; categoria; 10; Este es un producto guay.
+V; V-ZZZZ-000;17/04/2017;U-AAAA-000; 1-AAAA-000;13;99.99
+V; V-ZZZZ-001;18/04/2017;U-AAAA-002; 1-AAAA-002;3;99.99
