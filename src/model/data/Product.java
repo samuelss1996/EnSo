@@ -11,7 +11,18 @@ public class Product {
 	private Date availableSince;
 	private String category;
 	private String description;
-	private Object currentPrice;
+	private float currentPrice;
+
+	public Product(String id, String name, int stock, boolean available, Date availableSince, String category, String description, float currentPrice) {
+		this.id = id;
+		this.name = name;
+		this.stock = stock;
+		this.available = available;
+		this.availableSince = availableSince;
+		this.category = category;
+		this.description = description;
+		this.currentPrice = currentPrice;
+	}
 
 	public String getId() {
 		return id;
@@ -69,11 +80,11 @@ public class Product {
 		this.description = description;
 	}
 
-	public Object getCurrentPrice() {
+	public float getCurrentPrice() {
 		return currentPrice;
 	}
 
-	public void setCurrentPrice(Object currentPrice) {
+	public void setCurrentPrice(float currentPrice) {
 		this.currentPrice = currentPrice;
 	}
 }
