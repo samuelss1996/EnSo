@@ -7,6 +7,5 @@ import statistics.IStatistics;
 
 public interface IController {
 	IImport getImportModule();
-	IDataAccess getDataAccessModule();
 	IStatistics getStatisticsModule();
 }

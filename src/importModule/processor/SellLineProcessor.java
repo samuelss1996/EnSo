@@ -16,7 +16,8 @@ public class SellLineProcessor extends LineProcessor {
     public SellLineProcessor(String line, Date minDate) throws DataFormatException {
 		super(line, minDate);
 	}
-
+    //TODO Si una linea de sell comprate id con otra, en lugar de crearse un nuevo sell debería añadirse la linea de compra
+    //Ahora mismo el fichero no tiene ese caso, porque sino, no compila.
 	@Override
     public void processLine(ImportData data) throws DataFormatException {
         try {

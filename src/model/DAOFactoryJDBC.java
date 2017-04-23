@@ -13,7 +13,7 @@ public class DAOFactoryJDBC extends DAOFactory {
             Class.forName(DRIVER).newInstance();
             return DriverManager.getConnection(DB_URL, "enso", "enso");
         } catch (Exception e) {
-            throw new RuntimeException();
+            throw new RuntimeException(e);
         }
     }
 

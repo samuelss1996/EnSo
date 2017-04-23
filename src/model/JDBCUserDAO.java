@@ -14,7 +14,7 @@ import java.util.List;
 
 public class JDBCUserDAO implements IDAOUser {
     @Override
-    public void addUser(User user) {
+    public void addUser(User user) { //TODO adaptar teniendo en cuenta que desde el archivo no se pasan todos los datos
          try (Connection connection = DAOFactoryJDBC.createConnection()) {
              try (PreparedStatement preparedStatement = connection.prepareStatement("INSERT into USER (id, idCenter, firstName, lastName, email, nif, type) values (?, ?, ?, ?, ?, ?, ?)")) {
                  preparedStatement.setString(1, user.getId());
@@ -100,9 +100,10 @@ public class JDBCUserDAO implements IDAOUser {
 
     @Override
     public List<User> queryUser(String username) {
+
         try (Connection connection = DAOFactoryJDBC.createConnection()) {
-            try (PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM user WHERE firstName LIKE '%' || ? || '%'")) {
-                preparedStatement.setString(1, username);
+            try (PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM user WHERE firstName LIKE ?")) {
+                preparedStatement.setString(1, "%"+username+"%");
 
                 ResultSet resultSet = preparedStatement.executeQuery();
                 List<User> results = new ArrayList<>();

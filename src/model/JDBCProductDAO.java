@@ -21,7 +21,7 @@ public class JDBCProductDAO implements IDAOProduct {
                 preparedStatement.setDate(5, new java.sql.Date(product.getAvailableSince().getTime()));
                 preparedStatement.setString(6, product.getCategory());
                 preparedStatement.setString(7, product.getDescription());
-                preparedStatement.setFloat(3, product.getCurrentPrice());
+                preparedStatement.setFloat(8, product.getCurrentPrice());
 
                 preparedStatement.executeUpdate();
             }
@@ -99,8 +99,8 @@ public class JDBCProductDAO implements IDAOProduct {
     @Override
     public List<Product> queryProduct(String name) {
         try (Connection connection = DAOFactoryJDBC.createConnection()) {
-            try (PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM products WHERE name LIKE '%' || ? || '%'")) {
-                preparedStatement.setString(1, name);
+            try (PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM products WHERE name LIKE ?")) {
+                preparedStatement.setString(1, "%"+name+"%");
 
                 ResultSet resultSet = preparedStatement.executeQuery();
 

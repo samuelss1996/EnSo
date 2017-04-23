@@ -16,6 +16,13 @@ public class Sell {
 	    this.sellLines = new ArrayList<>();
     }
 
+    public Sell(String id, Date sellDate, String idUser, float totalPrice){
+		this.id=id;
+		this.sellDate=sellDate;
+		this.idUser=idUser;
+		this.totalPrice=totalPrice;
+		this.sellLines = new ArrayList<>();
+	}
 	public void addLine(SellLine line) {
 		this.sellLines.add(line);
 	}
