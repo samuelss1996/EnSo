@@ -4,6 +4,7 @@ import model.IDAOSell;
 import model.IDataAccess;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 
 public class Statistics implements IStatistics {
@@ -13,7 +14,8 @@ public class Statistics implements IStatistics {
         LocalDate now = LocalDate.now();
         LocalDate lastWeek = now.minusWeeks(1);
 
-        return sellDAO.calculateSellCount(new Date(lastWeek.toEpochDay()), new Date(now.toEpochDay()));
+        return sellDAO.calculateSellCount(Date.from(lastWeek.atStartOfDay(ZoneId.systemDefault()).toInstant()),
+				Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant()));
 	}
 
 	public int calculateLastMonthSellCount() {
@@ -22,7 +24,8 @@ public class Statistics implements IStatistics {
         LocalDate now = LocalDate.now();
         LocalDate lastMonth = now.minusMonths(1);
 
-		return sellDAO.calculateSellCount(new Date(lastMonth.toEpochDay()), new Date(now.toEpochDay()));
+		return sellDAO.calculateSellCount(Date.from(lastMonth.atStartOfDay(ZoneId.systemDefault()).toInstant()),
+				Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant()));
 	}
 
 	public int calculateLastYearSellCount() {
@@ -31,7 +34,8 @@ public class Statistics implements IStatistics {
         LocalDate now = LocalDate.now();
         LocalDate lastYear = now.minusYears(1);
 
-        return sellDAO.calculateSellCount(new Date(lastYear.toEpochDay()), new Date(now.toEpochDay()));
+        return sellDAO.calculateSellCount(Date.from(lastYear.atStartOfDay(ZoneId.systemDefault()).toInstant()),
+				Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant()));
 	}
 
 	public float calculateLastMonthDailyAverageSells() {
@@ -40,7 +44,8 @@ public class Statistics implements IStatistics {
         LocalDate now = LocalDate.now();
         LocalDate lastMonth = now.minusMonths(1);
 
-		return sellDAO.calculateDailyAverageSells(new Date(lastMonth.toEpochDay()), new Date(now.toEpochDay()));
+		return sellDAO.calculateDailyAverageSells(Date.from(lastMonth.atStartOfDay(ZoneId.systemDefault()).toInstant()),
+				Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant()));
 	}
 
 	public float calculateLastYearWeeklyAverageSells() {
@@ -49,7 +54,8 @@ public class Statistics implements IStatistics {
         LocalDate now = LocalDate.now();
         LocalDate lastYear = now.minusYears(1);
 
-		return sellDAO.calculateWeeklyAverageSells(new Date(lastYear.toEpochDay()), new Date(now.toEpochDay()));
+		return sellDAO.calculateWeeklyAverageSells(Date.from(lastYear.atStartOfDay(ZoneId.systemDefault()).toInstant()),
+				Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant()));
 	}
 
 	public int[] calculateLastMonthDailySellCount() {
@@ -58,7 +64,8 @@ public class Statistics implements IStatistics {
         LocalDate now = LocalDate.now();
         LocalDate lastMonth = now.minusMonths(1);
 
-		return sellDAO.calculateDailySellCount(new Date(lastMonth.toEpochDay()), new Date(now.toEpochDay()));
+		return sellDAO.calculateDailySellCount(Date.from(lastMonth.atStartOfDay(ZoneId.systemDefault()).toInstant()),
+				Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant()));
 	}
 
 	public int[] calculateLastYearWeeklySellCount() {
@@ -67,7 +74,8 @@ public class Statistics implements IStatistics {
         LocalDate now = LocalDate.now();
         LocalDate lastYear = now.minusYears(1);
 
-		return sellDAO.calculateWeeklySellCount(new Date(lastYear.toEpochDay()), new Date(now.toEpochDay()));
+		return sellDAO.calculateWeeklySellCount(Date.from(lastYear.atStartOfDay(ZoneId.systemDefault()).toInstant()),
+				Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant()));
 	}
 
 	public float[] calculateLastWeekDailyRelativeSells() {
@@ -76,7 +84,8 @@ public class Statistics implements IStatistics {
         LocalDate now = LocalDate.now();
         LocalDate lastWeek = now.minusWeeks(1);
 
-		return sellDAO.calculateDailyRelativeSells(new Date(lastWeek.toEpochDay()), new Date(now.toEpochDay()));
+		return sellDAO.calculateDailyRelativeSells(Date.from(lastWeek.atStartOfDay(ZoneId.systemDefault()).toInstant()),
+				Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant()));
 	}
 
 	public float[] calculateLastYearWeeklyRelativeSells() {
@@ -85,6 +94,7 @@ public class Statistics implements IStatistics {
         LocalDate now = LocalDate.now();
         LocalDate lastYear = now.minusYears(1);
 
-		return sellDAO.calculateWeeklyRelativeSells(new Date(lastYear.toEpochDay()), new Date(now.toEpochDay()));
+		return sellDAO.calculateWeeklyRelativeSells(Date.from(lastYear.atStartOfDay(ZoneId.systemDefault()).toInstant()),
+				Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant()));
 	}
 }
