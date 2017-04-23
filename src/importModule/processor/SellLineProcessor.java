@@ -25,6 +25,7 @@ public class SellLineProcessor extends LineProcessor {
             Date sellDate = DateFormat.getDateInstance(DateFormat.SHORT, Locale.forLanguageTag("es")).parse(this.getField(2));
 
             if (this.shouldBeImportedBasedOnDate(sellDate) && this.checkFieldsFormat()) {
+                //TODO: seria getField(2) porque no se tiene en cuenta el primer campo U-V-I;
                 Sell sell = data.containsSell(this.getField(1))? data.getSellById(this.getField(1)) : new Sell();
 
                 if (!data.containsSell(this.getField(1))) {

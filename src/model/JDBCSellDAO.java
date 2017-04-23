@@ -25,19 +25,20 @@ public class JDBCSellDAO implements IDAOSell {
                 preparedStmt.setDate(3, new java.sql.Date(sell.getSellDate().getTime()));
                 preparedStmt.setString(4, sell.getIduser());
                 preparedStmt.execute();
-            }
-            int i=0;
-            for(SellLine line : sell.getSellLines()){
-                try(PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO lineacompra(" +
-                        "lineSell,idSell,quantity,idProducts,unitPrice,totalPrice) VALUES(?,?,?,?,?,?) ")){
-                preparedStatement.setInt(1,i);
-                preparedStatement.setString(2,sell.getId());
-                preparedStatement.setInt(3,line.getQuantity());
-                preparedStatement.setString(4,line.getProduct().getId());
-                preparedStatement.setFloat(5,line.getUnitPrice());
-                preparedStatement.setFloat(6, line.getUnitPrice()*line.getQuantity());
-                preparedStatement.execute();
-                i++;
+
+                int i=0;
+                for(SellLine line : sell.getSellLines()){
+                    try(PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO lineacompra(" +
+                            "lineSell,idSell,quantity,idProducts,unitPrice,totalPrice) VALUES(?,?,?,?,?,?) ")){
+                        preparedStatement.setInt(1,i);
+                        preparedStatement.setString(2,sell.getId());
+                        preparedStatement.setInt(3,line.getQuantity());
+                        preparedStatement.setString(4,line.getProduct().getId());
+                        preparedStatement.setFloat(5,line.getUnitPrice());
+                        preparedStatement.setFloat(6, line.getUnitPrice()*line.getQuantity());
+                        preparedStatement.execute();
+                        i++;
+                    }
                 }
             }
         } catch (SQLException e) {
@@ -90,7 +91,7 @@ public class JDBCSellDAO implements IDAOSell {
     //Calcula la media de ventas por dia para un intervalo dado
     @Override
     public float calculateDailyAverageSells(Date from, Date to) {
-        int dias = (int) ((from.getTime() - to.getTime()) / ((1000.0f / 60.0f / 60.0f / 24.0f)));
+        int dias = (int) ((to.getTime() - from.getTime()) / 1000 / 60 / 60 / 24);
 
         return calculateSellCount(from, to) / (float) dias;
     }
@@ -98,7 +99,7 @@ public class JDBCSellDAO implements IDAOSell {
     //Calcula la media de ventas por semana para un intervalo dado
     @Override
     public float calculateWeeklyAverageSells(Date from, Date to) {
-        int semanas = (int) ((from.getTime() - to.getTime()) / (1000.0f / 60.0f / 60.0f / 24.0f / 7.0f));
+        int semanas = (int) ((to.getTime() - from.getTime()) / 1000 / 60 / 60 / 24 / 7);
 
         return calculateSellCount(from, to) / (float) semanas;
     }

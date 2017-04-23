@@ -85,8 +85,8 @@ public class JDBCUserDAO implements IDAOUser {
                                     resultSet.getString("firstName"),
                                     resultSet.getString("lastName"),
                                     resultSet.getDate("dateRegister"),
-                                    resultSet.getString("email"),
                                     resultSet.getString("nif"),
+                                    resultSet.getString("email"),
                                     resultSet.getString("type"));
                 } else {
                     return null;
@@ -113,8 +113,8 @@ public class JDBCUserDAO implements IDAOUser {
                                             resultSet.getString("firstName"),
                                             resultSet.getString("lastName"),
                                             resultSet.getDate("dateRegister"),
-                                            resultSet.getString("email"),
                                             resultSet.getString("nif"),
+                                            resultSet.getString("email"),
                                             resultSet.getString("type")));
                 }
                 return results;
