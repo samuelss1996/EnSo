@@ -19,18 +19,11 @@ public class UserLineProcessor extends LineProcessor {
 	@Override
 	public void processLine(ImportData data) throws DataFormatException {
         try {
-            User user = new User();
             Date registerDate = DateFormat.getDateInstance(DateFormat.SHORT, Locale.forLanguageTag("es")).parse(this.getField(2));
 
             if (this.shouldBeImportedBasedOnDate(registerDate) && this.checkFieldsFormat()) {
-                user.setId(this.getField(1));
-                user.setRegisterDate(registerDate);
-                user.setFirstName(this.getField(3));
-                user.setLastName(this.getField(4));
-                user.setNIF(this.getField(5));
-                user.setTypeUser("E");
-
-                data.addUser(user);
+                data.addUser(new User(this.getField(1), 1, this.getField(3), this.getField(4), registerDate, this.getField(5),
+                        String.format("%s@usuario.com", this.getField(1)), "E"));
             }
         } catch (ParseException e) {
             throw new DataFormatException(String.format("Invalid date format. Expected dd/mm/aaaa. Found %s", this.getField(2)));

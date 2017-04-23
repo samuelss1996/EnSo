@@ -19,7 +19,7 @@ public interface IImport {
      * @throws DataFormatException If any data in the file has wrong format
      * @throws IOException If file does not exist or any IO error occurs while reading the file
      */
-	ImportData doImport(int[] elements) throws DataFormatException, IOException;
+	ImportData doImport(int... elements) throws DataFormatException, IOException;
 
     /**
      * Imports users, items and/or sells from a file if their date of register, availability or sell is equal is the
@@ -31,5 +31,5 @@ public interface IImport {
      * @throws DataFormatException If any data in the file has wrong format
      * @throws IOException If file does not exist or any IO error occurs while reading the file
      */
-	ImportData doImport(Date dateFrom, int[] elements) throws DataFormatException, IOException;
+	ImportData doImport(Date dateFrom, int... elements) throws DataFormatException, IOException;
 }

@@ -14,7 +14,7 @@ import java.util.List;
 
 public class JDBCUserDAO implements IDAOUser {
     @Override
-    public void addUser(User user) { //TODO adaptar teniendo en cuenta que desde el archivo no se pasan todos los datos
+    public void addUser(User user) {
          try (Connection connection = DAOFactoryJDBC.createConnection()) {
              try (PreparedStatement preparedStatement = connection.prepareStatement("INSERT into USER (id, idCenter, firstName, lastName, email, nif, type) values (?, ?, ?, ?, ?, ?, ?)")) {
                  preparedStatement.setString(1, user.getId());

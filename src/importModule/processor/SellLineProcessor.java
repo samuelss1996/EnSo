@@ -16,8 +16,7 @@ public class SellLineProcessor extends LineProcessor {
     public SellLineProcessor(String line, Date minDate) throws DataFormatException {
 		super(line, minDate);
 	}
-    //TODO Si una linea de sell comprate id con otra, en lugar de crearse un nuevo sell debería añadirse la linea de compra
-    //Ahora mismo el fichero no tiene ese caso, porque sino, no compila.
+
 	@Override
     public void processLine(ImportData data) throws DataFormatException {
         try {
@@ -25,7 +24,6 @@ public class SellLineProcessor extends LineProcessor {
             Date sellDate = DateFormat.getDateInstance(DateFormat.SHORT, Locale.forLanguageTag("es")).parse(this.getField(2));
 
             if (this.shouldBeImportedBasedOnDate(sellDate) && this.checkFieldsFormat()) {
-                //TODO: seria getField(2) porque no se tiene en cuenta el primer campo U-V-I;
                 Sell sell = data.containsSell(this.getField(1))? data.getSellById(this.getField(1)) : new Sell();
 
                 if (!data.containsSell(this.getField(1))) {
@@ -36,12 +34,12 @@ public class SellLineProcessor extends LineProcessor {
 
                     sellUser.setId(this.getField(3));
                     sell.setUser(sellUser.getId());
+
+                    data.addSell(sell);
                 }
 
                 sellProduct.setId(this.getField(4));
                 sell.addLine(new SellLine(sellProduct, Integer.valueOf(this.getField(5)), Float.valueOf(this.getField(6))));
-
-                data.addSell(sell);
             }
         } catch (ParseException e) {
             throw new DataFormatException(String.format("Invalid date format. Expected dd/mm/aaaa. Found %s", this.getField(2)));

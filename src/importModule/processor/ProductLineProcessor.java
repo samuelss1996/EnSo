@@ -21,17 +21,10 @@ public class ProductLineProcessor extends LineProcessor {
 	public void processLine(ImportData data) throws DataFormatException {
         try {
             Date availableSince = DateFormat.getDateInstance(DateFormat.SHORT, Locale.forLanguageTag("es")).parse(this.getField(2));
-            Product product = new Product();
 
             if (this.shouldBeImportedBasedOnDate(availableSince) && this.checkFieldsFormat()) {
-                product.setId(this.getField(1));
-                product.setAvailableSince(availableSince);
-                product.setName(this.getField(3));
-                product.setCategory(this.getField(4));
-                product.setStock(Integer.valueOf(this.getField(5)));
-                product.setDescription(this.getField(6));
-
-                data.addProduct(product);
+                data.addProduct(new Product(this.getField(1), this.getField(3), Integer.valueOf(this.getField(5)),
+                        Integer.valueOf(this.getField(5)) > 0, availableSince, this.getField(4), this.getField(6), 0f));
             }
         } catch (ParseException e) {
             throw new DataFormatException(String.format("Invalid date format. Expected dd/mm/aaaa. Found %s", this.getField(2)));

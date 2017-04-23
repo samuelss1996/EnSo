@@ -14,21 +14,25 @@ public class Sell {
 
 	public Sell() {
 	    this.sellLines = new ArrayList<>();
+	    this.totalPrice = 0f;
     }
 
     public Sell(String id, Date sellDate, String idUser, float totalPrice){
-		this.id=id;
-		this.sellDate=sellDate;
-		this.idUser=idUser;
-		this.totalPrice=totalPrice;
+		this.id = id;
+		this.sellDate = sellDate;
+		this.idUser = idUser;
+		this.totalPrice = totalPrice;
 		this.sellLines = new ArrayList<>();
 	}
+
 	public void addLine(SellLine line) {
 		this.sellLines.add(line);
+		this.totalPrice += line.getTotalPrice();
 	}
 	
 	public void removeLine(SellLine line) {
 		this.sellLines.remove(line);
+		this.totalPrice -= line.getTotalPrice();
 	}
 	
 	public List<SellLine> getSellLines() {

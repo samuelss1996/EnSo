@@ -1,6 +1,5 @@
 package controller;
 
-import com.sun.xml.internal.bind.v2.model.core.ID;
 import importModule.CSVImport;
 import importModule.IImport;
 import model.*;
@@ -8,7 +7,6 @@ import model.data.*;
 import statistics.IStatistics;
 import statistics.Statistics;
 
-import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -71,8 +69,10 @@ public class Controller implements IController {
 
 
         IImport importModule = c.getImportModule();
-        importModule.doImport(new int[]{1, 2, 3});
-        ImportData importData = importModule.doImport(new Date(LocalDate.now().minusYears(1).toEpochDay()), new int[]{1, 2, 3});
+        importModule.doImport(IImport.USER_ELEMENTS, IImport.ITEM_ELEMENTS, IImport.SELL_ELEMENTS);
+        ImportData importData = importModule.doImport(new Date(LocalDate.now().minusYears(1).toEpochDay()),
+                IImport.USER_ELEMENTS, IImport.ITEM_ELEMENTS, IImport.SELL_ELEMENTS);
+
         for (User u : importData.getUsers())
         	idaoUser.addUser(u);
         for (Product p : importData.getProducts())
