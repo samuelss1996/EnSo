@@ -49,7 +49,7 @@ CREATE TABLE if not exists products(
 	availableSince DATE NOT NULL,
 	category VARCHAR(255),
 	description TEXT(1024),
-	currentPrice FLOAT
+	currentPrice FLOAT NOT NULL
 );
 
 
@@ -65,7 +65,7 @@ CREATE TABLE if not exists Sell(
 
 CREATE TABLE if not exists lineacompra(
 	quantity INTEGER NOT NULL,
-	totalPrice FLOAT,
+	totalPrice FLOAT NOT NULL,
 	unitPrice FLOAT NOT NULL,
 	lineSell INTEGER NOT NULL,
 	idSell CHAR(11) NOT NULL,
@@ -79,12 +79,12 @@ CREATE TABLE if not exists lineacompra(
 
 INSERT into center(name) values ('ETSE');
 
-INSERT into user(id, idCenter, firstName, lastName, email, nif, type) values ('U-AAAA-000', 1, 'Usuario1', 'Usuario', 'email@email.com', '12345678A', 'E');
-INSERT into user(id, idCenter, firstName, lastName, email, nif, type) values ('U-AAAA-001', 1, 'Usuario2', 'Usuario', 'email2@email.com', '09876543A', 'E');
+INSERT into user(id, idCenter, firstName, lastName, email, nif, type) values ('U-AAAAA-000', 1, 'Usuario1', 'Usuario', 'email@email.com', '12345678A', 'E');
+INSERT into user(id, idCenter, firstName, lastName, email, nif, type) values ('U-AAAAA-001', 1, 'Usuario2', 'Usuario', 'email2@email.com', '09876543A', 'E');
 
-INSERT into application(status, content) values ('pending', 'Request for I-AAAA-000');
+INSERT into application(status, content) values ('pending', 'Request for I-AAAAA-000');
 
-INSERT into belongto(idCenter, idUser, idApplication) values (1, 'U-AAAA-000', 1);
+INSERT into belongto(idCenter, idUser, idApplication) values (1, 'U-AAAAA-000', 1);
 
 INSERT into products(id, name, stock, available, availableSince, category, description, currentPrice)
        values ('I-AAAAA-000', 'Producto1', '100', true, '2017-03-01', 'categoria', 'Descripcion del producto', 99.99);
@@ -92,8 +92,8 @@ INSERT into products(id, name, stock, available, availableSince, category, descr
        values ('I-AAAAA-001', 'Producto2', '100', true, '2017-02-15', 'categoria', 'Descripcion del producto', 49.99);
 	   
 INSERT into sell(id, totalPrice, sellDate, idUser) 
-	VALUES ('V-AAAAA-000', 10.00, '2017-04-22 11:00:00', 'U-AAAA-000');
+	VALUES ('V-AAAAA-000', 10.00, '2017-04-22 11:00:00', 'U-AAAAA-000');
 INSERT into sell(id, totalPrice, sellDate, idUser)
-	VALUES ('V-AAAAA-001', 12.5, '2017-03-22 11:00:00', 'U-AAAA-000');
+	VALUES ('V-AAAAA-001', 12.5, '2017-03-22 11:00:00', 'U-AAAAA-000');
 INSERT into sell(id, totalPrice, sellDate, idUser)
-	VALUES ('V-AAAAA-002', 24.50, '2017-03-23 11:00:00', 'U-AAAA-000');
+	VALUES ('V-AAAAA-002', 24.50, '2017-03-23 11:00:00', 'U-AAAAA-000');
