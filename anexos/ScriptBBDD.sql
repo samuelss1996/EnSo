@@ -11,7 +11,7 @@ CREATE TABLE if not exists center (
 
 CREATE TABLE if not exists user(
 	id CHAR(11) PRIMARY KEY,
-	idCenter INTEGER NOT NULL,
+	idCenter INTEGER,
 	firstName VARCHAR(255) NOT NULL,
 	lastName VARCHAR(255) NOT NULL,
 	dateRegister DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -49,7 +49,7 @@ CREATE TABLE if not exists products(
 	availableSince DATE NOT NULL,
 	category VARCHAR(255),
 	description TEXT(1024),
-	currentPrice FLOAT NOT NULL
+	currentPrice FLOAT
 );
 
 
@@ -65,7 +65,7 @@ CREATE TABLE if not exists Sell(
 
 CREATE TABLE if not exists lineacompra(
 	quantity INTEGER NOT NULL,
-	totalPrice FLOAT NOT NULL,
+	totalPrice FLOAT,
 	unitPrice FLOAT NOT NULL,
 	lineSell INTEGER NOT NULL,
 	idSell CHAR(11) NOT NULL,
@@ -87,13 +87,13 @@ INSERT into application(status, content) values ('pending', 'Request for I-AAAA-
 INSERT into belongto(idCenter, idUser, idApplication) values (1, 'U-AAAA-000', 1);
 
 INSERT into products(id, name, stock, available, availableSince, category, description, currentPrice)
-       values ('I-AAAA-000', 'Producto1', '100', true, '2017-03-01', 'categoria', 'Descripcion del producto', 99.99);
+       values ('I-AAAAA-000', 'Producto1', '100', true, '2017-03-01', 'categoria', 'Descripcion del producto', 99.99);
 INSERT into products(id, name, stock, available, availableSince, category, description, currentPrice)
-       values ('I-AAAA-001', 'Producto2', '100', true, '2017-02-15', 'categoria', 'Descripcion del producto', 49.99);
+       values ('I-AAAAA-001', 'Producto2', '100', true, '2017-02-15', 'categoria', 'Descripcion del producto', 49.99);
 	   
 INSERT into sell(id, totalPrice, sellDate, idUser) 
-	VALUES (1, 10.00, '2017-04-22 11:00:00', 'U-AAAA-000');
+	VALUES ('V-AAAAA-000', 10.00, '2017-04-22 11:00:00', 'U-AAAA-000');
 INSERT into sell(id, totalPrice, sellDate, idUser)
-	VALUES (2, 24.50, '2017-03-22 11:00:00', 'U-AAAA-000');
+	VALUES ('V-AAAAA-001', 12.5, '2017-03-22 11:00:00', 'U-AAAA-000');
 INSERT into sell(id, totalPrice, sellDate, idUser)
-	VALUES (3, 24.50, '2017-03-23 11:00:00', 'U-AAAA-000');
+	VALUES ('V-AAAAA-002', 24.50, '2017-03-23 11:00:00', 'U-AAAA-000');
