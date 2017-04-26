@@ -57,6 +57,7 @@ public boolean validateOrder(Purchase purchase, boolean decision) {
 * q7: Último if.
 * q8: Return true;
 * q9: Return false;
+* q10: Ejecución del código de control de excepciones.
 ## Complejidad ciclomática
 
 V(G) = a - n + 2 = 13 - 11 + 2 = 4;
