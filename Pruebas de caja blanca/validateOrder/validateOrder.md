@@ -68,11 +68,209 @@ V(G) = a - n + 2 = 13 - 11 + 2 = 4;
 	* Camino común aceptando el order.
 * Camino 2: 0 - 1 - 2 - 3 - 5 - 6 - 7 - 8
 	* Camino común rechazando el order.
-* Camino 3: 0 - 1 - 10
+* Camino 3: 0 - 1 - 10 - 7 - 9
 	* Error al abrir la conexión.
-* Camino 4: 0 - 1 - 2 - 10
+* Camino 4: 0 - 1 - 2 - 10 - 7 - 9
 	* Error en la inserción
-* Camino 5: 0 - 1 - 2 - 3 - 4 - 6 - 10 
+* Camino 5: 0 - 1 - 2 - 3 - 4 - 6 - 10 - 7 - 9
 	* Error en la actualización del estado o al cerrar la conexión.
-* Camino 6: 0 - 1 - 2 - 3 - 4 - 6 - 7 - 9
-    * No se afecta ninguna línea de la base y no se lanza ninguna excepción.
+
+## Definición de casos de prueba
+
+* Camino 1: 
+    * Entrada: 
+    ```cs 
+        new Purchase() {
+            ID_Purchase = "V-AAAAA-000",
+            order = new Order() {
+                ID_Order = "O-AAAAA-000",
+                state = Order.WAITTING,
+                user = new User() {
+                    ID_User = "U-AAAAA-000",
+                    name = "Usuario",
+                    surname = "Usuario1",
+                    NIF = "12213428H",
+                    date = "24-04-2017",
+                    tipe = User.PID
+                },
+                validator = "U-EFTGK-234",
+                lines = new[] {
+                    new Line() {
+                        quantity = 2,
+                        price = 19.99,
+                        item = new Item() {
+                            itemRef = "I-AAAAA-000",
+                            name = "producto",
+                            description = "Descripción del producto",
+                            category = "Cosas",
+                            stock = 50,
+                            availableDate = "01-01-1970"
+                        }
+                    }
+                }
+            }
+            date = "04-05-2017",
+            discount = 0.2
+        },
+        decision = true;
+    ```
+    * Salida esperada: El método devuelve true e inserta lo anterior en la base, marcando el pedido O-AAAAA-000 como aceptado.
+
+* Camino 2:
+    * Entrada: 
+    ```cs 
+        new Purchase() {
+            ID_Purchase = "V-AAAAA-000",
+            order = new Order() {
+                ID_Order = "O-AAAAA-000",
+                state = Order.WAITTING,
+                user = new User() {
+                    ID_User = "U-AAAAA-000",
+                    name = "Usuario",
+                    surname = "Usuario1",
+                    NIF = "12213428H",
+                    date = "24-04-2017",
+                    tipe = User.PID
+                },
+                validator = "U-EFTGK-234",
+                lines = new[] {
+                    new Line() {
+                        quantity = 2,
+                        price = 19.99,
+                        item = new Item() {
+                            itemRef = "I-AAAAA-000",
+                            name = "producto",
+                            description = "Descripción del producto",
+                            category = "Cosas",
+                            stock = 50,
+                            availableDate = "01-01-1970"
+                        }
+                    }
+                }
+            }
+            date = "04-05-2017",
+            discount = 0.2
+        },
+        decision = false;
+    ```
+    * Salida esperada: El método devuelve false e inserta lo anterior en la base, marcando el pedido O-AAAAA-000 como rechazado.
+
+* Camino 3:
+    * Prerrequisitos: El servidor de base de datos está desconectado.
+    * Entrada: 
+    ```cs 
+        new Purchase() {
+            ID_Purchase = "V-AAAAA-000",
+            order = new Order() {
+                ID_Order = "O-AAAAA-000",
+                state = Order.WAITTING,
+                user = new User() {
+                    ID_User = "U-AAAAA-000",
+                    name = "Usuario",
+                    surname = "Usuario1",
+                    NIF = "12213428H",
+                    date = "24-04-2017",
+                    tipe = User.PID
+                },
+                validator = "U-EFTGK-234",
+                lines = new[] {
+                    new Line() {
+                        quantity = 2,
+                        price = 19.99,
+                        item = new Item() {
+                            itemRef = "I-AAAAA-000",
+                            name = "producto",
+                            description = "Descripción del producto",
+                            category = "Cosas",
+                            stock = 50,
+                            availableDate = "01-01-1970"
+                        }
+                    }
+                }
+            }
+            date = "04-05-2017",
+            discount = 0.2
+        },
+        decision = true;
+    ```
+    * Salida esperada: El método devuelve false sin modificar la base de datos.
+
+* Camino 4: 
+    * Prerrequisitos: La compra V-AAAAA-000 ya existe en la base de datos.
+    * Entrada: 
+    ```cs 
+        new Purchase() {
+            ID_Purchase = "V-AAAAA-000",
+            order = new Order() {
+                ID_Order = "O-AAAAA-000",
+                state = Order.WAITTING,
+                user = new User() {
+                    ID_User = "U-AAAAA-000",
+                    name = "Usuario",
+                    surname = "Usuario1",
+                    NIF = "12213428H",
+                    date = "24-04-2017",
+                    tipe = User.PID
+                },
+                validator = "U-EFTGK-234",
+                lines = new[] {
+                    new Line() {
+                        quantity = 2,
+                        price = 19.99,
+                        item = new Item() {
+                            itemRef = "I-AAAAA-000",
+                            name = "producto",
+                            description = "Descripción del producto",
+                            category = "Cosas",
+                            stock = 50,
+                            availableDate = "01-01-1970"
+                        }
+                    }
+                }
+            }
+            date = "04-05-2017",
+            discount = 0.2
+        },
+        decision = true;
+    ```
+    * Salida esperada: El método devuelve false y no modifica la base.
+
+* Camino 5: 
+    * Prerrequisito: El pedido O-AAAAA-000 no existe en la base de datos.
+    * Entrada: 
+    ```cs 
+        new Purchase() {
+            ID_Purchase = "V-AAAAA-000",
+            order = new Order() {
+                ID_Order = "O-AAAAA-000",
+                state = Order.WAITTING,
+                user = new User() {
+                    ID_User = "U-AAAAA-000",
+                    name = "Usuario",
+                    surname = "Usuario1",
+                    NIF = "12213428H",
+                    date = "24-04-2017",
+                    tipe = User.PID
+                },
+                validator = "U-EFTGK-234",
+                lines = new[] {
+                    new Line() {
+                        quantity = 2,
+                        price = 19.99,
+                        item = new Item() {
+                            itemRef = "I-AAAAA-000",
+                            name = "producto",
+                            description = "Descripción del producto",
+                            category = "Cosas",
+                            stock = 50,
+                            availableDate = "01-01-1970"
+                        }
+                    }
+                }
+            }
+            date = "04-05-2017",
+            discount = 0.2
+        },
+        decision = true;
+    ```
+    * Salida esperada: El método devuelve false sin modificar la base de datos.
