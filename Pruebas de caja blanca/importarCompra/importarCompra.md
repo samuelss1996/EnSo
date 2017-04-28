@@ -93,3 +93,91 @@ V(G) = a - n + 2 = 27 - 18 + 2 = 11
 	* El `if` falla en la sexta condición
 * Camino 11: 0 - 1 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 11 - 12 - 13 - 3 - 15 - 17
 	* El `if` falla en la séptima condición
+
+## Definición de casos de prueba
+* Camino 1:
+    * Prerrequisitos: 
+        * Existe el fichero `sells.csv`
+        * Se tienen permisos de lectura sobre el fichero `sells.csv`
+        * El usuario `U-AAAAA-000` existe en la base de datos
+        * El ítem `I-AAAAA-000` existe en la base de datos
+        * El fichero contiene la siguiente línea: `V; V-AAAAA-000; 10/10/2010; U-AAAAA-000; I-AAAAA-000; 1; 10`
+    * Entrada: 
+        * `path`: `"sells.csv"`
+    * Salida esperada: El método devuelve `1` y la compra se importa
+* Camino 2:
+    * Prerrequisitos:
+        * No existe el fichero `sells.csv`
+    * Entrada:
+        * `path`: `"sells.csv"`
+    * Salida esperada: El método devuelve `-1`
+* Camino 3:
+    * Prerrequisitos:
+        * Existe el fichero `sells.csv`
+        * No se tienen permisos de lectura sobre el fichero `sells.csv`
+    * Entrada:
+        * `path`: `"sells.csv"`
+    * Salida esperada: El método devuelve `0` y se imprime por pantalla un mensaje de error.
+* Camino 4:
+    * Prerrequisitos:
+        * Existe el fichero `sells.csv`
+        * Se bloqueará el fichero `sells.csv` justo antes de que se ejecute la línea `lectura.close();`
+    * Entrada:
+        * `path`: `"sells.csv"`
+    * Salida esperada: El método devuelve `0` y se imprime por pantalla un mensaje de error.
+* Camino 5:
+    * Prerrequisitos:
+        * Existe el fichero `sells.csv`
+        * Se tienen permisos de lectura sobre el fichero `sells.csv`
+        * El fichero contiene la siguiente línea: `A; V-AAAAA-000; 10/10/2010; U-AAAAA-000; I-AAAAA-000; 1; 10`
+    * Entrada:
+        * `path`: `"sells.csv"`
+    * Salida esperada: El método devuelve `0` y no se realiza ningún cambio en la base de datos
+* Camino 6:
+    * Prerrequisitos:
+        * Existe el fichero `sells.csv`
+        * Se tienen permisos de lectura sobre el fichero `sells.csv`
+        * El fichero contiene la siguiente línea: `V; V-AAAAA-00; 10/10/2010; U-AAAAA-000; I-AAAAA-000; 1; 10`
+    * Entrada:
+        * `path`: `"sells.csv"`
+    * Salida esperada: El método devuelve `0` y no se realiza ningún cambio en la base de datos
+* Camino 7:
+    * Prerrequisitos:
+        * Existe el fichero `sells.csv`
+        * Se tienen permisos de lectura sobre el fichero `sells.csv`
+        * El fichero contiene la siguiente línea: `V; V-AAAAA-000; 3/10/2010; U-AAAAA-000; I-AAAAA-000; 1; 10`
+    * Entrada:
+        * `path`: `"sells.csv"`
+    * Salida esperada: El método devuelve `0` y no se realiza ningún cambio en la base de datos
+* Camino 8:
+    * Prerrequisitos:
+        * Existe el fichero `sells.csv`
+        * Se tienen permisos de lectura sobre el fichero `sells.csv`
+        * El fichero contiene la siguiente línea: `V; V-AAAAA-000; 10/10/2010; U-AAAAA-00; I-AAAAA-000; 1; 10`
+    * Entrada:
+        * `path`: `"sells.csv"`
+    * Salida esperada: El método devuelve `0` y no se realiza ningún cambio en la base de datos
+* Camino 9:
+    * Prerrequisitos:
+        * Existe el fichero `sells.csv`
+        * Se tienen permisos de lectura sobre el fichero `sells.csv`
+        * El fichero contiene la siguiente línea: `V; V-AAAAA-000; 10/10/2010; U-AAAAA-000; I-AAAAA-00; 1; 10`
+    * Entrada:
+        * `path`: `"sells.csv"`
+    * Salida esperada: El método devuelve `0` y no se realiza ningún cambio en la base de datos
+* Camino 10:
+    * Prerrequisitos:
+        * Existe el fichero `sells.csv`
+        * Se tienen permisos de lectura sobre el fichero `sells.csv`
+        * El fichero contiene la siguiente línea: `V; V-AAAAA-000; 10/10/2010; U-AAAAA-000; I-AAAAA-000;; 10`
+    * Entrada:
+        * `path`: `"sells.csv"`
+    * Salida esperada: El método devuelve `0` y no se realiza ningún cambio en la base de datos
+* Camino 11:
+    * Prerrequisitos:
+        * Existe el fichero `sells.csv`
+        * Se tienen permisos de lectura sobre el fichero `sells.csv`
+        * El fichero contiene la siguiente línea: `V; V-AAAAA-000; 10/10/2010; U-AAAAA-000; I-AAAAA-000; 1;`
+    * Entrada:
+        * `path`: `"sells.csv"`
+    * Salida esperada: El método devuelve `0` y no se realiza ningún cambio en la base de datos

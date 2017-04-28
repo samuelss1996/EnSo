@@ -88,3 +88,81 @@ V(G) = a - n + 2 = 25 - 17 + 2 = 10
     * El `if` falla en la quinta condición
 * Camino 10: 0 - 1 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 11 - 12 - 3 - 14 - 16
     * El `if` falla en la sexta condición
+
+## Definición de casos de prueba
+* Camino 1:
+	* Prerrequisitos: 
+		* Existe el fichero `users.csv`
+		* Se tienen permisos de lectura sobre el fichero `users.csv`
+		* El fichero contiene la siguiente línea: `U; U-AAAAA-000; 10/10/2010; Samuel; Soutullo Sobral; 12345678E`
+	* Entrada: 
+		* `path`: `"users.csv"`
+	* Salida esperada: El método devuelve `1` y el usuario se importa
+* Camino 2:
+	* Prerrequisitos:
+		* No existe el fichero `users.csv`
+	* Entrada:
+		* `path`: `"users.csv"`
+	* Salida esperada: El método devuelve `-1`
+* Camino 3:
+	* Prerrequisitos:
+		* Existe el fichero `users.csv`
+		* No se tienen permisos de lectura sobre el fichero `users.csv`
+	* Entrada:
+		* `path`: `"users.csv"`
+	* Salida esperada: El método devuelve `0` y se imprime por pantalla un mensaje de error.
+* Camino 4:
+	* Prerrequisitos:
+		* Existe el fichero `users.csv`
+		* Se bloqueará el fichero `users.csv` justo antes de que se ejecute la línea `lectura.close();`
+	* Entrada:
+		* `path`: `"users.csv"`
+	* Salida esperada: El método devuelve `0` y se imprime por pantalla un mensaje de error.
+* Camino 5:
+	* Prerrequisitos:
+		* Existe el fichero `users.csv`
+		* Se tienen permisos de lectura sobre el fichero `users.csv`
+		* El fichero contiene la siguiente línea: `A; U-AAAAA-000; 10/10/2010; Samuel; Soutullo Sobral; 12345678E`
+	* Entrada:
+		* `path`: `"users.csv"`
+	* Salida esperada: El método devuelve `0` y no se realiza ningún cambio en la base de datos
+* Camino 6:
+	* Prerrequisitos:
+		* Existe el fichero `users.csv`
+		* Se tienen permisos de lectura sobre el fichero `users.csv`
+		* El fichero contiene la siguiente línea: `U; U-AAAAA-00; 10/10/2010; Samuel; Soutullo Sobral; 12345678E`
+	* Entrada:
+		* `path`: `"users.csv"`
+	* Salida esperada: El método devuelve `0` y no se realiza ningún cambio en la base de datos
+* Camino 7:
+	* Prerrequisitos:
+		* Existe el fichero `users.csv`
+		* Se tienen permisos de lectura sobre el fichero `users.csv`
+		* El fichero contiene la siguiente línea: `U; U-AAAAA-000; 3/10/2010; Samuel; Soutullo Sobral; 12345678E`
+	* Entrada:
+		* `path`: `"users.csv"`
+	* Salida esperada: El método devuelve `0` y no se realiza ningún cambio en la base de datos
+* Camino 8:
+	* Prerrequisitos:
+		* Existe el fichero `users.csv`
+		* Se tienen permisos de lectura sobre el fichero `users.csv`
+		* El fichero contiene la siguiente línea: `U; U-AAAAA-000; 10/10/2010;; Soutullo Sobral; 12345678E`
+	* Entrada:
+		* `path`: `"users.csv"`
+	* Salida esperada: El método devuelve `0` y no se realiza ningún cambio en la base de datos
+* Camino 9:
+	* Prerrequisitos:
+		* Existe el fichero `users.csv`
+		* Se tienen permisos de lectura sobre el fichero `users.csv`
+		* El fichero contiene la siguiente línea: `U; U-AAAAA-000; 10/10/2010; Samuel;; 12345678E`
+	* Entrada:
+		* `path`: `"users.csv"`
+	* Salida esperada: El método devuelve `0` y no se realiza ningún cambio en la base de datos
+* Camino 10:
+	* Prerrequisitos:
+		* Existe el fichero `users.csv`
+		* Se tienen permisos de lectura sobre el fichero `users.csv`
+		* El fichero contiene la siguiente línea: `U; U-AAAAA-000; 10/10/2010; Samuel; Soutullo Sobral; 12345678`
+	* Entrada:
+		* `path`: `"users.csv"`
+	* Salida esperada: El método devuelve `0` y no se realiza ningún cambio en la base de datos
