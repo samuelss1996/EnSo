@@ -69,3 +69,27 @@ public int importarCompra(String path) {
 
 ## Complejidad ciclomática
 V(G) = a - n + 2 = 27 - 18 + 2 = 11
+
+## Selección de caminos
+* Camino 1: 0 - 1 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 11 - 12 - 13 - 14 - 3 - 15 - 17
+	* Camino del caso base. Se lee un archivo con una línea.
+* Camino 2: 0 - 1 - 2
+	* Se lanza una excepción porque el archivo no existe
+* Camino 3: 0 - 1 - 3 - 16 - 17
+	* Se lanza una excepción porque se produce un error de E/S al leer una línea del archivo
+* Camino 4: 0 - 1 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 11 - 12 - 13 - 14 - 3 - 15 - 16 - 17
+	* Se lanza una excepción porque se produce un error de E/S al cerrar el `BufferedReader`
+* Camino 5: 0 - 1 - 3 - 4 - 5 - 6 - 7 - 3 - 15 - 17
+	* El `if` falla en la primera condición
+* Camino 6: 0 - 1 - 3 - 4 - 5 - 6 - 7 - 8 - 3 - 15 - 17
+	* El `if` falla en la segunda condición
+* Camino 7: 0 - 1 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 3 - 15 - 17
+	* El `if` falla en la tercera condición
+* Camino 8: 0 - 1 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 3 - 15 - 17
+	* El `if` falla en la cuarta condición
+* Camino 9: 0 - 1 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 11 - 3 - 15 - 17
+	* El `if` falla en la quinta condición
+* Camino 10: 0 - 1 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 11 - 12 - 3 - 15 - 17
+	* El `if` falla en la sexta condición
+* Camino 11: 0 - 1 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 - 11 - 12 - 13 - 3 - 15 - 17
+	* El `if` falla en la séptima condición
