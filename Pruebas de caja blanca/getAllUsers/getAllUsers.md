@@ -45,6 +45,8 @@ V(G) = a - n + 2 = 10 - 8 + 2 = 4
 	* Error al abrir la conexión.
 * Camino 3 : 0 - 1 - 2 - 4 - 5 - 6
 	* No se obtiene nada de la ejecución de la sentencia SQL y por tanto no se ejecuta el código interno del bucle while.
+* Camino 4: 0 - 1 - 2 - 4 - 5 - 7 - 6
+	* Error al cerrar la conexión
 
 ## Definición de casos de prueba
 
@@ -57,4 +59,8 @@ V(G) = a - n + 2 = 10 - 8 + 2 = 4
 
 * Camino 3:
 	* Prerrequisitos: La tabla Usuario de la base de datos debe estar vacía.
-	*Salina esperada: El método devuelve un ArrayList vacio.
+	* Salid esperada: El método devuelve un ArrayList vacio.
+* Camino 4:
+	* Prerrequisitos: El servidor de base de datos está conectado al principio de la ejecución pero se desconecta antes de cerrar la conexión. 
+	* Salida esperada: El método devuelve un ArrayList vacio.  
+   
