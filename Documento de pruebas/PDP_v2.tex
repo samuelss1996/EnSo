@@ -47,6 +47,7 @@
 		\texttt{PDP\_v1}
 
 	\subsection{Introducción}
+	%TODO Añadir encabezado
 		Este documento se corresponde con el plan de pruebas correspondiente al proyecto de ventas de la USC. El software se basa en un portal web mediante el cual los usuarios pueden solicitar pedidos, siendo tramitados posteriormente por la universidad.
 
 		El objetivo de este plan es marcar las pautas y definir la estrategia que se seguirá para certificar el software. En este caso, los casos de prueba y procedimientos tan sólo están generados mediante métodos de caja negra contra la especificación de las interfaces del software.
@@ -173,41 +174,132 @@ Programador de pruebas & Responsable de la generación del plan de pruebas.     
 \section{Diseño de pruebas}
 	\subsection{InterfazImportación}
 			\subsubsection{Prueba I-01}
-
+			\paragraph{Objetivo} Comprobar que un archivo con líneas incompletas, con demasiados campos, o en blanco no provoca un comportamiento inesperado en el programa.
+			\paragraph{Técnicas de caja negra} Aplicando las reglas especificadas a continuación se obtienen las siguientes clases de equivalencia:
+			\begin{itemize}
+				\item \textbf{R1:} incluir una línea con campos de menos (todos ellos con valores válidos), otra línea con campos de más (los que no se hayan incluido a mayores deben tener valores válidos) y una línea con el número de campos correctos (todos ellos con valores válidos).
+				\item \textbf{R3:} incluir una línea en blanco y otra completa y correcta.
+			\end{itemize}
+			Dado que las clases de equivalencia se obtienen en base al contenido del archivo, se aplicarán a los tres métodos de la interfaz  (\textit{importarUsuarios}, \textit{importarProducto} e \textit{importarCompra}).
+			\paragraph{Criterios de paso/fallo}
+			En ninguno de los casos se debe generar una excepción no controlada como consecuencia del formato inesperado de la línea del fichero. Cuando un archivo contenga líneas incorrectas se debe cancelar la importación informando al usuario del error. Por otra parte, un archivo con líneas correctas debe ser correctamente procesado.
+			\paragraph{Resultado de aplicar las ténicas}
+%TODO Añadir tabla de resultado			
 			\subsubsection{Prueba I-02}
-
+			\paragraph{Objetivo} Comprobar que un archivo que contenga un campo con un formato o valor incorrecto no provoca un comportamiento inesperado en el programa.
+			\paragraph{Técnicas de caja negra} Aplicando las reglas especificadas a continuación se obtienen las siguientes clases de equivalencia:
+			\begin{itemize}
+				\item \textbf{R1:} para todos los campos con longitud máxima delimitada, se probará introduciendo el campo vacío, el campo con una longitud correcta, y el campo con una longitud superior a la correcta.
+				\item \textbf{R3:} para cada uno de los campos sujetos a restricción de formato, se probará un caso con formato correcto y otro con formato incorrecto (por ejemplo: fecha con formato adecuado, unidades, cantidad y precio deben ser numéricos, etc.).
+				\item \textbf{R3:} para cada uno de los campos identificadores, se probará un caso con un identificador ya presente en la base de datos, y otro no presente en la base de datos. En otras palabras, se probará a importar un elemento ya presente en la base de datos y otro que no lo esté.
+				\item \textbf{R3:} para los campos de referencia a ítem y usuario en las líneas de venta, se probará un caso en el que el identificador del ítem o usuario referenciado se encuentre previamente en la base de datos y otro caso en el que no.
+			\end{itemize}
+			Dado que las clases de equivalencia se obtienen en base al contenido del archivo, se aplicarán a los tres métodos de la interfaz  (\textit{importarUsuarios}, \textit{importarProducto} e \textit{importarCompra}).
+			
+			Dada su relación directa con el tipo de línea en cuestión, las reglas que se listan a continuación sí se aplican de manera diferente a cada método:
+			\begin{itemize}
+				\item \textbf{\textit{importarUsuarios}}
+					\begin{itemize}
+						\item \textbf{R3:} un caso en el que el primer campo sea \textit{U} y otro en el que sea distinto de \textit{U}.
+					\end{itemize}
+				\item \textbf{\textit{importarProducto}}
+					\begin{itemize}
+						\item \textbf{R3:} un caso en el que el primer campo sea \textit{I} y otro en el que sea distinto de \textit{I}.
+					\end{itemize}
+				\item \textbf{\textit{importarCompra}}
+					\begin{itemize}
+						\item \textbf{R3:} un caso en el que el primer campo sea \textit{V} y otro en el que sea distinto de \textit{V}.
+					\end{itemize}
+			\end{itemize}
+			Aplicando las técnicas de análisis por valores límite se obtiene lo siguiente:
+			\begin{itemize}
+				\item \textbf{R1:} para todos los campos con longitud máxima \textit{m}, se probará introduciendo valores con longitud 0, \textit{m} y \textit{m+1}.
+			\end{itemize}
+			Finalmente, aplicando la técnica de conjetura de errores, se obtiene lo siguiente:
+			\begin{itemize}
+				\item Se debe comprobar si la existencia de varias líneas de venta con el mismo identificador provoca que se añadan varios ítems a la misma venta. Si esto no sucede, el comportamiento es incorrecto.
+			\end{itemize}
+			\paragraph{Criterios de paso/fallo}
+	En ninguno de los casos se debe generar una excepción no controlada como consecuencia del formato o valor inesperado del campo. Cuando un archivo contenga uno o más campos incorrectos se debe cancelar la importación informando al usuario del error. Por otra parte, un archivo con todos los campos correctos debe ser correctamente procesado.
+			\paragraph{Resultado de aplicar las ténicas}
+			%TODO Añadir tabla resultado de aplicar las técnicas
 			\subsubsection{Prueba I-03}
-
+			\paragraph{Objetivo}
+			\paragraph{Técnicas de caja negra}
+			\paragraph{Criterios de paso/fallo}
+			\paragraph{Resultado de aplicar las ténicas}
 	\subsection{InterfazDAO}
 			\subsubsection{Prueba D-01}
-
+			\paragraph{Objetivo}
+			\paragraph{Técnicas de caja negra}
+			\paragraph{Criterios de paso/fallo}
+			\paragraph{Resultado de aplicar las ténicas}
 			\subsubsection{Prueba D-02}
-
+			\paragraph{Objetivo}
+			\paragraph{Técnicas de caja negra}
+			\paragraph{Criterios de paso/fallo}
+			\paragraph{Resultado de aplicar las ténicas}
 			\subsubsection{Prueba D-03}
-
+			%TODO revisar: el método isLoged ya no existe, ahora hay logIn y está en el controlador.
+			\paragraph{Objetivo}
+			\paragraph{Técnicas de caja negra}
+			\paragraph{Criterios de paso/fallo}
+			\paragraph{Resultado de aplicar las ténicas}
 			\subsubsection{Prueba D-04}
-
+			%TODO validar pedido ya no recibe lo mismo que antes
+			\paragraph{Objetivo}
+			\paragraph{Técnicas de caja negra}
+			\paragraph{Criterios de paso/fallo}
+			\paragraph{Resultado de aplicar las ténicas}
 			\subsubsection{Prueba D-05}
-
+			%TODO getHistorialUsuario ya no recibe un string.
+			\paragraph{Objetivo}
+			\paragraph{Técnicas de caja negra}
+			\paragraph{Criterios de paso/fallo}
+			\paragraph{Resultado de aplicar las ténicas}
 	\subsection{InterfazEstadistica}
 			\subsubsection{Prueba D-06}
-
+			\paragraph{Objetivo}
+			\paragraph{Técnicas de caja negra}
+			\paragraph{Criterios de paso/fallo}
+			\paragraph{Resultado de aplicar las ténicas}
 	\subsection{InterfazControlador}
 			\subsubsection{Nota}
 
 			\subsubsection{Prueba C-01}
-
+			\paragraph{Objetivo}
+			\paragraph{Técnicas de caja negra}
+			\paragraph{Criterios de paso/fallo}
+			\paragraph{Resultado de aplicar las ténicas}
 			\subsubsection{Prueba C-02}
-
+			%TODO ya no hay insercion de compras, sino de orders.
+			\paragraph{Objetivo}
+			\paragraph{Técnicas de caja negra}
+			\paragraph{Criterios de paso/fallo}
+			\paragraph{Resultado de aplicar las ténicas}
 			\subsubsection{Prueba C-03}
-
+			%TODO revisar porque ahora hay orders
+			\paragraph{Objetivo}
+			\paragraph{Técnicas de caja negra}
+			\paragraph{Criterios de paso/fallo}
+			\paragraph{Resultado de aplicar las ténicas}
 			\subsubsection{Prueba C-04}
-
+			\paragraph{Objetivo}
+			\paragraph{Técnicas de caja negra}
+			\paragraph{Criterios de paso/fallo}
+			\paragraph{Resultado de aplicar las ténicas}
 			\subsubsection{Prueba C-05}
-
+			\paragraph{Objetivo}
+			\paragraph{Técnicas de caja negra}
+			\paragraph{Criterios de paso/fallo}
+			\paragraph{Resultado de aplicar las ténicas}
 \section{Casos de prueba}
 	\subsection{InterfazImportacion}
 			\subsubsection{Caso de prueba I-01-P-01}
+			\paragraph{Contexto de ejecución}
+			\paragraph{Definición}
+			\paragraph{Clases que valida}
+			\paragraph{Resultado esperado}
 
 			\subsubsection{Caso de prueba I-01-P-02}
 
