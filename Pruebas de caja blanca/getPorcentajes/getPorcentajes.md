@@ -47,34 +47,39 @@ Sus bucles se tratan como concatenados ya que los valores del segundo dependen d
 
 * q0: condición switch case.
 * q1: Si mode=1.
-* q2: Condición bucle 1 (case1) y código que contiene.
-* q3: Condición bucle 2 (case1) y código que contiene.
-* q4: Si mode=2.
-* q5: Condición bucle 1 (case2) y código que contiene.
-* q6: Condición bucle 2 (case2) y código que contiene.
-* q7: retorno de los porcentajes (array de floats).
-* q8: Si mode no es ni 1 ni 2.
-* q9: retorno de un valor nulo.
+* q2: Condición bucle 1 (case 1).
+* q3: Código que contiene el bucle 1.
+* q4: Inicialización del array de floats.
+* q5: Condición bucle 2 (case 1).
+* q6: Código del bucle 2 (case 1).
+* q7: Return en caso de que no se cumpla la condición del bucle 2 (case 1).
+* q8: Si mode=2.
+* q9: Condición bucle 1 (case 2).
+* q10: Código que contiene el bucle 1 (case 2).
+* q11: Inicialización del array de floats.
+* q12: Condición bucle 2 (case 2).
+* q13: Código del bucle 2 (case 2).
+* q14: Return en caso de que no se cumpla la condición del bucle 2 (case 2).
+* q15: Si mode no es ni 1, ni 2 (default).
 
 ## Complejidad ciclomática
 r: nº regiones cerradas del grafo
 
-V(G) = r = 6
+V(G) = r = 5
 
 ## Selección de caminos
-Según la complejidad ciclomática de McCabe hay 6 caminos independientes.
+Según la complejidad ciclomática de McCabe hay 5 caminos independientes.
 
-* Camino 1: 0-1-2-3-7
+* Camino 1: 0-1-2-3-2-4-5-6
 	* Modo = 1, ejecución siguiendo el flujo normal.
-* Camino 2: 0-4-5-6-7
-	* Modo = 2, ejecución siguiendo el flujo normal.
-* Camino 3: 0-8-9
-	* Modo!=1 && Modo!=2, se devuelve un nulo.
-* Camino 4: 0-1-7
-	* Modo = 1, el array de ventas diario está vacío.       
-* Camino 5: 0-5-7
-	* Modo = 2, el array de ventas está vacío.
-* Camino 6:   	
+* Camino 2: 0-1-2-3-2-4-5-7
+	* Modo = 1, ejecución con condición no cumplida en el segundo bucle.
+* Camino 3: 0-8-9-10-9-11-12-13
+	* Modo=2, ejecución siguiendo el flujo normal.
+* Camino 4: 0-8-9-10-9-11-12-14
+	* Modo = 2, ejecución con condición no cumplida en el segundo bucle.    
+* Camino 5: 0-15
+	* Modo!=1 && Modo!=2
 
 ## Definición de casos de prueba
 * Camino 1:
@@ -82,24 +87,20 @@ Según la complejidad ciclomática de McCabe hay 6 caminos independientes.
 	* Entrada: mode=1
 	* Salida: porcentajes correspondientes a cada día en forma de array de floats no vacío y con algún valor != 0.0 (mínimo 1).
 * Camino 2:
-	* Prerrequisitos: debe haber por lo menos 1 venta esa semana.
-	* Entrada: mode=2
-	* Salida: porcentajes correspondientes a cada semana en forma de array de floats no vacío y con algún valor != 0.0 (mínimo 1).
-* Camino 3:
-	* Prerrequisitos: ninguno.
-	* Entrada: mode!=1 && mode!=2
-	* Salida: null
-* Camino 4:
 	* Prerrequisitos: no debe haber compras ningún día
 	* Entrada: mode=1
 	* Salida: array vacío
-* Camino 5:
+* Camino 3:
+	* Prerrequisitos: debe haber por lo menos 1 venta esa semana.
+	* Entrada: mode=2
+	* Salida: porcentajes correspondientes a cada semana en forma de array de floats no vacío y con algún valor != 0.0 (mínimo 1).
+* Camino 4:
 	* Prerrequisitos: no debe haber compras ninguna semana
 	* Entrada: mode=2
 	* Salida: array vacío
-* Camino 6: ? 
-	* Prerrequisitos: ? 
-	* Entrada: ? 
-	* Salida: ?
+* Camino 5:
+	* Prerrequisitos: ninguno.
+	* Entrada: mode!=1 && mode!=2
+	* Salida: null
 	  	
 
