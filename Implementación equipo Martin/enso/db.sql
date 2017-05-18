@@ -1,6 +1,6 @@
--- CREATE DATABASE ensop8;
--- CREATE USER 'enso'@'%' IDENTIFIED BY 'enso';
--- GRANT ALL PRIVILEGES ON ensop8.* TO 'enso'@'localhost' identified by 'enso';
+CREATE DATABASE ensop8;
+CREATE USER 'enso'@'%' IDENTIFIED BY 'enso';
+GRANT ALL PRIVILEGES ON ensop8.* TO 'enso'@'localhost' identified by 'enso';
 
 
 CREATE TABLE IF NOT EXISTS Usuario (
