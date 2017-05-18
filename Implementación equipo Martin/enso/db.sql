@@ -1,7 +1,7 @@
--- CREATE DATABASE ensop8;
--- CREATE USER 'enso'@'%' IDENTIFIED BY 'enso';
--- GRANT ALL PRIVILEGES ON ensop8.* TO 'enso'@'localhost' identified by 'enso';
-
+CREATE DATABASE ensop8;
+CREATE USER 'enso'@'%' IDENTIFIED BY 'enso';
+GRANT ALL PRIVILEGES ON ensop8.* TO 'enso'@'localhost' identified by 'enso';
+USE ensop8;
 
 CREATE TABLE IF NOT EXISTS Usuario (
 	ID_User VARCHAR(11) PRIMARY KEY,

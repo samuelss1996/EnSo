@@ -31,8 +31,8 @@ public abstract class SuperDAO {
 	}
 
 public void openConection() throws ClassNotFoundException, SQLException{
-        Class.forName("com.mysql.jdbc.Driver");
-        connection = DriverManager.getConnection(DB_URL+SCHEMA,USER, PASS);        
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        connection = DriverManager.getConnection(DB_URL+SCHEMA+"?serverTimezone=UTC",USER, PASS);        
    }
    
    public void closeConnection()throws SQLException{
