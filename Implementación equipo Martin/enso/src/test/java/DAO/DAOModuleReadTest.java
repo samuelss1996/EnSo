@@ -36,11 +36,11 @@ public class DAOModuleReadTest {
 	
 	@Test
 	public void testD05P02() {
-		assert daoModule.getItemById("I-s-000") == null;
+		assertNull(daoModule.getItemById("I-s-000"));
 	}
 	
 	@Test
 	public void testD05P03() {
-		assert daoModule.getItemById("I-abcde-999") == null;
+		assertNull(daoModule.getItemById("I-abcde-999"));
 	}
 }

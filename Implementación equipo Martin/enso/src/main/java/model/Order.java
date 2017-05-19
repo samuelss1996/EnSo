@@ -93,6 +93,28 @@ public class Order {
 	public void setLines(ArrayList<Line> lines){
 		this.lines = lines;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ID_Order;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Order other = (Order) obj;
+		if (ID_Order != other.ID_Order)
+			return false;
+		return true;
+	}
 	
 	
 	
