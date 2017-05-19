@@ -31,7 +31,7 @@ public class StatisticsModuleEmptyDBTest {
 	}
 	
 	@Test
-	public void testgetValoresBrutosC2_1() {
+	public void testgetValoresBrutosC2() {
 		assertArrayEquals(new int[] {0}, testClass.getValoresBrutos(1));
 	}
 	
@@ -53,5 +53,15 @@ public class StatisticsModuleEmptyDBTest {
 	@Test
 	public void testGetPorcentajesC5() {
 		assertNull(testClass.getPorcentajes(3));
+	}
+	
+	@Test
+	public void testgetMediasC2() {
+		assertEquals(0.0f, testClass.getMedias(1), 0.00001f);
+	}
+	
+	@Test
+	public void testgetMediasC4() {
+		assertEquals(0.0f, testClass.getMedias(0), 0.00001f);
 	}
 }

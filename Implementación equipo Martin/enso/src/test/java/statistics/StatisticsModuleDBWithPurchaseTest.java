@@ -34,7 +34,7 @@ public class StatisticsModuleDBWithPurchaseTest {
 		User user = new User("U-AAAAA-001", "Usuaria", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Item item = new Item("I-AAAAA-000", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("1970-01-01"));
 		Order order = new Order(0, user);
-		Purchase purchase = new Purchase("V-AAAAA-000", new Date(LocalDate.now().toEpochDay()));
+		Purchase purchase = new Purchase("V-AAAAA-000", order, new Date(LocalDate.now().toEpochDay()), 0.0f);
 		
 		order.addLine(new Line(2, 19.99f, item));
 		
@@ -80,5 +80,23 @@ public class StatisticsModuleDBWithPurchaseTest {
 		daoModule.validateOrder(purchase, true);
 		
 		assertArrayEquals(new int[]{0}, testClass.getValoresBrutos(1));
+	}
+	
+	@Test
+	public void testgetMediasC1() {
+		assertEquals(1.0f, testClass.getMedias(1), 0.00001f);
+	}
+	
+	@Test
+	public void testgetMediasC6() {
+		User user = new User("U-AAAAA-001", "Usuaria", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
+		Order order = new Order(0, Order.ACCEPTED, user, "U-EFTGK-234");
+		Item item = new Item("I-AAAAA-000", "producto", "Descripcion del producto", "Cosas", 50, Date.valueOf("1970-01-01"));
+		order.addLine(new Line(2, 19.99f, item));
+		Purchase purchase = new Purchase("V-AAAAA-001", order, new Date(LocalDate.now().minusDays(2).toEpochDay()), 0.0f);
+		
+		daoModule.validateOrder(purchase, true);
+		
+		assertEquals(0.0f, testClass.getMedias(1), 0.00001f);
 	}
 }

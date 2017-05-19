@@ -35,16 +35,13 @@ public class StatisticsModuleTest {
 	}
 
 	@Test
-	public void testgetValoresBrutosC1_4() {
+	public void testgetValoresBrutosC1() {
 		User user = new User("U-AAAAA-001", "Usuaria", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Order order = new Order(0, Order.ACCEPTED, user, "U-EFTGK-234");
 		Item item = new Item("I-AAAAA-000", "producto", "Descripcion del producto", "Cosas", 50, Date.valueOf("1970-01-01"));
 		order.addLine(new Line(2, 19.99f, item));
 		Purchase purchase = new Purchase("V-AAAAA-001", order, new Date(LocalDate.now().toEpochDay()), 0.0f);
-		
-		daoModule.insertUser(user);
-		daoModule.insertItem(item);
-		daoModule.insertOrder(order);
+	
 		daoModule.validateOrder(purchase, true);
 		
 		assertArrayEquals(new int[]{1}, testClass.getValoresBrutos(1));
@@ -54,4 +51,9 @@ public class StatisticsModuleTest {
 	public void testgetValoresBrutosC3() {
 		assertArrayEquals(new int[0], testClass.getValoresBrutos(0));
 	}	
+	
+	@Test
+	public void testgetMediasC3() {
+		assertEquals(0.0f, testClass.getMedias(0), 0.00001f);
+	}
 }
