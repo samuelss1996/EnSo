@@ -46,7 +46,7 @@ public class StatisticsModuleFinalTest {
 		
 		//Ventas user2
 		Order order2 = new Order(1, Order.ACCEPTED, user2, "U-EFTGK-234");
-		Item item = new Item("I-FFFFF-000", "producto", "Descripcion del producto", "Cosas", 50, Date.valueOf("1970-01-01"));
+		Item item = new Item("I-FFFFF-000", "producto", "Descripcion del producto", "Cosas", 50, Date.valueOf("2000-01-01"));
 		order2.addLine(new Line(2, 19.99f, item));
 		Purchase purchase2 = new Purchase("V-FFFFF-001", order2, new Date(LocalDate.now().minusDays(1).toEpochDay()), 0.0f);
 		
@@ -102,7 +102,7 @@ public class StatisticsModuleFinalTest {
 		
 		//Ventas user2
 		Order order2 = new Order(1, Order.ACCEPTED, user2, "U-EFTGK-234");
-		Item item = new Item("I-qwqwq-000", "producto", "Descripcion del producto", "Cosas", 50, Date.valueOf("1970-01-01"));
+		Item item = new Item("I-qwqwq-000", "producto", "Descripcion del producto", "Cosas", 50, Date.valueOf("2000-01-01"));
 		order2.addLine(new Line(2, 19.99f, item));
 		Purchase purchase2 = new Purchase("V-qwqwq-001", order2, new Date(LocalDate.now().minusDays(1).toEpochDay()), 0.0f);
 		
