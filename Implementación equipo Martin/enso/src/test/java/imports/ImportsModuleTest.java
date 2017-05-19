@@ -99,12 +99,18 @@ public class ImportsModuleTest {
 	@Test
 	public void testI02P02() {
 		assertEquals(-1, testClass.importarUsuarios("!·$%&/()=?¿"));
-		//TODO: imprime un mensaje de error por pantalla
 	}
 	
 	@Test
 	public void testI02P03() {
 		assertEquals(-1, testClass.importarUsuarios("/home/usuario/ficheroInexistente.csv"));
+	}
+	
+	@Test
+	public void testimportarUsuarioC5() throws IOException {
+		Files.write(Paths.get("test.txt"), "A; U-AAAAA-000; 10/10/2010; Samuel; Soutullo Sobral; 12345678E".getBytes());
+		
+		assertEquals(0, testClass.importarCompra("test.txt"));
 	}
 
 	

@@ -11,6 +11,6 @@ import imports.ImportsModuleDependentsTest;
 import imports.ImportsModuleTest;
 
 @RunWith(Suite.class)
-@SuiteClasses({DAOModuleInsertTest.class, DAOModuleInsertOrderTest.class, ImportsModuleTest.class, ImportsModuleDependentsTest.class, 
+@SuiteClasses({StatisticsModule.class, DAOModuleInsertTest.class, DAOModuleInsertOrderTest.class, ImportsModuleTest.class, ImportsModuleDependentsTest.class, 
 	DAOModuleOrderValidationTest.class, DAOModuleUpdateTest.class, DAOModuleReadTest.class})
 public class AllTests {}
