@@ -15,7 +15,7 @@ import model.Order;
 import model.Purchase;
 import model.User;
 
-public class DAOModuleOrderValidation {
+public class DAOModuleOrderValidationTest {
 
 	static PurchaseDAO testClass;
 	
