@@ -9,6 +9,7 @@ import DAO.DAOModuleReadTest;
 import DAO.DAOModuleUpdateTest;
 import imports.ImportsModuleDependentsTest;
 import imports.ImportsModuleTest;
+import statistics.StatisticsModule;
 
 @RunWith(Suite.class)
 @SuiteClasses({StatisticsModule.class, DAOModuleInsertTest.class, DAOModuleInsertOrderTest.class, ImportsModuleTest.class, ImportsModuleDependentsTest.class, 
