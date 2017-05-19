@@ -56,7 +56,7 @@ public class StatisticsModuleDBWithPurchaseTest {
 		User user = new User("U-AAAAA-001", "Usuaria", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Item item = new Item("I-AAAAA-000", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("1970-01-01"));
 		Order order = new Order(1, user);
-		Purchase purchase = new Purchase("V-AAPOR-001", new Date(LocalDate.now().minusDays(1).toEpochDay()));
+		Purchase purchase = new Purchase("V-AAPOR-001", order, new Date(LocalDate.now().minusDays(1).toEpochDay()), 0.0f);
 		
 		order.addLine(new Line(2, 19.99f, item));
 		
