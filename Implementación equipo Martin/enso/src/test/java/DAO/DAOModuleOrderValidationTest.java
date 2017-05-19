@@ -37,7 +37,7 @@ public class DAOModuleOrderValidationTest {
 	public void testD03P01() {
 		User user = new User("U-aaaaa-000", "Usuario", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Order order = new Order("O-aaaaa-000", Order.WAITTING, user, "U-eftgk-234");
-		Item item = new Item("I-aaaaa-000", "producto", "Descripcion del producto", "cosas", 50, Date.valueOf("1970-01-01"));
+		Item item = new Item("I-aaaaa-000", "producto", "Descripcion del producto", "cosas", 50, Date.valueOf("2000-01-01"));
 		Line line = new Line(2, 19.99f, item);
 		order.addLine(line);
 		
@@ -51,7 +51,7 @@ public class DAOModuleOrderValidationTest {
 	public void testD03P02() {
 		User user = new User("U-aaaaa-000", "Usuario", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Order order = new Order("O-aaaaa-000", Order.WAITTING, user, "U-eftgk-234");
-		Item item = new Item("I-aaaaa-000", "producto", "Descripcion del producto", "cosas", 50, Date.valueOf("1970-01-01"));
+		Item item = new Item("I-aaaaa-000", "producto", "Descripcion del producto", "cosas", 50, Date.valueOf("2000-01-01"));
 		Line line = new Line(2, 19.99f, item);
 		order.addLine(line);
 		
@@ -70,7 +70,7 @@ public class DAOModuleOrderValidationTest {
 		
 		User user = new User("U-aaaaa-000", "Usuario", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Order order = new Order("O-aaaaa-000", Order.WAITTING, user, "U-eftgk-234");
-		Item item = new Item("I-aaaaa-000", "producto", "Descripcion del producto", "cosas", 50, Date.valueOf("1970-01-01"));
+		Item item = new Item("I-aaaaa-000", "producto", "Descripcion del producto", "cosas", 50, Date.valueOf("2000-01-01"));
 		Line line = new Line(2, 19.99f, item);
 		order.addLine(line);
 		
@@ -88,7 +88,7 @@ public class DAOModuleOrderValidationTest {
 
 		User user = new User("U-aaaaa-000", "Usuario", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Order order = new Order("O-aaaaa-000", Order.WAITTING, user, "U-eftgk-234");
-		Item item = new Item("I-aaaaa-000", "producto", "Descripcion del producto", "cosas", 50, Date.valueOf("1970-01-01"));
+		Item item = new Item("I-aaaaa-000", "producto", "Descripcion del producto", "cosas", 50, Date.valueOf("2000-01-01"));
 		Line line = new Line(2, 19.99f, item);
 		order.addLine(line);
 		

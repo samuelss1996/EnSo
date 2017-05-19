@@ -31,7 +31,7 @@ public class DAOModuleInsertOrderTest {
 	public void testD02P04() {
 		User user = new User("U-abcde-000", "Usuario", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Order order = new Order("x", Order.WAITTING, user, "U-eftgk-234");
-		order.addLine(new Line(2, 19.99f, new Item("I-abcde-000", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("1970-01-01"))));
+		order.addLine(new Line(2, 19.99f, new Item("I-abcde-000", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("2000-01-01"))));
 		
 		assertFalse(daoModule.insertOrder(order));
 		assertFalse(daoModule.getHistorialUser(user).contains(order));
@@ -42,7 +42,7 @@ public class DAOModuleInsertOrderTest {
 	public void testinsertOrderC1() {
 		User user = new User("U-aaaaa-000", "Usuario", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Order order = new Order("O-aaaaa-000", Order.WAITTING, user, "U-eftgk-234");
-		order.addLine(new Line(2, 19.99f, new Item("I-aaaaa-000", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("1970-01-01"))));
+		order.addLine(new Line(2, 19.99f, new Item("I-aaaaa-000", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("2000-01-01"))));
 		
 		assert daoModule.insertOrder(order);
 		assert daoModule.getHistorialUser(user).contains(order);
@@ -53,7 +53,7 @@ public class DAOModuleInsertOrderTest {
 	public void testinsertOrderC2() {
 		User user = new User("U-aaaaa-999", "Usuario", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Order order = new Order("O-aaaaa-000", Order.WAITTING, user, "U-eftgk-234");
-		order.addLine(new Line(2, 19.99f, new Item("I-aaaaa-000", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("1970-01-01"))));
+		order.addLine(new Line(2, 19.99f, new Item("I-aaaaa-000", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("2000-01-01"))));
 		
 		assertNull(daoModule.isRegistered(user.getID_User()));
 		assertFalse(daoModule.insertOrder(order));
@@ -75,7 +75,7 @@ public class DAOModuleInsertOrderTest {
 	public void testinsertOrderC4() {
 		User user = new User("U-aaaaa-000", "Usuario", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Order order = new Order("O-aaaaa-000", Order.WAITTING, user, "U-eftgk-234");
-		order.addLine(new Line(2, 19.99f, new Item("I-aaaaa-999", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("1970-01-01"))));
+		order.addLine(new Line(2, 19.99f, new Item("I-aaaaa-999", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("2000-01-01"))));
 		
 		assertNull(daoModule.getItemById("I-aaaaa-999"));
 		assertFalse(daoModule.insertOrder(order));

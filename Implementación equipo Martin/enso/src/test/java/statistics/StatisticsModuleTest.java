@@ -38,7 +38,7 @@ public class StatisticsModuleTest {
 	public void testgetValoresBrutosC1() {
 		User user = new User("U-AAAAA-001", "Usuaria", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Order order = new Order(0, Order.ACCEPTED, user, "U-EFTGK-234");
-		Item item = new Item("I-AAAAA-000", "producto", "Descripcion del producto", "Cosas", 50, Date.valueOf("1970-01-01"));
+		Item item = new Item("I-AAAAA-000", "producto", "Descripcion del producto", "Cosas", 50, Date.valueOf("2000-01-01"));
 		order.addLine(new Line(2, 19.99f, item));
 		Purchase purchase = new Purchase("V-AAAAA-001", order, new Date(LocalDate.now().toEpochDay()), 0.0f);
 	
