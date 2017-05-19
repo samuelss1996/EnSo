@@ -99,6 +99,10 @@ public class Order {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ID_Order;
+		result = prime * result + ((lines == null) ? 0 : lines.hashCode());
+		result = prime * result + ((state == null) ? 0 : state.hashCode());
+		result = prime * result + ((user == null) ? 0 : user.hashCode());
+		result = prime * result + ((validator == null) ? 0 : validator.hashCode());
 		return result;
 	}
 
@@ -113,12 +117,26 @@ public class Order {
 		Order other = (Order) obj;
 		if (ID_Order != other.ID_Order)
 			return false;
+		if (lines == null) {
+			if (other.lines != null)
+				return false;
+		} else if (!lines.equals(other.lines))
+			return false;
+		if (state == null) {
+			if (other.state != null)
+				return false;
+		} else if (!state.equals(other.state))
+			return false;
+		if (user == null) {
+			if (other.user != null)
+				return false;
+		} else if (!user.equals(other.user))
+			return false;
+		if (validator == null) {
+			if (other.validator != null)
+				return false;
+		} else if (!validator.equals(other.validator))
+			return false;
 		return true;
 	}
-	
-	
-	
-	
-	
-
 }
