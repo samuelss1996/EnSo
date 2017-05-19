@@ -29,13 +29,11 @@ public class DAOModuleInsertOrder {
 	@Test
 	@Ignore("El ID de Order debe ser String y es int, no se puede realizar la prueba")
 	public void testD02P04() {
-//		User user = new User("U-abcde-000", "Usuario", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
-//		Order order = new Order("x", Order.WAITTING, user, "U-EFTGK-234");
-//		order.addLine(new Line(2, 19.99f, new Item("I-abcde-000", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("1970-01-01"))));
-//		
-//		assert !daoModule.insertOrder(order);
-//		assert !daoModule.getHistorialUser(user).contains(order);
+		User user = new User("U-abcde-000", "Usuario", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
+		Order order = new Order("x", Order.WAITTING, user, "U-EFTGK-234");
+		order.addLine(new Line(2, 19.99f, new Item("I-abcde-000", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("1970-01-01"))));
 		
-		assertTrue(false);
+		assert !daoModule.insertOrder(order);
+		assert !daoModule.getHistorialUser(user).contains(order);
 	}
 }

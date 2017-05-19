@@ -97,34 +97,6 @@ public class ImportsModuleTest {
 	}
 	
 	@Test
-	public void testI01P12() throws IOException {
-		//TODO: hacer que el usuario ya exista
-		
-		Files.write(Paths.get("test.txt"), "U; U-aaaaa-000; 10/10/2010; Samuel; Soutullo Sobral; 77013889E".getBytes());
-		
-		assertEquals(0, testClass.importarUsuarios("test.txt"));
-	}
-	
-	@Test
-	public void testI01P13() throws IOException {
-		//TODO: hacer que el usuario y producto referenciados no existan
-		
-		Files.write(Paths.get("test.txt"), "V; V-aaaaa-000; 10/10/2010; U-aaaaa-000; I-aaaaa-000; 1; 1.53".getBytes());
-		
-		assertEquals(0, testClass.importarCompra("test.txt"));
-	}
-	
-	@Test
-	public void testI01P14() throws IOException {
-		//TODO: Se presupone que la base de datos contiene el usuario U-aaaaaa-000 y los productos I-aaaaaa-000 y I-aaaaaa-001.
-		
-		Files.write(Paths.get("test.txt"), ("V; V-aaaaaa-000; 10/10/2010; U-aaaaaa-000; I-aaaaaa-000; 1; 1.53\n"+
-											"V; V-aaaaaa-000; 10/10/2010; U-aaaaaa-000; I-aaaaaa-001; 1; 2.64").getBytes());
-		
-		assertEquals(2, testClass.importarCompra("test.txt"));
-	}
-	
-	@Test
 	public void testI02P02() {
 		assertEquals(-1, testClass.importarUsuarios("!·$%&/()=?¿"));
 		//TODO: imprime un mensaje de error por pantalla
