@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.Calendar;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -34,7 +35,7 @@ public class StatisticsModuleDBWithPurchaseTest {
 		User user = new User("U-AAAAA-001", "Usuaria", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Item item = new Item("I-AAAAA-000", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("2000-01-01"));
 		Order order = new Order(0, user);
-		Purchase purchase = new Purchase("V-AAAAA-000", order, new Date(LocalDate.now().toEpochDay()), 0.0f);
+		Purchase purchase = new Purchase("V-AAAAA-000", order, Date.valueOf(LocalDate.now()), 0.0f);
 		
 		order.addLine(new Line(2, 19.99f, item));
 		
@@ -45,7 +46,7 @@ public class StatisticsModuleDBWithPurchaseTest {
 	
 	@Test
 	public void testGetPorcentajesC1() {
-		float[] expected = new float[30];
+		float[] expected = new float[Calendar.getInstance().getActualMaximum(Calendar.DAY_OF_MONTH)];
 		expected[29] = 1.0f;
 
 		assertArrayEquals(expected, testClass.getPorcentajes(1), 0.01f);
@@ -56,7 +57,7 @@ public class StatisticsModuleDBWithPurchaseTest {
 		User user = new User("U-AAAAA-001", "Usuaria", "Usuario1", "12213428H", Date.valueOf("2017-04-24"), User.PID);
 		Item item = new Item("I-AAAAA-000", "producto", "Descripción del producto", "Cosas", 50, Date.valueOf("2000-01-01"));
 		Order order = new Order(1, user);
-		Purchase purchase = new Purchase("V-AAPOR-001", order, new Date(LocalDate.now().minusDays(1).toEpochDay()), 0.0f);
+		Purchase purchase = new Purchase("V-AAPOR-001", order, Date.valueOf(LocalDate.now().minusDays(1)), 0.0f);
 		
 		order.addLine(new Line(2, 19.99f, item));
 		
@@ -66,7 +67,7 @@ public class StatisticsModuleDBWithPurchaseTest {
 		float[] expected = new float[52];
 		expected[51] = 100.0f;
 
-		assertArrayEquals(expected, testClass.getPorcentajes(1), 0.01f);
+		assertArrayEquals(expected, testClass.getPorcentajes(2), 0.01f);
 	}
 	
 	@Test
@@ -75,7 +76,7 @@ public class StatisticsModuleDBWithPurchaseTest {
 		Order order = new Order(0, Order.ACCEPTED, user, "U-EFTGK-234");
 		Item item = new Item("I-AAAAA-000", "producto", "Descripcion del producto", "Cosas", 50, Date.valueOf("2000-01-01"));
 		order.addLine(new Line(2, 19.99f, item));
-		Purchase purchase = new Purchase("V-AAAAA-001", order, new Date(LocalDate.now().minusDays(2).toEpochDay()), 0.0f);
+		Purchase purchase = new Purchase("V-AAAAA-001", order, Date.valueOf(LocalDate.now().minusDays(2)), 0.0f);
 		
 		daoModule.validateOrder(purchase, true);
 		
@@ -93,7 +94,7 @@ public class StatisticsModuleDBWithPurchaseTest {
 		Order order = new Order(0, Order.ACCEPTED, user, "U-EFTGK-234");
 		Item item = new Item("I-AAAAA-000", "producto", "Descripcion del producto", "Cosas", 50, Date.valueOf("2000-01-01"));
 		order.addLine(new Line(2, 19.99f, item));
-		Purchase purchase = new Purchase("V-AAAAA-001", order, new Date(LocalDate.now().minusDays(2).toEpochDay()), 0.0f);
+		Purchase purchase = new Purchase("V-AAAAA-001", order, Date.valueOf(LocalDate.now().minusDays(2)), 0.0f);
 		
 		daoModule.validateOrder(purchase, true);
 		

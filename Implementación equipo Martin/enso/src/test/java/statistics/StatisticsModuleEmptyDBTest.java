@@ -3,6 +3,7 @@ package statistics;
 import static org.junit.Assert.*;
 
 import java.sql.Date;
+import java.util.Calendar;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -42,7 +43,7 @@ public class StatisticsModuleEmptyDBTest {
 	
 	@Test
 	public void testGetPorcentajesC2() {		
-		assertArrayEquals(new float[30], testClass.getPorcentajes(1), 0.01f);
+		assertArrayEquals(new float[Calendar.getInstance().getActualMaximum(Calendar.DAY_OF_MONTH)], testClass.getPorcentajes(1), 0.01f);
 	}
 	
 	@Test

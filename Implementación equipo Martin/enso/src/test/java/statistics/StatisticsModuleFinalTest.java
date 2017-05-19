@@ -42,26 +42,26 @@ public class StatisticsModuleFinalTest {
 		
 		//Ventas user1
 		Order order1 = new Order(0, Order.ACCEPTED, user1, "U-EFTGK-234");
-		Purchase purchase1 = new Purchase("V-FFFFF-000", order1, new Date(LocalDate.now().minusDays(1).toEpochDay()), 0.0f);
+		Purchase purchase1 = new Purchase("V-FFFFF-000", order1, Date.valueOf(LocalDate.now().minusDays(1)), 0.0f);
 		
 		//Ventas user2
 		Order order2 = new Order(1, Order.ACCEPTED, user2, "U-EFTGK-234");
 		Item item = new Item("I-FFFFF-000", "producto", "Descripcion del producto", "Cosas", 50, Date.valueOf("2000-01-01"));
 		order2.addLine(new Line(2, 19.99f, item));
-		Purchase purchase2 = new Purchase("V-FFFFF-001", order2, new Date(LocalDate.now().minusDays(1).toEpochDay()), 0.0f);
+		Purchase purchase2 = new Purchase("V-FFFFF-001", order2, Date.valueOf(LocalDate.now().minusDays(1)), 0.0f);
 		
 		Order order2a = new Order(2, Order.ACCEPTED, user2, "U-EFTGK-234");
 		order2a.addLine(new Line(2, 19.99f, item));
-		Purchase purchase2a = new Purchase("V-FFFFF-002", order2a, new Date(LocalDate.now().minusDays(1).toEpochDay()), 0.0f);
+		Purchase purchase2a = new Purchase("V-FFFFF-002", order2a, Date.valueOf(LocalDate.now().minusDays(1)), 0.0f);
 		
 		//Ventas user3
 		Order order3 = new Order(3, Order.ACCEPTED, user3, "U-EFTGK-234");
 		order3.addLine(new Line(2, 19.99f, item));
-		Purchase purchase3 = new Purchase("V-FFFFF-003", order3, new Date(LocalDate.now().minusDays(3).toEpochDay()), 0.0f);
+		Purchase purchase3 = new Purchase("V-FFFFF-003", order3, Date.valueOf(LocalDate.now().minusDays(3)), 0.0f);
 		
 		//Ventas user4
 		Order order4 = new Order(4, Order.ACCEPTED, user4, "U-EFTGK-234");
-		Purchase purchase4 = new Purchase("V-FFFFF-004", order4, new Date(LocalDate.now().minusDays(6).toEpochDay()), 0.0f);
+		Purchase purchase4 = new Purchase("V-FFFFF-004", order4, Date.valueOf(LocalDate.now().minusDays(6)), 0.0f);
 		
 		
 		//Inserciones
@@ -98,26 +98,26 @@ public class StatisticsModuleFinalTest {
 		
 		//Ventas user1
 		Order order1 = new Order(0, Order.ACCEPTED, user1, "U-EFTGK-234");
-		Purchase purchase1 = new Purchase("V-qwqwq-000", order1, new Date(LocalDate.now().minusDays(1).toEpochDay()), 0.0f);
+		Purchase purchase1 = new Purchase("V-qwqwq-000", order1, Date.valueOf(LocalDate.now().minusDays(1)), 0.0f);
 		
 		//Ventas user2
 		Order order2 = new Order(1, Order.ACCEPTED, user2, "U-EFTGK-234");
 		Item item = new Item("I-qwqwq-000", "producto", "Descripcion del producto", "Cosas", 50, Date.valueOf("2000-01-01"));
 		order2.addLine(new Line(2, 19.99f, item));
-		Purchase purchase2 = new Purchase("V-qwqwq-001", order2, new Date(LocalDate.now().minusDays(1).toEpochDay()), 0.0f);
+		Purchase purchase2 = new Purchase("V-qwqwq-001", order2, Date.valueOf(LocalDate.now().minusDays(1)), 0.0f);
 		
 		Order order2a = new Order(2, Order.ACCEPTED, user2, "U-EFTGK-234");
 		order2a.addLine(new Line(2, 19.99f, item));
-		Purchase purchase2a = new Purchase("V-qwqwq-002", order2a, new Date(LocalDate.now().minusDays(1).toEpochDay()), 0.0f);
+		Purchase purchase2a = new Purchase("V-qwqwq-002", order2a, Date.valueOf(LocalDate.now().minusDays(1)), 0.0f);
 		
 		//Ventas user3
 		Order order3 = new Order(3, Order.ACCEPTED, user3, "U-EFTGK-234");
 		order3.addLine(new Line(2, 19.99f, item));
-		Purchase purchase3 = new Purchase("V-qwqwq-003", order3, new Date(LocalDate.now().minusDays(3).toEpochDay()), 0.0f);
+		Purchase purchase3 = new Purchase("V-qwqwq-003", order3, Date.valueOf(LocalDate.now().minusDays(3)), 0.0f);
 		
 		//Ventas user4
 		Order order4 = new Order(4, Order.ACCEPTED, user4, "U-EFTGK-234");
-		Purchase purchase4 = new Purchase("V-qwqwq-004", order4, new Date(LocalDate.now().minusDays(6).toEpochDay()), 0.0f);
+		Purchase purchase4 = new Purchase("V-qwqwq-004", order4, Date.valueOf(LocalDate.now().minusDays(6)), 0.0f);
 		
 		
 		//Inserciones
