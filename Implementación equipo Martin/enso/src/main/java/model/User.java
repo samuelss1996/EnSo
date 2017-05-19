@@ -88,6 +88,75 @@ public class User {
 	public void setNIF(String nIF) {
 		NIF = nIF;
 	}
+
+
+
+
+
+
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((ID_User == null) ? 0 : ID_User.hashCode());
+		result = prime * result + ((NIF == null) ? 0 : NIF.hashCode());
+		result = prime * result + ((date == null) ? 0 : date.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((surname == null) ? 0 : surname.hashCode());
+		result = prime * result + ((tipe == null) ? 0 : tipe.hashCode());
+		return result;
+	}
+
+
+
+
+
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		if (ID_User == null) {
+			if (other.ID_User != null)
+				return false;
+		} else if (!ID_User.equals(other.ID_User))
+			return false;
+		if (NIF == null) {
+			if (other.NIF != null)
+				return false;
+		} else if (!NIF.equals(other.NIF))
+			return false;
+		if (date == null) {
+			if (other.date != null)
+				return false;
+		} else if (!date.equals(other.date))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (surname == null) {
+			if (other.surname != null)
+				return false;
+		} else if (!surname.equals(other.surname))
+			return false;
+		if (tipe == null) {
+			if (other.tipe != null)
+				return false;
+		} else if (!tipe.equals(other.tipe))
+			return false;
+		return true;
+	}
 	
 	
 	
