@@ -31,7 +31,6 @@ public class DAOModuleInsertTest {
 	
 	@Test
 	public void testD01P02() {
-		// TODO quizás cambiar nombre
 		assertFalse(daoModule.insertUser(new User("x", "Manuel", "Soutoullo", "77013889E", Date.valueOf("2010-10-10"), User.ALUMN)));
 		assertNull(daoModule.isRegistered("x"));
 	}

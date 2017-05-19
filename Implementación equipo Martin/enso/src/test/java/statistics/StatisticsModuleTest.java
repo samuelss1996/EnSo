@@ -16,7 +16,6 @@ import model.Order;
 import model.Purchase;
 import model.User;
 
-// TODO cosas de caja negra
 public class StatisticsModuleTest {
 	
 	static StatisticsInterface testClass;

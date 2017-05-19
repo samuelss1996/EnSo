@@ -51,46 +51,44 @@ public class ImportsModuleTest {
 		
 		assertEquals(0, testClass.importarUsuarios("test.txt"));
 	}
-	
-	//TODO: El P04 aparece repetido. Actualizar con el documento
-	
+		
 	@Test
-	public void testI01P06() throws IOException {
+	public void testI01P05() throws IOException {
 		Files.write(Paths.get("test.txt"), "U; U-aaaaa-000; 10/10/2010; Samuel; Soutullo Sobral; 77013889E".getBytes());
 		
 		assertEquals(0, testClass.importarCompra("test.txt"));
 	}
 	
 	@Test
-	public void testI01P07() throws IOException {
+	public void testI01P06() throws IOException {
 		Files.write(Paths.get("test.txt"), "V; V-aaaaa-000; 10/10/2010; U-aaaaa-000; I-aaaaa-000; 1; 1.53".getBytes());
 		
 		assertEquals(1, testClass.importarCompra("test.txt"));
 	}
 	
 	@Test
-	public void testI01P08() throws IOException {
+	public void testI01P07() throws IOException {
 		Files.write(Paths.get("test.txt"), "U; U-aaaaa-000; 10/10/2010; ; Soutullo Sobral; 77013889E".getBytes());
 		
 		assertEquals(0, testClass.importarUsuarios("test.txt"));
 	}
 	
 	@Test
-	public void testI01P09() throws IOException {
+	public void testI01P08() throws IOException {
 		Files.write(Paths.get("test.txt"), "U; U-aaaaa-000; 10/10/2010; aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ; Soutullo Sobral; 77013889E".getBytes());
 		
 		assertEquals(0, testClass.importarUsuarios("test.txt"));
 	}
 	
 	@Test
-	public void testI01P10() throws IOException {
+	public void testI01P09() throws IOException {
 		Files.write(Paths.get("test.txt"), "U; U-aaaaa-000; July 4, 2010; Samuel; Soutullo Sobral; 77013889E".getBytes());
 		
 		assertEquals(0, testClass.importarUsuarios("test.txt"));
 	}
 	
 	@Test
-	public void testI01P11() throws IOException {
+	public void testI01P10() throws IOException {
 		Files.write(Paths.get("test.txt"), "V; V-aaaaa-000; 10/10/2010; U-aaaaa-000; I-aaaaa-000; 1; 125ª".getBytes());
 		
 		assertEquals(0, testClass.importarCompra("test.txt"));

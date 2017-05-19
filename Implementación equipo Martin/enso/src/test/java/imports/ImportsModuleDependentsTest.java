@@ -34,7 +34,7 @@ public class ImportsModuleDependentsTest {
 	}
 	
 	@Test
-	public void testI01P12() throws IOException {
+	public void testI01P11() throws IOException {
 		//U-aaaaa-000 está insertado por ImportsModuleTest
 		
 		Files.write(Paths.get("test.txt"), "U; U-aaaaa-000; 10/10/2010; Samuel; Soutullo Sobral; 77013889E".getBytes());
@@ -43,7 +43,7 @@ public class ImportsModuleDependentsTest {
 	}
 	
 	@Test
-	public void testI01P13() throws IOException {
+	public void testI01P12() throws IOException {
 		
 		//El usuario e item no existen
 		assertNull(daoModule.getItemById("I-trewq-000"));
@@ -55,7 +55,7 @@ public class ImportsModuleDependentsTest {
 	}
 	
 	@Test
-	public void testI01P14() throws IOException {
+	public void testI01P13() throws IOException {
 		
 		
 		daoModule.insertItem(new Item("I-abcde-001", "Robot limpiapiscinas", "Limpia piscinas", "Exteriores", 50, Date.valueOf("2010-10-10")));
